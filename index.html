@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WayQuizz - Luyện Thi Trắc Nghiệm Core Java (320 câu) & DBMS (260 câu)</title>
+  <meta name="description" content="Ứng dụng làm bài trắc nghiệm Core Java (320 câu) và DBMS (260 câu). Thứ tự câu hỏi và đáp án ngẫu nhiên mỗi lần, có Sổ Tay câu sai để ôn tập.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- App Header -->
+  <header class="app-header">
+    <div class="brand-wrapper" id="brand-home-btn" title="Về trang chủ đề thi">
+      <div class="brand-logo-icon">☕</div>
+      <div class="brand-text-group">
+        <h1>WayQuizz</h1>
+        <div class="brand-tagline">Core Java 320 câu | DBMS 260 câu | Ôn tập thông minh</div>
+      </div>
+    </div>
+
+    <div class="header-actions">
+      <!-- Create Quiz Button -->
+      <!-- Mistake Notebook Button -->
+      <button class="btn btn-warning" id="btn-open-mistake-notebook" title="Xem Sổ tay câu sai để ôn tập lại">
+        <span>📓</span> Sổ Tay Câu Sai
+      </button>
+
+      <button class="btn btn-primary" id="btn-open-create-modal" title="Tạo bộ đề mới hoặc thêm nhanh qua văn bản">
+        <span>➕</span> Tạo Đề / Nhập Text
+      </button>
+
+      <!-- Restore Defaults -->
+      <button class="btn btn-secondary btn-icon-only" id="btn-restore-defaults" title="Khôi phục lại 320 câu hỏi gốc">
+        🔄
+      </button>
+
+      <!-- Sound Toggle -->
+      <button class="btn btn-secondary btn-icon-only" id="btn-toggle-sound" title="Bật/Tắt âm thanh hiệu ứng">
+        🔊
+      </button>
+
+      <!-- Theme Toggle -->
+      <button class="btn btn-secondary btn-icon-only" id="btn-toggle-theme" title="Đổi giao diện Sáng / Tối">
+        🌙
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="app-container">
+
+    <!-- =======================================================================
+         VIEW 1: DASHBOARD / QUIZ SETS LIST
+         ======================================================================= -->
+    <section id="view-dashboard">
+      <!-- Hero Banner -->
+      <div class="hero-banner">
+        <div class="hero-content">
+          <div class="hero-badge">⚡ Ngân hàng đề thi Core Java + DBMS 2026</div>
+          <h2 class="hero-title">Ôn Luyện Trắc Nghiệm Toàn Diện</h2>
+          <p class="hero-desc">
+            Trọn bộ <strong>320 câu Core Java</strong> và <strong>260 câu DBMS</strong>, thứ tự câu hỏi và đáp án <strong>ngẫu nhiên mỗi lần</strong> để luyện tập hiệu quả.
+            Ghi nhớ tự động các câu sai vào <strong>Sổ Tay</strong> để ôn tập có mục tiêu!
+          </p>
+
+          <div class="hero-stats">
+            <div class="stat-box">
+              <div class="stat-value" id="stat-total-questions">320</div>
+              <div class="stat-label">Tổng câu hỏi</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-value" id="stat-total-sets">17</div>
+              <div class="stat-label">Bộ đề luyện</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-value" id="stat-completed-count">0</div>
+              <div class="stat-label">Đã hoàn thành</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-mode-selector-wrapper">
+          <div class="hero-mode-label">Chế độ làm bài:</div>
+          <div class="segmented-mode-bar" id="hero-mode-segmented">
+            <button class="seg-mode-btn active" data-mode="study" id="btn-mode-study" title="Chọn đáp án là biết ngay Đúng / Sai kèm giải thích">
+              ⚡ Hiện Đúng / Sai Ngay (Học Tập)
+            </button>
+            <button class="seg-mode-btn" data-mode="exam" id="btn-mode-exam" title="Làm bài có tính giờ, nộp bài mới biết điểm như thi thật">
+              ⏱️ Thi Thử (Nộp Bài Chấm Điểm)
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-actions-group">
+          <button class="btn btn-accent btn-play" id="btn-quick-full-test">
+            🏆 Đề 320 Câu Core Java
+          </button>
+          <button class="btn btn-secondary" id="btn-quick-dbms-test">
+            🗄️ Đề 260 Câu DBMS
+          </button>
+          <button class="btn btn-secondary" id="btn-quick-random-20">
+            🎲 Luyện Nhanh 20 Câu Ngẫu Nhiên
+          </button>
+          <button class="btn btn-ghost" id="btn-open-mistake-notebook-hero">
+            📓 Sổ Tay Câu Sai
+          </button>
+        </div>
+      </div>
+
+      <!-- Controls & Filter Bar -->
+      <div class="controls-bar">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="quiz-search-input" placeholder="Tìm kiếm bộ đề, module, từ khóa Java...">
+        </div>
+
+        <div class="filter-pills" id="category-filter-pills">
+          <button class="filter-pill active" data-category="all">Tất cả đề</button>
+          <button class="filter-pill" data-category="Tổng hợp">Java Tổng hợp</button>
+          <button class="filter-pill" data-category="DBMS">DBMS</button>
+          <button class="filter-pill" data-category="Theo Module">Java Modules</button>
+          <button class="filter-pill" data-category="Tự tạo">Đề tự tạo</button>
+        </div>
+      </div>
+
+      <!-- Quiz Cards Grid -->
+      <div class="quizzes-grid" id="quizzes-card-grid">
+        <!-- Rendered dynamically by JavaScript -->
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         VIEW 2: ACTIVE QUIZ PLAYER
+         ======================================================================= -->
+    <section id="view-player" class="player-view">
+      <!-- Player Top Bar -->
+      <div class="player-header">
+        <div class="player-info-group">
+          <button class="player-mode-switcher-pill" id="player-mode-toggle-btn" title="Bấm để đổi chế độ giữa 'Hiện Đúng/Sai Ngay' và 'Thi Thử'">
+            <span id="player-mode-icon">⚡</span>
+            <span id="player-mode-badge">Hiện Đúng/Sai Ngay</span>
+            <span class="mode-switch-tag">⇄ Đổi Chế Độ</span>
+          </button>
+          <h2 class="player-title" id="player-quiz-title">Tên Đề Thi</h2>
+        </div>
+
+        <div class="player-stats-bar">
+          <div class="timer-box" id="player-timer-box" title="Thời gian làm bài còn lại">
+            ⏱️ <span id="player-timer-text">25:00</span>
+          </div>
+          <button class="btn btn-ghost btn-icon-only" id="player-quit-btn" title="Thoát về trang chủ">
+            ✖
+          </button>
+        </div>
+      </div>
+
+      <!-- Progress Container -->
+      <div class="progress-container">
+        <div class="progress-bar-wrapper">
+          <div class="progress-bar-fill" id="player-progress-fill"></div>
+        </div>
+        <div class="progress-label-row">
+          <span id="player-progress-text">Câu 1 / 20</span>
+          <span id="player-answered-count">Đã làm: 0/20</span>
+        </div>
+      </div>
+
+      <!-- Question Card -->
+      <div class="question-card" id="question-card">
+        <div class="question-meta-row">
+          <span class="question-badge-pill" id="question-module-badge">Module 1</span>
+          <button class="btn-flag" id="btn-toggle-flag" title="Đánh dấu câu hỏi cần xem lại">
+            <span>🚩</span> <span id="flag-btn-text">Đánh dấu</span>
+          </button>
+        </div>
+
+        <!-- Question Prompt -->
+        <h3 class="question-prompt" id="question-prompt-text">
+          Nội dung câu hỏi hiển thị tại đây...
+        </h3>
+
+        <!-- Optional Code Box -->
+        <div class="code-box" id="question-code-box" style="display: none;">
+          <div class="code-header">
+            <span>Java Source Code</span>
+            <button class="btn btn-ghost" id="btn-copy-code" style="padding: 2px 6px; font-size: 0.75rem;">Sao chép</button>
+          </div>
+          <pre class="code-body"><code id="question-code-text"></code></pre>
+        </div>
+
+        <!-- Options Container -->
+        <div class="options-list" id="options-container">
+          <!-- Dynamic 4 Options A, B, C, D -->
+        </div>
+
+        <!-- Explanation Card (Shown in Instant/Study Mode or after answering) -->
+        <div class="explanation-card" id="explanation-box">
+          <div class="explanation-result-row" id="explanation-result-row">
+            <!-- Dynamic header with icon, title, retry button -->
+          </div>
+          <div class="explanation-content" id="explanation-text"></div>
+        </div>
+      </div>
+
+      <!-- Bottom Navigation Bar -->
+      <div class="player-bottom-bar">
+        <button class="palette-toggle-btn" id="btn-open-palette">
+          <span>📊</span> Bảng câu hỏi (<span id="palette-indicator-text">1/20</span>)
+        </button>
+
+        <div style="display: flex; gap: 0.6rem;">
+          <button class="btn btn-secondary" id="btn-prev-question">
+            ⬅ Câu trước
+          </button>
+          <button class="btn btn-primary" id="btn-next-question">
+            Câu tiếp ➡
+          </button>
+          <button class="btn btn-accent" id="btn-submit-quiz">
+            ✅ Nộp Bài
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         VIEW 3: RESULTS & DETAILED REVIEW
+         ======================================================================= -->
+    <section id="view-result" class="result-view">
+      <!-- Score Hero Card -->
+      <div class="score-hero-card">
+        <div class="score-badge-circle">
+          <span class="score-number" id="result-score-num">18</span>
+          <span class="score-total" id="result-score-total">/ 20 câu</span>
+        </div>
+
+        <h2 class="result-verdict" id="result-verdict-title">🎉 Xuất Sắc!</h2>
+        <p class="result-subtitle" id="result-subtitle-text">Bạn đã hoàn thành bài thi rất tốt.</p>
+
+        <div class="result-stats-row">
+          <div class="result-stat-pill">
+            <span>🎯 Tỉ lệ đúng:</span>
+            <span class="num" id="result-accuracy-pct" style="color: var(--primary);">90%</span>
+          </div>
+          <div class="result-stat-pill">
+            <span>✅ Số câu đúng:</span>
+            <span class="num" id="result-correct-count" style="color: var(--success);">18</span>
+          </div>
+          <div class="result-stat-pill">
+            <span>❌ Số câu sai:</span>
+            <span class="num" id="result-wrong-count" style="color: var(--danger);">2</span>
+          </div>
+          <div class="result-stat-pill">
+            <span>⏱️ Thời gian làm:</span>
+            <span class="num" id="result-time-spent" style="color: var(--accent-cyan);">14:20</span>
+          </div>
+        </div>
+
+        <div class="result-actions-row">
+          <button class="btn btn-primary" id="btn-retry-same-quiz">
+            🔄 Làm Lại Đề Này
+          </button>
+          <button class="btn btn-accent" id="btn-practice-wrong-only">
+            ⚠️ Luyện Lại Các Câu Sai
+          </button>
+          <button class="btn btn-secondary" id="btn-result-back-home">
+            🏠 Trở Về Danh Sách Đề
+          </button>
+        </div>
+      </div>
+
+      <!-- Detailed Review Section -->
+      <div class="review-section-header">
+        <h3>Xem lại chi tiết từng câu hỏi</h3>
+        <div class="review-filter-tabs">
+          <button class="review-filter-btn active" data-filter="all" id="filter-review-all">Tất cả</button>
+          <button class="review-filter-btn" data-filter="wrong" id="filter-review-wrong">Chỉ câu sai</button>
+          <button class="review-filter-btn" data-filter="flagged" id="filter-review-flagged">Đã gắn cờ</button>
+        </div>
+        <button class="btn btn-warning" id="btn-save-wrong-to-notebook" style="margin-left: auto;">
+          📓 Lưu câu sai vào Sổ Tay
+        </button>
+      </div>
+
+      <div id="review-cards-list">
+        <!-- Rendered dynamically -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =======================================================================
+       MODAL 1: QUESTION PALETTE MODAL
+       ======================================================================= -->
+  <div class="palette-modal" id="palette-modal">
+    <div class="palette-modal-content">
+      <div class="palette-header">
+        <h3>Bảng Danh Sách Câu Hỏi</h3>
+        <button class="btn btn-ghost btn-icon-only" id="palette-close-btn">✖</button>
+      </div>
+      <div class="palette-body">
+        <div class="palette-legend">
+          <div class="legend-item"><div class="legend-dot dot-answered"></div> Đã trả lời</div>
+          <div class="legend-item"><div class="legend-dot dot-unanswered"></div> Chưa trả lời</div>
+          <div class="legend-item"><div class="legend-dot dot-flagged"></div> Gắn cờ</div>
+          <div class="legend-item"><div class="legend-dot dot-current"></div> Đang làm</div>
+        </div>
+        <div class="palette-grid" id="palette-buttons-grid">
+          <!-- Dynamic number tiles -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =======================================================================
+       MODAL 2: QUIZ BUILDER & QUICK TEXT IMPORT
+       ======================================================================= -->
+  <div class="modal-overlay" id="quiz-builder-modal">
+    <div class="modal-content-lg">
+      <div class="modal-header">
+        <h3 class="modal-title" id="builder-modal-title">Tạo Bộ Đề Trắc Nghiệm Mới</h3>
+        <button class="btn btn-ghost btn-icon-only" id="builder-modal-close-btn">✖</button>
+      </div>
+
+      <!-- Navigation Tabs -->
+      <div class="modal-tabs">
+        <button class="modal-tab-btn active" data-tab="quick-text" id="tab-btn-quick-text">
+          ⚡ Thêm Nhanh Bằng Văn Bản
+        </button>
+        <button class="modal-tab-btn" data-tab="manual-form" id="tab-btn-manual-form">
+          📝 Nhập Thủ Công (Form)
+        </button>
+        <button class="modal-tab-btn" data-tab="json-tab" id="tab-btn-json">
+          💾 Xuất / Nhập JSON
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <!-- General Quiz Info (Shared) -->
+        <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+          <div class="form-group" style="margin-bottom: 0;">
+            <label class="form-label">Tên bộ đề trắc nghiệm *</label>
+            <input type="text" class="form-input" id="builder-quiz-title" placeholder="VD: Luyện tập Java Stream API & Lambda">
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label class="form-label">Phân loại / Module</label>
+            <input type="text" class="form-input" id="builder-quiz-category" placeholder="Tự tạo, Java Core..." value="Tự tạo">
+          </div>
+          <div class="form-group" style="margin-bottom: 0;">
+            <label class="form-label">Thời gian (Phút)</label>
+            <input type="number" class="form-input" id="builder-quiz-duration" value="25" min="5" max="180">
+          </div>
+        </div>
+
+        <!-- TAB 1: QUICK TEXT IMPORT -->
+        <div id="tab-content-quick-text">
+          <!-- Syntax Guide Accordion -->
+          <div class="syntax-guide-box">
+            <h4>
+              <span>📋</span> Quy tắc nhập nhanh bằng đoạn văn bản:
+              <button class="btn btn-ghost" id="btn-paste-sample-syntax" style="margin-left: auto; padding: 2px 8px; font-size: 0.8rem;">
+                📥 Dán đoạn văn bản mẫu
+              </button>
+            </h4>
+            <p>Hệ thống hỗ trợ tự động nhận diện các định dạng phổ biến nhất. Bạn chỉ cần dán đoạn văn bản gồm câu hỏi và các đáp án A, B, C, D:</p>
+            <pre class="syntax-sample-pre">Câu 1: Từ khóa nào trong Java dùng để khai báo hằng số?
+A. static
+*B. final (Thêm dấu * hoặc [x] vào đáp án đúng)
+C. const
+D. abstract
+Giải thích: Từ khóa final ngăn cản việc gán lại giá trị của biến.
+
+Câu 2: Cho đoạn mã sau:
+```java
+int a = 5;
+System.out.println(++a);
+```
+A. 5
+B. 6
+C. Biên dịch lỗi
+D. 0
+Đáp án: B (Hoặc khai báo 'Đáp án: B' hoặc 'Answer: B' ở dòng riêng)
+Giải thích: Tiền tố ++a tăng giá trị trước khi in.</pre>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Dán văn bản câu hỏi vào đây:</label>
+            <textarea class="form-textarea" id="builder-quick-text-input" rows="12" placeholder="Dán các câu hỏi trắc nghiệm của bạn vào đây theo quy định..."></textarea>
+          </div>
+
+          <div class="parse-preview-status" id="builder-parse-status"></div>
+        </div>
+
+        <!-- TAB 2: MANUAL FORM -->
+        <div id="tab-content-manual-form" style="display: none;">
+          <div class="form-group">
+            <label class="form-label">Nội dung câu hỏi:</label>
+            <textarea class="form-textarea" id="manual-q-text" rows="3" placeholder="Nhập câu hỏi..."></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Đoạn mã lập trình (Nếu có):</label>
+            <textarea class="form-textarea" id="manual-q-code" rows="3" placeholder="public class Test { ... }"></textarea>
+          </div>
+
+          <div style="display: grid; gap: 0.75rem; margin-bottom: 1.25rem;">
+            <label class="form-label">Các lựa chọn (Tích chọn ô tròn để đặt làm đáp án đúng):</label>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <input type="radio" name="manual-correct" value="0" checked id="rad-opt-0">
+              <input type="text" class="form-input" id="manual-opt-0" placeholder="Đáp án A">
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <input type="radio" name="manual-correct" value="1" id="rad-opt-1">
+              <input type="text" class="form-input" id="manual-opt-1" placeholder="Đáp án B">
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <input type="radio" name="manual-correct" value="2" id="rad-opt-2">
+              <input type="text" class="form-input" id="manual-opt-2" placeholder="Đáp án C">
+            </div>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <input type="radio" name="manual-correct" value="3" id="rad-opt-3">
+              <input type="text" class="form-input" id="manual-opt-3" placeholder="Đáp án D">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Lời giải thích chi tiết:</label>
+            <input type="text" class="form-input" id="manual-q-expl" placeholder="Giải thích lý do vì sao đáp án này đúng...">
+          </div>
+
+          <button class="btn btn-secondary" id="btn-manual-add-q">➕ Thêm câu hỏi này vào danh sách</button>
+          <div id="manual-added-summary" style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--text-secondary);">
+            Đã thêm: 0 câu hỏi
+          </div>
+        </div>
+
+        <!-- TAB 3: JSON BACKUP / RESTORE -->
+        <div id="tab-content-json" style="display: none;">
+          <p style="margin-bottom: 1rem; color: var(--text-secondary); font-size: 0.9rem;">
+            Bạn có thể xuất toàn bộ ngân hàng đề thi ra file JSON để sao lưu hoặc tải file JSON vào để chia sẻ đề trắc nghiệm với bạn bè.
+          </p>
+
+          <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+            <button class="btn btn-primary" id="btn-export-all-json">
+              📤 Xuất Toàn Bộ Đề (Tải file JSON)
+            </button>
+            <label class="btn btn-secondary" style="cursor: pointer;">
+              📥 Nhập Từ File JSON
+              <input type="file" id="input-import-json-file" accept=".json" style="display: none;">
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Dán mã JSON trực tiếp:</label>
+            <textarea class="form-textarea" id="json-raw-textarea" rows="8" placeholder="Dán mảng JSON các bộ đề hoặc câu hỏi..."></textarea>
+          </div>
+          <button class="btn btn-accent" id="btn-import-raw-json">Nạp dữ liệu từ mã JSON</button>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-ghost" id="builder-cancel-btn">Hủy bỏ</button>
+        <button class="btn btn-primary" id="builder-save-quiz-btn">💾 Lưu Bộ Đề</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       MODAL: MISTAKE NOTEBOOK (SỔ TAY CÂU SAI)
+       ===================================================================== -->
+  <div class="modal-overlay" id="mistake-notebook-modal" style="display:none;">
+    <div class="modal-content-lg">
+      <div class="modal-header">
+        <h3 class="modal-title">📓 Sổ Tay Câu Sai — Ôn Tập Thông Minh</h3>
+        <button class="btn btn-ghost btn-icon-only" id="notebook-close-btn">✖</button>
+      </div>
+      <div class="modal-body">
+        <div style="display: flex; gap: 0.75rem; align-items: center; margin-bottom: 1.25rem; flex-wrap: wrap;">
+          <div id="notebook-stats" style="font-size: 0.9rem; color: var(--text-secondary); flex: 1;">Đang tải...</div>
+          <button class="btn btn-accent" id="btn-practice-notebook" style="min-width: 180px;">▶ Ôn Tập Tất Cả Câu Sai</button>
+          <button class="btn btn-danger" id="btn-clear-notebook" style="min-width: 140px;">🗑 Xóa Sổ Tay</button>
+        </div>
+        <div id="notebook-questions-list" style="max-height: 55vh; overflow-y: auto;">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Load Core Java Data (320 questions parsed) -->
+  <script src="data.js"></script>
+  <!-- Load DBMS Data (118 questions) -->
+  <script src="dbms_data.js"></script>
+  <!-- Main Application Logic -->
+  <script src="app.js"></script>
+</body>
+</html>

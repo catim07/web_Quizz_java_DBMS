@@ -1,0 +1,4160 @@
+[
+  {
+    "id": "dbms_q_1",
+    "original_qnum": 1,
+    "module_num": 1,
+    "module_name": "Module 1: Introduction to DBMS",
+    "question": "Which of the following is not an advantage of the DBMS?",
+    "code": "",
+    "options": [
+      "User application data creation.",
+      "Data independence and efficient access.",
+      "Reduced application development time.",
+      "Data integrity and security."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 1: Introduction to DBMS)."
+  },
+  {
+    "id": "dbms_q_2",
+    "original_qnum": 2,
+    "module_num": 1,
+    "module_name": "Module 1: Introduction to DBMS",
+    "question": "Which Background process updates the online redo log files with the redo log buffer\nentries when a COMMIT occurs in the database?",
+    "code": "",
+    "options": [
+      "LGWR",
+      "DBWn",
+      "CKPT",
+      "CJQn"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 1: Introduction to DBMS)."
+  },
+  {
+    "id": "dbms_q_3",
+    "original_qnum": 3,
+    "module_num": 1,
+    "module_name": "Module 1: Introduction to DBMS",
+    "question": "Which files can be multiplexed?",
+    "code": "",
+    "options": [
+      "Data Files",
+      "Control Files",
+      "Parameter Files",
+      "Data Buffer Cache"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 1: Introduction to DBMS)."
+  },
+  {
+    "id": "dbms_q_4",
+    "original_qnum": 4,
+    "module_num": 1,
+    "module_name": "Module 1: Introduction to DBMS",
+    "question": "Which Statement about the Data files is not true?",
+    "code": "",
+    "options": [
+      "A data file Can belong to only one tablespace",
+      "At least one data file is required for each tablespace",
+      "Maintain the logs of the changes made to the database to enable recovery.",
+      "Data File contains the data in the database, including tables, indexes, temp segments etc"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 1: Introduction to DBMS)."
+  },
+  {
+    "id": "dbms_q_5",
+    "original_qnum": 5,
+    "module_num": 1,
+    "module_name": "Module 1: Introduction to DBMS",
+    "question": "Which Statement about the Oracle Initialization Parameter Files (init.ora) is not true?",
+    "code": "",
+    "options": [
+      "Enclose in quotation marks any parameter value that contains a special character",
+      "An initialization parameter file should contain only parameters and comments.",
+      "Several parameters can be specified on one line, separated by a space",
+      "Parameters must be specified in a predefined order."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 1: Introduction to DBMS)."
+  },
+  {
+    "id": "dbms_q_6",
+    "original_qnum": 6,
+    "module_num": 1,
+    "module_name": "Module 1: Introduction to DBMS",
+    "question": "What is not true about the Oracle Instance?",
+    "code": "",
+    "options": [
+      "Oracle Instance provides means to access Oracle database",
+      "Oracle Instance  is a collection of data that is treated as a unit, which stores and retrieves related information",
+      "Oracle Instance  can open and use one database at a time",
+      "Oracle Instance  consists of SGA and background processes"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 1: Introduction to DBMS)."
+  },
+  {
+    "id": "dbms_q_7",
+    "original_qnum": 7,
+    "module_num": 1,
+    "module_name": "Module 1: Introduction to DBMS",
+    "question": "Which of the following is not a part of System Global Area?",
+    "code": "",
+    "options": [
+      "Redo log Buffer",
+      "Data Buffer Cache",
+      "Parameter Files",
+      "Shared Pool"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 1: Introduction to DBMS)."
+  },
+  {
+    "id": "dbms_q_8",
+    "original_qnum": 8,
+    "module_num": 1,
+    "module_name": "Module 1: Introduction to DBMS",
+    "question": "Which of the following statements about the Data buffer cache is not true?",
+    "code": "",
+    "options": [
+      "Data buffer cache stores a collection of the most recently used SQL statements.",
+      "Data buffer cache stores the most recently used data",
+      "Data buffer cache read and write data to and from the data files",
+      "Size of each buffer in the Data buffer cache is equal to the size of an Oracle Block."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 1: Introduction to DBMS)."
+  },
+  {
+    "id": "dbms_q_9",
+    "original_qnum": 9,
+    "module_num": 1,
+    "module_name": "Module 1: Introduction to DBMS",
+    "question": "Which of the following statements about the Redo log buffer is not true?",
+    "code": "",
+    "options": [
+      "The client process records changes in the redo log buffer",
+      "The Redo log buffer records changes made to a database",
+      "The server process records changes in the redo log buffer",
+      "The Redo log buffer records the block that is changed, the location of the change and the new Value."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 1: Introduction to DBMS)."
+  },
+  {
+    "id": "dbms_q_10",
+    "original_qnum": 10,
+    "module_num": 1,
+    "module_name": "Module 1: Introduction to DBMS",
+    "question": "Which of the following is not stored by the Library Cache?",
+    "code": "",
+    "options": [
+      "Results of the SQL statements",
+      "The text of SQL statement",
+      "The Parse Tree: complied version of a statement.",
+      "The Execution Plan"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 1: Introduction to DBMS)."
+  },
+  {
+    "id": "dbms_q_11",
+    "original_qnum": 11,
+    "module_num": 1,
+    "module_name": "Module 1: Introduction to DBMS",
+    "question": "Which of the following is not true about the Shared Pool?",
+    "code": "",
+    "options": [
+      "The shared pool can be used by multiple SQL statements for the processing of data retrieved.",
+      "Shared Pool is a part of the SGA",
+      "Shared Pool consists of the Library cache and the Data dictionary cache",
+      "The shared pool is sized by SHARED_POOL_SIZE parameter of init.ora"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 1: Introduction to DBMS)."
+  },
+  {
+    "id": "dbms_q_12",
+    "original_qnum": 12,
+    "module_num": 1,
+    "module_name": "Module 1: Introduction to DBMS",
+    "question": "Which of the following systems requires a database?",
+    "code": "",
+    "options": [
+      "Payroll System",
+      "Airline reservations system",
+      "A web site that is capturing registered users",
+      "All of the above"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 1: Introduction to DBMS)."
+  },
+  {
+    "id": "dbms_q_13",
+    "original_qnum": 13,
+    "module_num": 1,
+    "module_name": "Module 1: Introduction to DBMS",
+    "question": "Which of the following is not contained in the Program Global Area?",
+    "code": "",
+    "options": [
+      "SQL Execution Plan",
+      "Session information",
+      "Cursor information",
+      "SQL execution work areas"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 1: Introduction to DBMS)."
+  },
+  {
+    "id": "dbms_q_14",
+    "original_qnum": 14,
+    "module_num": 1,
+    "module_name": "Module 1: Introduction to DBMS",
+    "question": "Which of the following is not a valid level of abstraction in a DBMS?",
+    "code": "",
+    "options": [
+      "Tables",
+      "Views",
+      "Conceptual Schema",
+      "Physical Schema"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 1: Introduction to DBMS)."
+  },
+  {
+    "id": "dbms_q_15",
+    "original_qnum": 15,
+    "module_num": 1,
+    "module_name": "Module 1: Introduction to DBMS",
+    "question": "Which of the following is not among the ACID properties of a Transaction?",
+    "code": "",
+    "options": [
+      "Independence",
+      "Atomicity",
+      "Consistency",
+      "Durability"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 1: Introduction to DBMS)."
+  },
+  {
+    "id": "dbms_q_16",
+    "original_qnum": 16,
+    "module_num": 1,
+    "module_name": "Module 1: Introduction to DBMS",
+    "question": "Which of the following are the advantages of the DBMS over a conventional file system\nthat stores data, in terms of processing power requires a database?",
+    "code": "",
+    "options": [
+      "All of the above",
+      "Ability to create Data Reports",
+      "Efficient Querying of Data",
+      "Matching and Sorting"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 1: Introduction to DBMS)."
+  },
+  {
+    "id": "dbms_q_17",
+    "original_qnum": 17,
+    "module_num": 1,
+    "module_name": "Module 1: Introduction to DBMS",
+    "question": "Which of the following is not a valid type of a database management system?",
+    "code": "",
+    "options": [
+      "OODBMS (Operations Oriented Database Management System)",
+      "NDBMS (Networked Database Management System)",
+      "HDBMS (Hierarchical Database Management System)",
+      "unsigned charRDBMS (Relational Database Management System)"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 1: Introduction to DBMS)."
+  },
+  {
+    "id": "dbms_q_18",
+    "original_qnum": 18,
+    "module_num": 1,
+    "module_name": "Module 1: Introduction to DBMS",
+    "question": "Which of the following is not a part of the Oracle Database?",
+    "code": "",
+    "options": [
+      "Shared Pool",
+      "Data Files",
+      "Control Files",
+      "Redo Log Files"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 1: Introduction to DBMS)."
+  },
+  {
+    "id": "dbms_q_19",
+    "original_qnum": 19,
+    "module_num": 1,
+    "module_name": "Module 1: Introduction to DBMS",
+    "question": "In an instance, multiple ________ can share an SGA.",
+    "code": "",
+    "options": [
+      "Server Processes",
+      "PMON Processes",
+      "Instances",
+      "Databases"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 1: Introduction to DBMS)."
+  },
+  {
+    "id": "dbms_q_20",
+    "original_qnum": 20,
+    "module_num": 1,
+    "module_name": "Module 1: Introduction to DBMS",
+    "question": "Which component in the following list is not part of the System Global Area (SGA)?",
+    "code": "",
+    "options": [
+      "Sort Area",
+      "Database Buffer Cache",
+      "Library Cache",
+      "Shared Pool"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 1: Introduction to DBMS)."
+  },
+  {
+    "id": "dbms_q_21",
+    "original_qnum": 21,
+    "module_num": 2,
+    "module_name": "Module 2: Introduction to SQL",
+    "question": "What does SQL stand for?",
+    "code": "",
+    "options": [
+      "Structured Query Language",
+      "Structured Question Language",
+      "Strong Question Language",
+      "Strong Query Language"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 2: Introduction to SQL)."
+  },
+  {
+    "id": "dbms_q_22",
+    "original_qnum": 22,
+    "module_num": 2,
+    "module_name": "Module 2: Introduction to SQL",
+    "question": "The Employee table contains these columns:\nEmpno  Number(4)\nEname  Varchar2(10)\njob    varchar2(10)\nsal    Varchar2(10)\nYou need to display employee information using this query.\nSELECT Empno, Ename, Job \"Employee Information\" FROM employee;\nHow many columns are presented after executing this query?",
+    "code": "",
+    "options": [
+      "2",
+      "1",
+      "3"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 2: Introduction to SQL)."
+  },
+  {
+    "id": "dbms_q_23",
+    "original_qnum": 23,
+    "module_num": 2,
+    "module_name": "Module 2: Introduction to SQL",
+    "question": "The ITEM table contains these columns:\nITEM_ID  NUMBER(9)\nCOST     NUMBER(7,2)\nRETAIL   NUMBER(7,2)\nThe RETAIL and COST columns contain values greater than zero.\nEvaluate these two SQL statements:\n1. SELECT item_id, (retail * 1.25) + 5.00 - (cost * 1.10) - (cost * .10) AS Calculated Profit\nFROM item;\n2. SELECT item_id, retail * 1.25 + 5.00 - cost * 1.10 - cost * .10 \"Calculated Profit\"\nFROM item;\nWhat will be the result?",
+    "code": "",
+    "options": [
+      "One of the statements will NOT execute.",
+      "Statement 1 will display the 'Calculated Profit' column heading.",
+      "Statement 1 and statement 2 will return the same value.",
+      "Statement 1 will return a higher value than statement 2."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 2: Introduction to SQL)."
+  },
+  {
+    "id": "dbms_q_24",
+    "original_qnum": 24,
+    "module_num": 2,
+    "module_name": "Module 2: Introduction to SQL",
+    "question": "Which SQL statement generates the alias Annual Salary for the calculated column\nSALARY*12?",
+    "code": "",
+    "options": [
+      "SELECT ename, salary*12 AS INITCAP ('ANNUAL SALARY') FROM employees;",
+      "SELECT ename, salary*12 AS Annual Salary FROM employees;",
+      "SELECT ename, salary*12 Annual Salary FROM employees;",
+      "SELECT ename, salary*12 'Annual Salary' FROM employees;"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 2: Introduction to SQL)."
+  },
+  {
+    "id": "dbms_q_25",
+    "original_qnum": 25,
+    "module_num": 2,
+    "module_name": "Module 2: Introduction to SQL",
+    "question": "Evaluate this SQL statement:\nSELECT ename, sal, 12*sal+100 FROM emp;\nThe SAL column stores the monthly salary of the employee. Which change must be",
+    "code": "",
+    "options": [
+      "SELECT ename, sal, 12*(sal+100) FROM emp;",
+      "No change is required to achieve the desired results",
+      "SELECT ename, sal, (12*sal) +100 FROM emp;",
+      "SELECT ename, sal+100,*12 FROM emp;"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 2: Introduction to SQL)."
+  },
+  {
+    "id": "dbms_q_26",
+    "original_qnum": 26,
+    "module_num": 2,
+    "module_name": "Module 2: Introduction to SQL",
+    "question": "You need to produce output that states \"Dear Customer customer_name, \".\nThe customer_name data values come from the CUSTOMER_NAME column in the\nCUSTOMERS table.\nWhich statement produces this output?",
+    "code": "",
+    "options": [
+      "SELECT 'Dear Customer ' customer_name ',' FROM customers;",
+      "SELECT dear customer, customer_name, FROM customers;",
+      "SELECT \"Dear Customer\", customer_name ',' FROM customers;",
+      "SELECT 'Dear Customer ' customer_name ',' FROM customers;"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 2: Introduction to SQL)."
+  },
+  {
+    "id": "dbms_q_27",
+    "original_qnum": 27,
+    "module_num": 2,
+    "module_name": "Module 2: Introduction to SQL",
+    "question": "Which of the following query will correctly display each row of the Employees table\nonly once given that Employees table may contain duplicate rows?",
+    "code": "",
+    "options": [
+      "SELECT distinct * from employees;",
+      "SELECT unique rows from employees;",
+      "SELECT * from employees;",
+      "SELECT distinct rows from employees;"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 2: Introduction to SQL)."
+  },
+  {
+    "id": "dbms_q_28",
+    "original_qnum": 28,
+    "module_num": 2,
+    "module_name": "Module 2: Introduction to SQL",
+    "question": "What will be the output of the following query?\nSELECT 1 FROM employees;",
+    "code": "",
+    "options": [
+      "This statement will return 1 as many times as the number of rows in the employees table.",
+      "This statement will return first row of the employees table",
+      "This statement will return only one row and one column in output and value will be 1.",
+      "This statement will return error."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 2: Introduction to SQL)."
+  },
+  {
+    "id": "dbms_q_29",
+    "original_qnum": 29,
+    "module_num": 2,
+    "module_name": "Module 2: Introduction to SQL",
+    "question": "What of the following statements is not true?",
+    "code": "",
+    "options": [
+      "Clauses must be placed on separate lines.",
+      "SQL statements are not case sensitive.",
+      "SQL statements can be on one or more lines.",
+      "Keywords cannot be abbreviated or split across lines."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 2: Introduction to SQL)."
+  },
+  {
+    "id": "dbms_q_30",
+    "original_qnum": 30,
+    "module_num": 2,
+    "module_name": "Module 2: Introduction to SQL",
+    "question": "What is true about NULL?",
+    "code": "",
+    "options": [
+      "NULL is a value that is unavailable, unassigned, unknown, or inapplicable",
+      "NULL is same as blank spaces",
+      "NULL in a number column can be treated as zero",
+      "NULL means an incorrect value"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 2: Introduction to SQL)."
+  },
+  {
+    "id": "dbms_q_31",
+    "original_qnum": 31,
+    "module_num": 2,
+    "module_name": "Module 2: Introduction to SQL",
+    "question": "What should be the result of the expression for the employees having commission_pct as\nNULL?\nSELECT 12 * salary * commission_pct 'ANNSAL_COMM'\nFROM employees;",
+    "code": "",
+    "options": [
+      "None of the above",
+      "Zero",
+      "NULL",
+      "Unpredictable"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 2: Introduction to SQL)."
+  },
+  {
+    "id": "dbms_q_32",
+    "original_qnum": 32,
+    "module_num": 2,
+    "module_name": "Module 2: Introduction to SQL",
+    "question": "Which SQL statement is used to extract data from a database?",
+    "code": "",
+    "options": [
+      "SELECT",
+      "GET",
+      "OPEN",
+      "EXTRACT"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 2: Introduction to SQL)."
+  },
+  {
+    "id": "dbms_q_33",
+    "original_qnum": 33,
+    "module_num": 2,
+    "module_name": "Module 2: Introduction to SQL",
+    "question": "Which statement about the column aliases is not True?",
+    "code": "",
+    "options": [
+      "\"AS\" keyword must be used between the column name and the column alias",
+      "A column alias renames a column heading",
+      "A column alias requires double quotation marks if it contains spaces or special characters or is case sensitive",
+      "Immediately follows the column name."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 2: Introduction to SQL)."
+  },
+  {
+    "id": "dbms_q_34",
+    "original_qnum": 34,
+    "module_num": 2,
+    "module_name": "Module 2: Introduction to SQL",
+    "question": "With SQL, how do you select a column named \"FirstName\" from a table named\n\"Persons\"?",
+    "code": "",
+    "options": [
+      "SELECT Persons.FirstName ;",
+      "SELECT FirstName FROM Persons;",
+      "EXTRACT FirstName FROM Persons ;",
+      "SELECT FROM persons the FirstName;"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 2: Introduction to SQL)."
+  },
+  {
+    "id": "dbms_q_35",
+    "original_qnum": 35,
+    "module_num": 2,
+    "module_name": "Module 2: Introduction to SQL",
+    "question": "In the following query, which expression is evaluated first?\nSELECT id_number, (quantity - 100 / 0.15 + 20 - 10) FROM inventory",
+    "code": "",
+    "options": [
+      "D. 20 - 10",
+      "0.15 + 20",
+      "100 / 0.15",
+      "quantity - 100"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 2: Introduction to SQL)."
+  },
+  {
+    "id": "dbms_q_36",
+    "original_qnum": 36,
+    "module_num": 2,
+    "module_name": "Module 2: Introduction to SQL",
+    "question": "Which SQL statement is used to return only different values?",
+    "code": "",
+    "options": [
+      "SELECT DISTINCT",
+      "SELECT DIFFERENT",
+      "SELECT UNIQUE",
+      "SELECT NO DUPLICATES"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 2: Introduction to SQL)."
+  },
+  {
+    "id": "dbms_q_37",
+    "original_qnum": 37,
+    "module_num": 2,
+    "module_name": "Module 2: Introduction to SQL",
+    "question": "Which clauses of a SELECT statement are mandatory?",
+    "code": "",
+    "options": [
+      "SELECT and FROM",
+      "Only SELECT",
+      "SELECT and WHERE",
+      "SELECT, FROM and WHERE"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 2: Introduction to SQL)."
+  },
+  {
+    "id": "dbms_q_38",
+    "original_qnum": 38,
+    "module_num": 2,
+    "module_name": "Module 2: Introduction to SQL",
+    "question": "Which SELECT statement should you use if you want to display unique combinations of\nthe POSITION and MANAGER values from the EMPLOYEE table?",
+    "code": "",
+    "options": [
+      "SELECT position, manager DISTINCT FROM employee;",
+      "SELECT DISTINCT position, manager FROM employee;",
+      "SELECT position, manager FROM employee;",
+      "SELECT position, DISTINCT manager FROM employee;"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 2: Introduction to SQL)."
+  },
+  {
+    "id": "dbms_q_39",
+    "original_qnum": 39,
+    "module_num": 2,
+    "module_name": "Module 2: Introduction to SQL",
+    "question": "You are formulating queries in a SQL* Plus.\nWhich of the following statement correctly describes how to specify a column alias?",
+    "code": "",
+    "options": [
+      "Place the alias at the end of the statement to describe the table.",
+      "Place the alias after each column separated by a comma to describe the column.",
+      "Place the alias after each column separated by a space to describe the column.",
+      "Place the alias at the beginning of the statement to describe the table."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 2: Introduction to SQL)."
+  },
+  {
+    "id": "dbms_q_40",
+    "original_qnum": 40,
+    "module_num": 2,
+    "module_name": "Module 2: Introduction to SQL",
+    "question": "With SQL, how do you select all the columns from a table named \"Persons\"?",
+    "code": "",
+    "options": [
+      "SELECT *.Persons",
+      "SELECT Persons",
+      "SELECT [all] FROM Persons",
+      "SELECT * FROM Persons"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 2: Introduction to SQL)."
+  },
+  {
+    "id": "dbms_q_41",
+    "original_qnum": 41,
+    "module_num": 3,
+    "module_name": "Module 3: DDL (Data Definition Language)",
+    "question": "What does the TRUNCATE statement do?",
+    "code": "",
+    "options": [
+      "Removes the table",
+      "Removes all rows from a table",
+      "Shortens the table to 10 rows",
+      "Removes all columns from a table"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 3: DDL (Data Definition Language))."
+  },
+  {
+    "id": "dbms_q_42",
+    "original_qnum": 42,
+    "module_num": 3,
+    "module_name": "Module 3: DDL (Data Definition Language)",
+    "question": "Which statement about data types is true?",
+    "code": "",
+    "options": [
+      "The CHAR datatype should be used for fixed-length character data",
+      "The TIMESTAMP data type is an extension of the VARCHAR2 data type",
+      "The BLOB data type stores character data up to four gigabytes",
+      "The VARCHAR2 data type stores character data up to four gigabytes"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 3: DDL (Data Definition Language))."
+  },
+  {
+    "id": "dbms_q_43",
+    "original_qnum": 43,
+    "module_num": 3,
+    "module_name": "Module 3: DDL (Data Definition Language)",
+    "question": "The EMPLOYEES table has these columns:\nLAST_NAME  VARCHAR2(35)\nSALARY     NUMBER(8,2)\nHIRE_DATE  DATE",
+    "code": "",
+    "options": [
+      "A change to the DEFAULT value affects only subsequent insertions to the table.",
+      "Column definitions cannot be altered to add DEFAULT values.",
+      "Column definitions cannot be altered at add DEFAULT values for columns with a NUMBER data type",
+      "All the rows that have a NULL value for the SALARY column will be updated with the value5000."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 3: DDL (Data Definition Language))."
+  },
+  {
+    "id": "dbms_q_44",
+    "original_qnum": 44,
+    "module_num": 3,
+    "module_name": "Module 3: DDL (Data Definition Language)",
+    "question": "You need to change the definition of an existing table. The COMMERCIALS table\nneeds its DESCRIPTION column changed to hold varying length characters up to 2000\nbytes. The column can currently hold 1000 bytes per value. The table contains 20000\nrows.\nWhich statement is valid?",
+    "code": "",
+    "options": [
+      "ALTER TABLE commercials MODIFY (description VARCHAR2(2000));",
+      "ALTER TABLE commercials MODIFY (description CHAR2(2000));",
+      "ALTER TABLE commercials CHANGE (description CHAR2(2000));",
+      "ALTER TABLE commercials CHANGE (description VARCHAR2(2000));"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 3: DDL (Data Definition Language))."
+  },
+  {
+    "id": "dbms_q_45",
+    "original_qnum": 45,
+    "module_num": 3,
+    "module_name": "Module 3: DDL (Data Definition Language)",
+    "question": "Evaluate the SQL statement:\nDROP TABLE DEPT;\nWhich statement is false about the above SQL statement?",
+    "code": "",
+    "options": [
+      "All views based on the DEPT table are deleted.",
+      "You cannot roll back this statement.",
+      "All pending transactions are committed.",
+      "All indexes based on the DEPT table are dropped."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 3: DDL (Data Definition Language))."
+  },
+  {
+    "id": "dbms_q_46",
+    "original_qnum": 46,
+    "module_num": 3,
+    "module_name": "Module 3: DDL (Data Definition Language)",
+    "question": "Which statement describes the ROWID data type?",
+    "code": "",
+    "options": [
+      "A hexadecimal string representing the unique address of a row in its table.",
+      "Binary data up to 4 gigabytes",
+      "Character data up to 4 gigabytes.",
+      "Raw binary data of variable length up to 2 gigabytes."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 3: DDL (Data Definition Language))."
+  },
+  {
+    "id": "dbms_q_47",
+    "original_qnum": 47,
+    "module_num": 3,
+    "module_name": "Module 3: DDL (Data Definition Language)",
+    "question": "You just issued the following statement.\nALTER TABLE marketing\nDROP COLUMN profit;\nWhich of the following choices identified when the column will actually be removed\nfrom database?",
+    "code": "",
+    "options": [
+      "Immediately following statement execution.",
+      "After the Alter table drop unused columns command is issued.",
+      "After the Alter table set unused column command is issued.",
+      "After the Alter table modify command is issued."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 3: DDL (Data Definition Language))."
+  },
+  {
+    "id": "dbms_q_48",
+    "original_qnum": 48,
+    "module_num": 3,
+    "module_name": "Module 3: DDL (Data Definition Language)",
+    "question": "Which of the following can be a valid table name?",
+    "code": "",
+    "options": [
+      "Catch_#22",
+      "Number",
+      "1966_Invoices",
+      "#Invoices"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 3: DDL (Data Definition Language))."
+  },
+  {
+    "id": "dbms_q_49",
+    "original_qnum": 49,
+    "module_num": 3,
+    "module_name": "Module 3: DDL (Data Definition Language)",
+    "question": "Which describes the default behaviour when you create a table?",
+    "code": "",
+    "options": [
+      "Tables are created in your schema.",
+      "The table is accessible to all users.",
+      "Tables are created in the public schema.",
+      "Tables are created in the DBA schema."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 3: DDL (Data Definition Language))."
+  },
+  {
+    "id": "dbms_q_50",
+    "original_qnum": 50,
+    "module_num": 3,
+    "module_name": "Module 3: DDL (Data Definition Language)",
+    "question": "You need to modify the STUDENTS table to add a primary key on the STUDENT_ID\ncolumn. The table is currently empty. Which statement accomplishes this task?",
+    "code": "",
+    "options": [
+      "ALTER TABLE students ADD CONSTRAINT stud_id_pk PRIMARY KEY (student_id);",
+      "ALTER TABLE students ADD PRIMARY KEY student_id;",
+      "ALTER TABLE students ADD CONSTRAINT PRIMARY KEY (student_id);",
+      "ALTER TABLE students ADD CONSTRAINT stud_id_pk PRIMARY KEY student_id;"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 3: DDL (Data Definition Language))."
+  },
+  {
+    "id": "dbms_q_51",
+    "original_qnum": 51,
+    "module_num": 3,
+    "module_name": "Module 3: DDL (Data Definition Language)",
+    "question": "Evaluate the SQL statement:\nTRUNCATE TABLE DEPT;\nWhich statement is not true about the SQL statement?",
+    "code": "",
+    "options": [
+      "It releases the storage space used by the table.",
+      "It does not release the storage space used by the table.",
+      "You can NOT roll back the deletion of rows after the statement executes.",
+      "You must be the owner of the table or have DELETE ANY TABLE system privileges to truncate the DEPT table"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 3: DDL (Data Definition Language))."
+  },
+  {
+    "id": "dbms_q_52",
+    "original_qnum": 52,
+    "module_num": 3,
+    "module_name": "Module 3: DDL (Data Definition Language)",
+    "question": "Which is not a correct guideline for naming database tables?",
+    "code": "",
+    "options": [
+      "Must begin with either a number or a letter.",
+      "Must be 1-30 characters long.",
+      "Should not be an Oracle Server reserved word.",
+      "Must contain only A-Z, a-z, 0-9, _, $, and #."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 3: DDL (Data Definition Language))."
+  },
+  {
+    "id": "dbms_q_53",
+    "original_qnum": 53,
+    "module_num": 3,
+    "module_name": "Module 3: DDL (Data Definition Language)",
+    "question": "Which is a valid CREATE TABLE statement?",
+    "code": "",
+    "options": [
+      "CREATE TABLE EMP9$# AS (empid number(2));",
+      "CREATE TABLE EMP*123 AS (empid number(2));",
+      "CREATE TABLE PACKAGE AS (packid num(2));",
+      "CREATE TABLE EMP_TEST AS (empid number(2));"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 3: DDL (Data Definition Language))."
+  },
+  {
+    "id": "dbms_q_54",
+    "original_qnum": 54,
+    "module_num": 3,
+    "module_name": "Module 3: DDL (Data Definition Language)",
+    "question": "Which of these DATETIME data types cannot be used when specifying column\ndefinitions?",
+    "code": "",
+    "options": [
+      "INTERVAL MONTH TO DAY",
+      "TIMESTAMP",
+      "INTERVAL DAY TO SECOND",
+      "INTERVAL YEAR TO MONTH"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 3: DDL (Data Definition Language))."
+  },
+  {
+    "id": "dbms_q_55",
+    "original_qnum": 55,
+    "module_num": 3,
+    "module_name": "Module 3: DDL (Data Definition Language)",
+    "question": "Which statement about a table is true?",
+    "code": "",
+    "options": [
+      "The size of a table does NOT need to be specified",
+      "A table can have up to 10,000 columns",
+      "A table CANNOT be created while users are using the database.",
+      "The structure of a table CANNOT be modified while the table is online."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 3: DDL (Data Definition Language))."
+  },
+  {
+    "id": "dbms_q_56",
+    "original_qnum": 56,
+    "module_num": 3,
+    "module_name": "Module 3: DDL (Data Definition Language)",
+    "question": "Consider a general employees table, which statement should you use to increase the\nEMP_LNAME column length to 25 if the column currently contains 3000 records?",
+    "code": "",
+    "options": [
+      "ALTER TABLE employee MODIFY emp_lname VARCHAR2(25);",
+      "You CANNOT increases the width of the EMP_LNAME column.",
+      "ALTER TABLE employee RENAME emp_lname VARCHAR2(25);",
+      "ALTER employee TABLE MODIFY COLUMN emp_lname VARCHAR2(25);"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 3: DDL (Data Definition Language))."
+  },
+  {
+    "id": "dbms_q_57",
+    "original_qnum": 57,
+    "module_num": 3,
+    "module_name": "Module 3: DDL (Data Definition Language)",
+    "question": "Which statement will permanently remove all the data in, the indexes on, and the\nstructure of the PO_DETAIL table?",
+    "code": "",
+    "options": [
+      "DROP TABLE po_detail;",
+      "DELETE TABLE po_detail;",
+      "TRUNCATE TABLE po_detail;",
+      "ALTER TABLE po_detail SET UNUSED (po_num, po_line_id, product_id, quantity, unit_price);"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 3: DDL (Data Definition Language))."
+  },
+  {
+    "id": "dbms_q_58",
+    "original_qnum": 58,
+    "module_num": 3,
+    "module_name": "Module 3: DDL (Data Definition Language)",
+    "question": "Consider an Employees table in which the MGR_ID column currently contains\nemployee identification numbers, and you need to allow users to include text characters\nin the identification values. Which statement should you use to implement this?",
+    "code": "",
+    "options": [
+      "You CANNOT modifies the data type of the MGR_ID column.",
+      "ALTER employee MODIFY (mgr_id VARCHAR2(15));",
+      "ALTER TABLE employee MODIFY (mgr_id VARCHAR2(15));",
+      "ALTER employee TABLE MODIFY COLUMN (mgr_id VARCHAR2(15));"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 3: DDL (Data Definition Language))."
+  },
+  {
+    "id": "dbms_q_59",
+    "original_qnum": 59,
+    "module_num": 3,
+    "module_name": "Module 3: DDL (Data Definition Language)",
+    "question": "Which CREATE TABLE statements will not fail?",
+    "code": "",
+    "options": [
+      "CREATE TABLE time (time1 NUMBER(9));",
+      "CREATE TABLE date (time_id NUMBER(9));",
+      "CREATE TABLE time* (time_id NUMBER(9));",
+      "CREATE TABLE $time (time_id NUMBER(9));"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 3: DDL (Data Definition Language))."
+  },
+  {
+    "id": "dbms_q_60",
+    "original_qnum": 60,
+    "module_num": 3,
+    "module_name": "Module 3: DDL (Data Definition Language)",
+    "question": "Examine the structure of the PRODUCT table.\nPRODUCT_ID    NUMBER        Primary Key\nPRODUCT_NAME  VARCHAR2(25)\nSUPPLIER_ID   NUMBER\nLIST_PRICE    NUMBER(7,2)\nYou need to reduce the LIST_PRICE column precision to 6 with a scale of 2 and ensure\nthat when inserting a row into the PRODUCT table without a value for the LIST_PRICE\ncolumn, a price of $5.00 will automatically be inserted. The PRODUCT table currently\ncontains no records.\nWhich statement should you use?",
+    "code": "",
+    "options": [
+      "ALTER TABLE product MODIFY (list_price NUMBER(6,2) DEFAULT 5);",
+      "ALTER TABLE product ADD OR REPLACE (list_price NUMBER(8,2) DEFAULT 5);",
+      "ALTER TABLE product MODIFY COLUMN (list_price NUMBER(6,2) DEFAULT '$5.00');",
+      "You CANNOT reduces the size of the LIST_PRICE column."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 3: DDL (Data Definition Language))."
+  },
+  {
+    "id": "dbms_q_61",
+    "original_qnum": 61,
+    "module_num": 4,
+    "module_name": "Module 4: Constraints",
+    "question": "Which ALTER TABLE statement should you use to add a PRIMARY KEY constraint\non the MANUFACTURER_ID column of the INVENTORY table?",
+    "code": "",
+    "options": [
+      "ALTER TABLE inventory ADD PRIMARY KEY (manufacturer_id);",
+      "ALTER TABLE inventory ADD CONSTRAINT manufacturer_id PRIMARY KEY;",
+      "ALTER TABLE inventory MODIFY manufacturer_id CONSTRAINT PRIMARY KEY;",
+      "ALTER TABLE inventory MODIFY CONSTRAINT PRIMARY KEY manufacturer_id;"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 4: Constraints)."
+  },
+  {
+    "id": "dbms_q_62",
+    "original_qnum": 62,
+    "module_num": 4,
+    "module_name": "Module 4: Constraints",
+    "question": "Which statement explicitly names a constraint?",
+    "code": "",
+    "options": [
+      "ALTER TABLE student_grades ADD CONSTRAINT student_id_fk FOREIGN KEY (student_id) REFERENCES students(student_id);",
+      "ALTER TABLE student_grades ADD FOREIGN KEY (student_id) REFERENCES students(student_id);",
+      "ALTER TABLE student_grades ADD CONSTRAINT NAME = student_id_fk FOREIGN KEY (student_id) REFERENCES students(student_id);",
+      "ALTER TABLE student grades ADD NAMED CONSTRAINT student_id_fk FOREIGN KEY (student_id) REFERENCES students(student_id);"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 4: Constraints)."
+  },
+  {
+    "id": "dbms_q_63",
+    "original_qnum": 63,
+    "module_num": 4,
+    "module_name": "Module 4: Constraints",
+    "question": "Examine the SQL statements that create ORDERS table:\nCREATE TABLE orders\n(SER_NO      NUMBER UNIQUE,\nORDER_ID    NUMBER,\nORDER_DATE  DATE NOT NULL,\nSTATUS      VARCHAR2(10)\nCHECK (status IN ('CREDIT', 'CASH')),\nPROD_ID     NUMBER\nREFERENCES PRODUCTS(PRODUCT_ID),\nORD_TOTAL   NUMBER\n);\nFor which columns would an index be automatically created when you execute the\nabove SQL statement?",
+    "code": "",
+    "options": [
+      "SER_NO",
+      "ORDER_ID",
+      "STATUS",
+      "PROD_ID"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 4: Constraints)."
+  },
+  {
+    "id": "dbms_q_64",
+    "original_qnum": 64,
+    "module_num": 4,
+    "module_name": "Module 4: Constraints",
+    "question": "For which of these constraints does the Oracle Server implicitly create a unique index?",
+    "code": "",
+    "options": [
+      "PRIMARY KEY",
+      "NOT NULL",
+      "FOREIGN KEY",
+      "CHECK"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 4: Constraints)."
+  },
+  {
+    "id": "dbms_q_65",
+    "original_qnum": 65,
+    "module_num": 4,
+    "module_name": "Module 4: Constraints",
+    "question": "Your attempt to disable a constraint results in the following error:\nORA-02297: cannot disable constraint - dependencies exist.\nWhich of the following types of the constraints is likely causing interference with your\ndisablement of this one?",
+    "code": "",
+    "options": [
+      "Foreign key Constraints",
+      "Check constraints",
+      "Not NULL constraints.",
+      "Unique Constraints."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 4: Constraints)."
+  },
+  {
+    "id": "dbms_q_66",
+    "original_qnum": 66,
+    "module_num": 4,
+    "module_name": "Module 4: Constraints",
+    "question": "Which is not a valid Oracle constraint type?",
+    "code": "",
+    "options": [
+      "CASCADE",
+      "UNIQUE",
+      "CHECK",
+      "NOT NULL"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 4: Constraints)."
+  },
+  {
+    "id": "dbms_q_67",
+    "original_qnum": 67,
+    "module_num": 4,
+    "module_name": "Module 4: Constraints",
+    "question": "Which constraint will ensure that the CUSTOMER_NAME column of the\nCUSTOMERS table always holds a value?",
+    "code": "",
+    "options": [
+      "NOT NULL or Primary Key",
+      "Only Primary Key",
+      "Unique",
+      "Foreign Key"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 4: Constraints)."
+  },
+  {
+    "id": "dbms_q_68",
+    "original_qnum": 68,
+    "module_num": 4,
+    "module_name": "Module 4: Constraints",
+    "question": "Which view should a user query to display the columns associated with the constraints\non a table owned by the user?",
+    "code": "",
+    "options": [
+      "USER_CONS_COLUMNS",
+      "USER_CONSTRAINTS",
+      "USER_OBJECTS",
+      "ALL_CONSTRAINTS"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 4: Constraints)."
+  },
+  {
+    "id": "dbms_q_69",
+    "original_qnum": 69,
+    "module_num": 4,
+    "module_name": "Module 4: Constraints",
+    "question": "You need to modify the STUDENTS table to add a primary key on the STUDENT_ID\ncolumn. The table is currently empty. Which statement accomplishes this task?",
+    "code": "",
+    "options": [
+      "ALTER TABLE students ADD CONSTRAINT stud_id_pk PRIMARY KEY (student_id);",
+      "ALTER TABLE students ADD PRIMARY KEY student_id;",
+      "ALTER TABLE students ADD CONSTRAINT PRIMARY KEY (student_id);",
+      "ALTER TABLE students ADD CONSTRAINT stud_id_pk PRIMARY KEY student_id;"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 4: Constraints)."
+  },
+  {
+    "id": "dbms_q_70",
+    "original_qnum": 70,
+    "module_num": 4,
+    "module_name": "Module 4: Constraints",
+    "question": "Which statement about the CASCADE CONSTRAINTS clause is not true?",
+    "code": "",
+    "options": [
+      "The CASCADE CONSTRAINTS can be used while creating the constraint to enable automatic dropping of foreign key constraint when a primary key is dropped.",
+      "The CASCADE CONSTRAINTS clause is used along with the DROP COLUMN clause.",
+      "The CASCADE CONSTRAINTS clause drops all referential integrity constraints that refer to the primary and unique keys defined on the dropped columns.",
+      "The CASCADE CONSTRAINTS clause also drops all multicolumn constraints defined on the dropped columns"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 4: Constraints)."
+  },
+  {
+    "id": "dbms_q_71",
+    "original_qnum": 71,
+    "module_num": 4,
+    "module_name": "Module 4: Constraints",
+    "question": "Which data dictionary view can be used to view the details of columns involved in\nconstraints ?",
+    "code": "",
+    "options": [
+      "USER_CONS_COLUMNS",
+      "USER_COLS_CONSTRAINTS",
+      "USER_CONSTRAINTS",
+      "USER_OBJECTS"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 4: Constraints)."
+  },
+  {
+    "id": "dbms_q_72",
+    "original_qnum": 72,
+    "module_num": 4,
+    "module_name": "Module 4: Constraints",
+    "question": "Which SQL statement defines the FOREIGN KEY constraint on the DEPTNO column\nof the EMP table?",
+    "code": "",
+    "options": [
+      "CREATE TABLE EMP(empno NUMBER(4),ename VARCNAR2(35),deptno NUMBER(7,2) CONSTRAINT emp_deptno_fk REFERENCES dept (deptno));",
+      "CREATE TABLE EMP(empno NUMBER(4),ename VARCNAR2(35),deptno NUMBER(7,2) NOT NULL CONSTRAINT emp_deptno_fk FOREIGN KEY deptno REFERENCES dept deptno);",
+      "CREATE TABLE EMP(empno NUMBER(4)ename VARCHAR2(35),deptno NUMBER(7,2) NOT NULL, CONSTRAINT emp_deptno_fk REFERENCES dept (deptno) FOREIGN KEY (deptno));",
+      "CREATE TABLE EMP (empno NUMBER(4),ename VARCNAR2(35),deptno NUMBER(7,2) FOREIGN KEY CONSTRAINT emp deptno fk REFERENCES dept (deptno));"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 4: Constraints)."
+  },
+  {
+    "id": "dbms_q_73",
+    "original_qnum": 73,
+    "module_num": 4,
+    "module_name": "Module 4: Constraints",
+    "question": "Which statement should be used to alter the constraints (i.e. either to enable, disable or\ndrop a constraint)?",
+    "code": "",
+    "options": [
+      "ALTER TABLE",
+      "ALTER CONSTRAINT",
+      "DROP CONSTRAINT",
+      "ALTER OBJECT"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 4: Constraints)."
+  },
+  {
+    "id": "dbms_q_74",
+    "original_qnum": 74,
+    "module_num": 4,
+    "module_name": "Module 4: Constraints",
+    "question": "Which statement is not correct about the use of constraints?",
+    "code": "",
+    "options": [
+      "Constraints make complex queries easy",
+      "Constraints enforce rules at the view level.",
+      "Constraints enforce rules at the table level.",
+      "Constraints prevent the deletion of a table if there are dependencies."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 4: Constraints)."
+  },
+  {
+    "id": "dbms_q_75",
+    "original_qnum": 75,
+    "module_num": 4,
+    "module_name": "Module 4: Constraints",
+    "question": "Which statement about NOT NULL constraints is true?",
+    "code": "",
+    "options": [
+      "NOT NULL constraints can only be defined at the column level.",
+      "You CANNOT add a NOT NULL constraint to an existing column using the ALTER TABLE statement",
+      "You can modify the structure of a NOT NULL constraint using the ALTER TABLE statement.",
+      "A NOT NULL constraint is stored in the data dictionary as a UNIQUE constraint."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 4: Constraints)."
+  },
+  {
+    "id": "dbms_q_76",
+    "original_qnum": 76,
+    "module_num": 4,
+    "module_name": "Module 4: Constraints",
+    "question": "The PO_DETAIL table contains these columns:\nPO_NUM      NUMBER  NOT NULL, Primary Key\nPO_LINE_ID  NUMBER  NOT NULL, Primary Key\nPRODUCT_ID  NUMBER  Foreign Key to PRODUCT_ID column of the PRODUCT table\nQUANTITY    NUMBER\nUNIT_PRICE  NUMBER(5,2)\nEvaluate this statement:\nALTER TABLE po_detail\nENABLE CONSTRAINT po_num_pk;\nFor which task would you issue this statement?",
+    "code": "",
+    "options": [
+      "to activate the previously disabled constraint on the PO_NUM column while creating a PRIMARY KEY index",
+      "to drop and recreate the PRIMARY KEY constraint on the PO_NUM column",
+      "to create a new PRIMARY KEY constraint on the PO_NUM column",
+      "to enable any previously disabled FOREIGN KEY constraints that are dependent on thePO_NUM column"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 4: Constraints)."
+  },
+  {
+    "id": "dbms_q_77",
+    "original_qnum": 77,
+    "module_num": 4,
+    "module_name": "Module 4: Constraints",
+    "question": "Which statement about constraints is true?",
+    "code": "",
+    "options": [
+      "Constraints prevent a table with dependencies from being deleted.",
+      "Constraints only enforce rules at the table level.",
+      "You must provide a name for each constraint at the time of its creation.",
+      "Constraint names are NOT required to follow the standard object-naming rules."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 4: Constraints)."
+  },
+  {
+    "id": "dbms_q_78",
+    "original_qnum": 78,
+    "module_num": 4,
+    "module_name": "Module 4: Constraints",
+    "question": "Which syntax turns an existing constraint on?",
+    "code": "",
+    "options": [
+      "ALTER TABLE table_name ENABLE CONSTRAINT constraint_name;",
+      "ALTER TABLE table_name ENABLE constraint_name;",
+      "ALTER TABLE table_name STATUS = ENABLE CONSTRAINT constraint_name;",
+      "ALTER TABLE table_name STATUS ENABLE CONSTRAINT constraint_name;"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 4: Constraints)."
+  },
+  {
+    "id": "dbms_q_79",
+    "original_qnum": 79,
+    "module_num": 4,
+    "module_name": "Module 4: Constraints",
+    "question": "Which statement about creating constraints is true?",
+    "code": "",
+    "options": [
+      "Constraints can be created after the table is created.",
+      "Constraint names must start with SYS_C.",
+      "All constraints must be defines at the column level.",
+      "Information about constraints is found in the VIEW_CONSTRAINTS dictionary view."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 4: Constraints)."
+  },
+  {
+    "id": "dbms_q_80",
+    "original_qnum": 80,
+    "module_num": 4,
+    "module_name": "Module 4: Constraints",
+    "question": "Which constraint can be defined only at the column level?",
+    "code": "",
+    "options": [
+      "NOT NULL",
+      "UNIQUE",
+      "CHECK",
+      "PRIMARY KEY"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 4: Constraints)."
+  },
+  {
+    "id": "dbms_q_81",
+    "original_qnum": 81,
+    "module_num": 5,
+    "module_name": "Module 5: DML (Data Manipulation Language)",
+    "question": "A data manipulation language statement _____.",
+    "code": "",
+    "options": [
+      "Modifies the data but not the structure of a table",
+      "Completes a transaction on a table.",
+      "Modifies the structure and data in a table",
+      "Modifies the structure but not the data of a table"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 5: DML (Data Manipulation Language))."
+  },
+  {
+    "id": "dbms_q_82",
+    "original_qnum": 82,
+    "module_num": 5,
+    "module_name": "Module 5: DML (Data Manipulation Language)",
+    "question": "Which statement regarding DML statement functionality is true?",
+    "code": "",
+    "options": [
+      "UPDATE can update multiple columns in one table.",
+      "DELETE can be used to delete rows or columns from a table.",
+      "MERGE will delete rows that do NOT exist in either table.",
+      "UPDATE will add rows to a table if an INTO clause is specified."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 5: DML (Data Manipulation Language))."
+  },
+  {
+    "id": "dbms_q_83",
+    "original_qnum": 83,
+    "module_num": 5,
+    "module_name": "Module 5: DML (Data Manipulation Language)",
+    "question": "You own a table called EMPLOYEES. What happens when you execute this DELETE\nstatement?\nDELETE employees;",
+    "code": "",
+    "options": [
+      "The data in the EMPLOYEES table is deleted but not the structure.",
+      "You get an error because of a primary key violation",
+      "The data and structure of the EMPLOYEES table are deleted.",
+      "You get an error because the statement is not syntactically correct."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 5: DML (Data Manipulation Language))."
+  },
+  {
+    "id": "dbms_q_84",
+    "original_qnum": 84,
+    "module_num": 5,
+    "module_name": "Module 5: DML (Data Manipulation Language)",
+    "question": "Examine the structure of the EMPLOYEES table:\nEMPLOYEE_ID  NUMBER        Primary Key\nFIRST_NAME   VARCHAR2(25)\nLAST_NAME    VARCHAR2(25)\nWhich statement fails to insert a row into the table?",
+    "code": "",
+    "options": [
+      "INSERT INTO employees( first_name, last_name) VALUES( 'John', 'Smith');",
+      "INSERT INTO employees VALUES ( '1000', 'John', NULL);",
+      "INSERT INTO employees (employee_id) VALUES (1000);",
+      "INSERT INTO employees (employee_id, first_name, last_name) VALUES ( 1000, 'John', ' ');"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 5: DML (Data Manipulation Language))."
+  },
+  {
+    "id": "dbms_q_85",
+    "original_qnum": 85,
+    "module_num": 5,
+    "module_name": "Module 5: DML (Data Manipulation Language)",
+    "question": "Which is not true?",
+    "code": "",
+    "options": [
+      "A MERGE statement replaces the complete data of one table with that of another.",
+      "A MERGE statement is used to merge the data of one table with data from another.",
+      "A MERGE statement can be used to insert new rows into a table.",
+      "A MERGE statement can be used to update existing rows in a table."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 5: DML (Data Manipulation Language))."
+  },
+  {
+    "id": "dbms_q_86",
+    "original_qnum": 86,
+    "module_num": 5,
+    "module_name": "Module 5: DML (Data Manipulation Language)",
+    "question": "With SQL, how can you insert \"Olsen\" as the \"LastName\" in the \"Persons\" table?",
+    "code": "",
+    "options": [
+      "INSERT INTO Persons (LastName) VALUES ('Olsen')",
+      "INSERT INTO Persons ('Olsen') as LastName",
+      "INSERT LastName('Olsen') INTO Persons",
+      "None of the above"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 5: DML (Data Manipulation Language))."
+  },
+  {
+    "id": "dbms_q_87",
+    "original_qnum": 87,
+    "module_num": 5,
+    "module_name": "Module 5: DML (Data Manipulation Language)",
+    "question": "How can you change \"Hansen\" into \"Nilsen\" in the \"LastName\" column in the Persons\ntable?",
+    "code": "",
+    "options": [
+      "UPDATE Persons SET LastName='Nilsen' WHERE LastName='Hansen'",
+      "MODIFY Persons SET LastName='Hansen' INTO LastName='Nilsen",
+      "UPDATE Persons SET LastName='Hansen' INTO LastName='Nilsen'",
+      "MODIFY Persons SET LastName='Nilsen' WHERE LastName='Hansen'"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 5: DML (Data Manipulation Language))."
+  },
+  {
+    "id": "dbms_q_88",
+    "original_qnum": 88,
+    "module_num": 5,
+    "module_name": "Module 5: DML (Data Manipulation Language)",
+    "question": "With SQL, how can you delete the records where the \"FirstName\" is \"Peter\" in the\nPersons Table?",
+    "code": "",
+    "options": [
+      "DELETE FROM Persons WHERE FirstName = 'Peter'",
+      "DELETE * FROM Persons WHERE FirstName = 'Peter'",
+      "DELETE FirstName FROM Persons WHERE FirstName = 'Peter'",
+      "DELETE 'Peter' FROM Persons"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 5: DML (Data Manipulation Language))."
+  },
+  {
+    "id": "dbms_q_89",
+    "original_qnum": 89,
+    "module_num": 5,
+    "module_name": "Module 5: DML (Data Manipulation Language)",
+    "question": "Which of the following Insert statement will successfully insert only records of Sales\nRepresentatives from the employees table into a new table called Sales_rep ?",
+    "code": "",
+    "options": [
+      "INSERT INTO sales_reps(id, name, salary, commission_pct) SELECT employee_id, last_name, salary, commission_pct FROM employees WHERE job_id = 'SA_REP';",
+      "INSERT INTO sales_reps(id, name, salary, commission_pct) VALUES SELECT employee_id, last_name, salary, commission_pct FROM employees WHERE job_id = 'SA_REP';",
+      "INSERT INTO sales_reps(id, name, salary, commission_pct) SELECT employee_id, last_name, salary, commission_pct FROM employees;",
+      "INSERT INTO sales_reps(id, name, salary, commission_pct) SELECT last_name, employee_id, salary, commission_pct FROM employees WHERE job_id = 'SA_REP';"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 5: DML (Data Manipulation Language))."
+  },
+  {
+    "id": "dbms_q_90",
+    "original_qnum": 90,
+    "module_num": 5,
+    "module_name": "Module 5: DML (Data Manipulation Language)",
+    "question": "Which of the following is not a valid usage of a Merge statement?",
+    "code": "",
+    "options": [
+      "Insert as well as update each row in a table.",
+      "Conditionally update or insert data into a database table",
+      "Perform an UPDATE if the row exists, and an INSERT if it is a new row",
+      "Increase performance and ease of use"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 5: DML (Data Manipulation Language))."
+  },
+  {
+    "id": "dbms_q_91",
+    "original_qnum": 91,
+    "module_num": 5,
+    "module_name": "Module 5: DML (Data Manipulation Language)",
+    "question": "What will be the output of following statement?\nUPDATE employees a\nSET job_id = (SELECT job_id\nFROM new_employees b\nWHERE a.employee_id = b.employee_id);\nAssume that Employee and New_employees tables have same structure.",
+    "code": "",
+    "options": [
+      "This statement will update job_id for all records of employees as:Match found in New_employees table use job_id from New_employees tableno match found in New_employees table update job_id as NULL.",
+      "This statement will return error",
+      "This statement will update only those records of Employees table which have matching employee_id in the New_employees table.",
+      "This statement will update job_id for all records of employees table but for records that do not have matching employee_id in the New_employees table the existing job_id will be retained."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 5: DML (Data Manipulation Language))."
+  },
+  {
+    "id": "dbms_q_92",
+    "original_qnum": 92,
+    "module_num": 5,
+    "module_name": "Module 5: DML (Data Manipulation Language)",
+    "question": "Which of the following is not a DML statement?",
+    "code": "",
+    "options": [
+      "COMMIT",
+      "MERGE",
+      "UPDATE",
+      "DELETE"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 5: DML (Data Manipulation Language))."
+  },
+  {
+    "id": "dbms_q_93",
+    "original_qnum": 93,
+    "module_num": 5,
+    "module_name": "Module 5: DML (Data Manipulation Language)",
+    "question": "What will be the output of following statement?\nINSERT INTO departments (department_id, department_name, manager_id)\nVALUES (300, 'Engineering', DEFAULT);",
+    "code": "",
+    "options": [
+      "This will insert one record in Employees table with values (300, 'Engineering') for the (department_id, department_name) respectively.",
+      "This will insert one record in Employees table with values (300, 'Engineering', DEFAULT) for the (department_id, department_name, manager_id) respectively",
+      "This will insert one record in Employees table with values (300, 'Engineering') for the (department_id, department_name) respectively manager_id will be NULL as DEFAULT is not a valid value.",
+      "This will return Error as DEFAULT is not allowed in the INSERT"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 5: DML (Data Manipulation Language))."
+  },
+  {
+    "id": "dbms_q_94",
+    "original_qnum": 94,
+    "module_num": 5,
+    "module_name": "Module 5: DML (Data Manipulation Language)",
+    "question": "You maintain two tables, CUSTOMER and PROSPECT, that have identical structures\nbut different data. You want to synchronize these two tables by inserting records from\nthe PROSPECT table into the CUSTOMER table, if they do not exist. If the customer\nalready exists in the CUSTOMER table, you want to update customer data.\nWhich DML statement should you use to perform this task?",
+    "code": "",
+    "options": [
+      "MERGE",
+      "INSERT",
+      "UPDATE",
+      "You CANNOT perform this task with one DML operation."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 5: DML (Data Manipulation Language))."
+  },
+  {
+    "id": "dbms_q_95",
+    "original_qnum": 95,
+    "module_num": 5,
+    "module_name": "Module 5: DML (Data Manipulation Language)",
+    "question": "You added a PHONE-NUMBER column of NUMBER data type to an existing\nEMPLOYEES table.\nThe EMPLOYEES table already contains records of 100 employees. Now, you want to\nenter the phone numbers of each of the 100 employees into the table. Some of the\nemployees may not have a phone number available.\nWhich data manipulation operation do you perform?",
+    "code": "",
+    "options": [
+      "PDATE",
+      "MERGE",
+      "INSERT",
+      "ADD"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 5: DML (Data Manipulation Language))."
+  },
+  {
+    "id": "dbms_q_96",
+    "original_qnum": 96,
+    "module_num": 5,
+    "module_name": "Module 5: DML (Data Manipulation Language)",
+    "question": "Evaluate this DELETE statement:\nDELETE employee_id, salary, job_id\nFROM employees\nWHERE dept_id = 90;\nWhy does the DELETE statement fail when you execute it?",
+    "code": "",
+    "options": [
+      "You cannot specify column names in the DELETE clause of the DELETE statement.",
+      "There is no row with dept_id 90 in the EMPLOYEES table.",
+      "You cannot delete the JOB_ID column because it is a NOT NULL column.",
+      "You cannot delete the EMPLOYEE_ID column because it is the primary key of the table."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 5: DML (Data Manipulation Language))."
+  },
+  {
+    "id": "dbms_q_97",
+    "original_qnum": 97,
+    "module_num": 5,
+    "module_name": "Module 5: DML (Data Manipulation Language)",
+    "question": "Examine the structure of the EMPLOYEES table:\nEMPLOYEE_ID  NUMBER        Primary Key\nFIRST_NAME   VARCHAR2(25)\nLAST_NAME    VARCHAR2(25)\nWhich statement inserts a row into the table?",
+    "code": "",
+    "options": [
+      "INSERT INTO employees VALUES ('1000','John',NULL);",
+      "INSERT INTO employees VALUES ( NULL, 'John','Smith');",
+      "INSERT INTO employees( first_name, last_name) VALUES('John','Smith');",
+      "INSERT INTO employees(first_name,last_name, employee_id) VALUES ( 1000, 'John','Smith');"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 5: DML (Data Manipulation Language))."
+  },
+  {
+    "id": "dbms_q_98",
+    "original_qnum": 98,
+    "module_num": 5,
+    "module_name": "Module 5: DML (Data Manipulation Language)",
+    "question": "Examine the data from the CLASS and INSTRUCTOR tables.\nCLASS Table\nCLASS_ID  CLASS_NAME                  HOURS_CREDIT  INSTRUCTOR_ID\n--------  --------------------------  ------------  -------------\n1         Introduction to Accounting  3             4\n2         Computer Basics             3             1\n3         Tax Accounting Principles   3             4\n4         American History            3             2\n5         Basic Engineering           3\nYou want to delete the classes that do NOT have an instructor assigned. Which\nDELETE statement will accomplish the desired result?",
+    "code": "",
+    "options": [
+      "DELETE FROM class WHERE instructor_id IS NULL;",
+      "DELETE class_id, class_name, hours_credit, instructor_id FROM class WHERE instructor_id IS NULL;",
+      "DELETE FROM class WHERE instructor_id NOT IN(SELECT instructor_id FROM class);",
+      "DELETE FROM instructor NATURAL JOIN class WHERE instructor_id IS NOT NULL;"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 5: DML (Data Manipulation Language))."
+  },
+  {
+    "id": "dbms_q_99",
+    "original_qnum": 99,
+    "module_num": 5,
+    "module_name": "Module 5: DML (Data Manipulation Language)",
+    "question": "The PRODUCT table contains these columns:\nPRODUCT_ID    NUMBER  NOT NULL\nPRODUCT_NAME  VARCHAR2(25)\nSUPPLIER_ID   NUMBER\nLIST_PRICE    NUMBER(7,2)\nCOST          NUMBER(7,2)\nYou need to increase the list price and cost of all products supplied by Global Imports,\nInc. by 5.5 percent. The SUPPLIER_ID for Global Imports, Inc. is 105. Which\nstatement should you use?",
+    "code": "",
+    "options": [
+      "UPDATE product SET list_price = list_price * 1.055, cost = cost * 1.055 WHERE supplier_id = 105;",
+      "UPDATE product SET list_price = list_price * 1.055 SET cost = cost * 1.055 WHERE supplier_id = 105;",
+      "UPDATE product",
+      "UPDATE product SET list_price = list_price + (list_price * .055), cost = cost + (cost * .055) WHERE supplier_id LIKE 'Global Imports, Inc.' OR supplier_id = 105;"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 5: DML (Data Manipulation Language))."
+  },
+  {
+    "id": "dbms_q_100",
+    "original_qnum": 100,
+    "module_num": 5,
+    "module_name": "Module 5: DML (Data Manipulation Language)",
+    "question": "Examine the structures of the EVENT and NEW_EVENT tables.\nEVENT Table\nEVENT_ID           NUMBER\nEVENT_NAME         VARCHAR2(30)\nEVENT_DESCRIPTION  VARCHAR2(100)\nEVENT_TYPE_ID      NUMBER\nNEW_EVENT Table\nEVENT_ID           NUMBER\nEVENT_NAME         VARCHAR2(30)\nEVENT_DESCRIPTION  VARCHAR2(100)\nEVENT_TYPE_ID      NUMBER\nSTART_DT           DATE\nYou execute this MERGE statement:\nMERGE INTO event e\nUSING (SELECT *\nFROM new_event\nWHERE event_type_id = 4) n\nON (e.event_id = n.event_id)\nWHEN MATCHED THEN\nUPDATE SET\ne.event_type_id = n.event_type_id,\ne.start_dt = n.start_dt\nWHEN NOT MATCHED THEN\nINSERT (event_id, event_name, event_type_id)\nVALUES (n.event_id, n.event_name, n.event_type_id);\nThis MERGE statement generates an error. Which statement describes the cause of the\nerror?",
+    "code": "",
+    "options": [
+      "The UPDATE portion of the statement is invalid.",
+      "A subquery CANNOT be used in the USING clause of a MERGE statement.",
+      "Table aliases CANNOT be used in a MERGE statement.",
+      "The ON clause of the statement is invalid."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 5: DML (Data Manipulation Language))."
+  },
+  {
+    "id": "dbms_q_101",
+    "original_qnum": 101,
+    "module_num": 6,
+    "module_name": "Module 6: Simple Row Function",
+    "question": "You want to use a function in your column clause of a SQL statement.\nThe NVL function accomplishes which of the following tasks?",
+    "code": "",
+    "options": [
+      "Enables you to specify alternated out for NULL column values.",
+      "Assists in the distribution of output across multiple columns.",
+      "Enables you to specify alternate output for non-NULL column values.",
+      "Nullifies the value of the column output."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 6: Simple Row Function)."
+  },
+  {
+    "id": "dbms_q_102",
+    "original_qnum": 102,
+    "module_num": 6,
+    "module_name": "Module 6: Simple Row Function",
+    "question": "Which SELECT statement will show the result 'elloworld' from the string 'HelloWorld'?",
+    "code": "",
+    "options": [
+      "SELECT LOWER (TRIM ('H' FROM 'HelloWorld')) FROM dual;",
+      "SELECT SUBSTR ('HelloWorld', 1) FROM dual;",
+      "SELECT INITCAP (TRIM ('HelloWorld', 1, 1)) FROM dual;",
+      "SELECT LOWER (SUBSTR ('HelloWorld', 1, 1) FROM dual;"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 6: Simple Row Function)."
+  },
+  {
+    "id": "dbms_q_103",
+    "original_qnum": 103,
+    "module_num": 6,
+    "module_name": "Module 6: Simple Row Function",
+    "question": "Which script displays '01-JAN-02' when the ENROLL_DATE value is '01-JUL-01'?",
+    "code": "",
+    "options": [
+      "SELECT ROUND (enroll_date, 'YEAR') FROM student;",
+      "SELECT ROUND (enroll_date, 'DAY') FROM student;",
+      "SELECT ROUND (enroll_date, 'MONTH') FROM student;",
+      "SELECT ROUND (TO_CHAR(enroll_date, 'YYYY')) FROM student;"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 6: Simple Row Function)."
+  },
+  {
+    "id": "dbms_q_104",
+    "original_qnum": 104,
+    "module_num": 6,
+    "module_name": "Module 6: Simple Row Function",
+    "question": "Which function can be used in your query on department table to restrict the data\ndisplayed to only those department names containing 3 characters?",
+    "code": "",
+    "options": [
+      "LENGTH",
+      "REPLACE",
+      "SUBSTR",
+      "RPAD"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 6: Simple Row Function)."
+  },
+  {
+    "id": "dbms_q_105",
+    "original_qnum": 105,
+    "module_num": 6,
+    "module_name": "Module 6: Simple Row Function",
+    "question": "Which statement concerning SQL functions is true?",
+    "code": "",
+    "options": [
+      "Character functions can return character or number values.",
+      "Conversion functions convert a column definition from one data type to another data type.",
+      "Single-row functions can only be used in SELECT and WHERE clauses.",
+      "All date functions return DATE data type values."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 6: Simple Row Function)."
+  },
+  {
+    "id": "dbms_q_106",
+    "original_qnum": 106,
+    "module_num": 6,
+    "module_name": "Module 6: Simple Row Function",
+    "question": "Evaluate the SQL statement:\nSELECT ROUND(45.953, -1), TRUNC(45.936, 2)\nFROM dual;\nWhich values are displayed?",
+    "code": "",
+    "options": [
+      "50 and 45.93",
+      "46 and 45",
+      "46 and 45.93",
+      "50 and 45.9"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 6: Simple Row Function)."
+  },
+  {
+    "id": "dbms_q_107",
+    "original_qnum": 107,
+    "module_num": 6,
+    "module_name": "Module 6: Simple Row Function",
+    "question": "Which of the following is not a number function?",
+    "code": "",
+    "options": [
+      "TO_NUMBER.",
+      "TRUNC",
+      "SQRT",
+      "ROUND"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 6: Simple Row Function)."
+  },
+  {
+    "id": "dbms_q_108",
+    "original_qnum": 108,
+    "module_num": 6,
+    "module_name": "Module 6: Simple Row Function",
+    "question": "You are using single row function in a SELECT statement which function can best be\ncategorized as similar in function to an IF-THEN-ELSE statement?",
+    "code": "",
+    "options": [
+      "DECODE",
+      "SQRT",
+      "NEW_TIME",
+      "ROWIDTOCHAR."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 6: Simple Row Function)."
+  },
+  {
+    "id": "dbms_q_109",
+    "original_qnum": 109,
+    "module_num": 6,
+    "module_name": "Module 6: Simple Row Function",
+    "question": "Which is not an attributes of single row functions?",
+    "code": "",
+    "options": [
+      "cannot be nested",
+      "manipulate data items",
+      "act on each row returned",
+      "return one result per row"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 6: Simple Row Function)."
+  },
+  {
+    "id": "dbms_q_110",
+    "original_qnum": 110,
+    "module_num": 6,
+    "module_name": "Module 6: Simple Row Function",
+    "question": "Which SQL statement returns a numeric value?",
+    "code": "",
+    "options": [
+      "SELECT sysdate-hire_date FROM EMP;",
+      "SELECT ADD_MONTHS(MAX(hire_Date), 6) FROM EMP;",
+      "SELECT ROUND(hire_date) FROM EMP;",
+      "SELECT TO_NUMBER(hire_date + 7) FROM EMP;"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 6: Simple Row Function)."
+  },
+  {
+    "id": "dbms_q_111",
+    "original_qnum": 111,
+    "module_num": 6,
+    "module_name": "Module 6: Simple Row Function",
+    "question": "Which is not a type of Single Row functions available in SQL?",
+    "code": "",
+    "options": [
+      "calendar",
+      "string",
+      "character",
+      "Numeric"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 6: Simple Row Function)."
+  },
+  {
+    "id": "dbms_q_112",
+    "original_qnum": 112,
+    "module_num": 6,
+    "module_name": "Module 6: Simple Row Function",
+    "question": "Management has asked you to calculate the value 12*salary*commission_pct for all the\nemployees in the EMP table.\nThe EMP table contains these columns:\nLAST_NAME       VARCHAR2(35)  NOT NULL\nSALARY          NUMBER(9,2)   NOT NULL\nCOMMISSION_PCT  NUMBER(4,2)\nWhich statement ensures that a value is displayed in the calculated columns for all\nemployees?",
+    "code": "",
+    "options": [
+      "SELECT last_name, 12*salary*(nvl(commission_pct,0)) FROM emp;",
+      "SELECT last_name, 12*salary*commison_pct FROM emp;",
+      "SELECT last_name, 12*salary* (commission_pct,0) FROM emp;",
+      "SELECT last_name, 12*salary*(decode(commission_pct,0)) FROM emp;"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 6: Simple Row Function)."
+  },
+  {
+    "id": "dbms_q_113",
+    "original_qnum": 113,
+    "module_num": 6,
+    "module_name": "Module 6: Simple Row Function",
+    "question": "Evaluate the SQL statement:\nSELECT LPAD(salary, 10, *)\nFROM EMP\nWHERE EMP_ID = 1001;\nIf the employee with the EMP_ID 1001 has a salary of 17000, what is displayed?",
+    "code": "",
+    "options": [
+      "An error statement",
+      "17000.00",
+      "17000*****",
+      "*****17000"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 6: Simple Row Function)."
+  },
+  {
+    "id": "dbms_q_114",
+    "original_qnum": 114,
+    "module_num": 6,
+    "module_name": "Module 6: Simple Row Function",
+    "question": "The EMPLOYEE table has these columns:\nLAST_NAME       VARCHAR2(35)\nSALARY          NUMBER(8,2)\nCOMMISSION_PCT  NUMBER(5,2)\nYou want to display the name and annual salary multiplied by the commission_pct for\nall employees. For records that have a NULL commission_pct, a zero must be displayed\nagainst the calculated column. Which SQL statement displays the desired results?",
+    "code": "",
+    "options": [
+      "SELECT last_name, (salary * 12) * NVL(commission_pct, 0) FROM EMPLOYEES;",
+      "SELECT last_name, (salary * 12) * commission_pct FROM EMPLOYEES;",
+      "SELECT last_name, (salary * 12) * IFNULL(commission_pct,0) FROM EMPLOYEES;",
+      "SELECT last_name, (salary * 12) * NVL2(commission_pct, 0) FROM EMPLOYEES;"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 6: Simple Row Function)."
+  },
+  {
+    "id": "dbms_q_115",
+    "original_qnum": 115,
+    "module_num": 6,
+    "module_name": "Module 6: Simple Row Function",
+    "question": "You would like to display the system date in the format \"Monday, 01 June, 2001\".\nWhich SELECT statement should you use?",
+    "code": "",
+    "options": [
+      "SELECT TO_CHAR(SYSDATE, 'FMDay, DD Month, YYYY') FROM dual;",
+      "SELECT TO_DATE(SYSDATE, 'FMDAY, DD Month, YYYY') FROM dual;",
+      "SELECT TO_CHAR(SYSDATE, 'FMDD, DY Month, 'YYY') FROM dual;",
+      "SELECT TO_CHAR(SYSDATE, 'FMDY, DDD Month, YYYY') FROM dual;"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 6: Simple Row Function)."
+  },
+  {
+    "id": "dbms_q_116",
+    "original_qnum": 116,
+    "module_num": 6,
+    "module_name": "Module 6: Simple Row Function",
+    "question": "Evaluate the SQL statement:\nSELECT ROUND(TRUNC(MOD(1600, 10), -1), 2)\nFROM dual;\nWhat will be displayed?",
+    "code": "",
+    "options": [
+      "0",
+      "1",
+      "0.00",
+      "An error statement"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 6: Simple Row Function)."
+  },
+  {
+    "id": "dbms_q_117",
+    "original_qnum": 117,
+    "module_num": 6,
+    "module_name": "Module 6: Simple Row Function",
+    "question": "Which SELECT statement will not display 2000 in the format '$2,000.00'",
+    "code": "",
+    "options": [
+      "SELECT TO_CHAR (2000, '$2,000.00') FROM dual;",
+      "SELECT TO_CHAR (2000, '$0,000.00') FROM dual;",
+      "SELECT TO_CHAR (2000, '$9,999.00') FROM dual;",
+      "SELECT TO_CHAR (2000, '$9,999.99') FROM dual;"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 6: Simple Row Function)."
+  },
+  {
+    "id": "dbms_q_118",
+    "original_qnum": 118,
+    "module_num": 6,
+    "module_name": "Module 6: Simple Row Function",
+    "question": "Which statement is incorrect about functions that are available in SQL?",
+    "code": "",
+    "options": [
+      "NVL2 returns the first non-null expression in the expression list.",
+      "DECODE translates an expression after comparing it to each search value.",
+      "TRIM trims the heading of trailing characters (or both) from a character string.",
+      "NULLIF compares two expressions and returns null if they are equal, or the first expression if they are not equal"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 6: Simple Row Function)."
+  },
+  {
+    "id": "dbms_q_119",
+    "original_qnum": 119,
+    "module_num": 6,
+    "module_name": "Module 6: Simple Row Function",
+    "question": "Which is a character manipulation function?",
+    "code": "",
+    "options": [
+      "TRIM",
+      "TRUNC",
+      "TO_DATE",
+      "MOD"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 6: Simple Row Function)."
+  },
+  {
+    "id": "dbms_q_120",
+    "original_qnum": 120,
+    "module_num": 6,
+    "module_name": "Module 6: Simple Row Function",
+    "question": "Which task can you perform by using the TO_CHAR function?",
+    "code": "",
+    "options": [
+      "Convert '10' to '10'",
+      "Convert 10 to 'TEN'",
+      "Convert '10' to 10",
+      "Convert 'TEN' to 10"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 6: Simple Row Function)."
+  },
+  {
+    "id": "dbms_q_121",
+    "original_qnum": 121,
+    "module_num": 7,
+    "module_name": "Module 7: Group Functions",
+    "question": "Which statement is true about WHERE and HAVING clauses?",
+    "code": "",
+    "options": [
+      "A HAVING clause can be used to restrict groups only.",
+      "A WHERE clause can be used to restrict groups only.",
+      "A WHERE clause can be used to restrict both rows and groups.",
+      "A HAVING clause can be used to restrict both rows and groups."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 7: Group Functions)."
+  },
+  {
+    "id": "dbms_q_122",
+    "original_qnum": 122,
+    "module_num": 7,
+    "module_name": "Module 7: Group Functions",
+    "question": "Examine the description of the EMPLOYEES table:\nEMP_ID      NUMBER(4)     NOT NULL\nLAST_NAME   VARCHAR2(30)  NOT NULL\nFIRST_NAME  VARCHAR2(30)\nDEPT_ID     NUMBER(2)\nWhich statement produces the number of different departments that have employees with\nlast name Smith?",
+    "code": "",
+    "options": [
+      "SELECT DISTINCT(COUNT(dept_id)) FROM employees WHERE last_name='Smith';",
+      "SELECT COUNT(*) FROM employees WHERE last_name='Smith';",
+      "SELECT COUNT(DISTINCT dept_id) FROM employees WHERE last_name='Smith';",
+      "SELECT COUNT (dept_id) FROM employees WHERE last_name='Smith';"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 7: Group Functions)."
+  },
+  {
+    "id": "dbms_q_123",
+    "original_qnum": 123,
+    "module_num": 7,
+    "module_name": "Module 7: Group Functions",
+    "question": "What is true of using group functions on columns that contain NULL values?",
+    "code": "",
+    "options": [
+      "Group functions on columns returning dates include NULL values.",
+      "Group functions on columns ignore NULL values.",
+      "Group functions on columns cannot be accurately used on columns that contain NULL values.",
+      "Group functions on columns returning numbers include NULL values."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 7: Group Functions)."
+  },
+  {
+    "id": "dbms_q_124",
+    "original_qnum": 124,
+    "module_num": 7,
+    "module_name": "Module 7: Group Functions",
+    "question": "The STUDENT_GRADES table has these columns:\nSTUDENT_ID    NUMBER(12)\nSEMESTER_END  DATE\nGPA           NUMBER(4,3)\nWhich statement finds the highest grade point average (GPA) per semester?",
+    "code": "",
+    "options": [
+      "SELECT MAX(gpa) FROM student_grades WHERE gpa IS NOT NULL GROUP BY semester_end;",
+      "SELECT (gpa) FROM student_grades GROUP BY semester_end WHERE gpa IS NOT NULL",
+      "SELECT MAX(gpa) FROM student_grades WHERE gpa IS NOT NULL",
+      "SELECT MAX(gpa) GROUP BY semester_end WHERE gpa IS NOT NULL FROM student_grades"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 7: Group Functions)."
+  },
+  {
+    "id": "dbms_q_125",
+    "original_qnum": 125,
+    "module_num": 7,
+    "module_name": "Module 7: Group Functions",
+    "question": "Which of the following data types are compatible for applying the group functions such as\nMIN, MAX ?",
+    "code": "",
+    "options": [
+      "Numeric",
+      "Date",
+      "All of the above",
+      "Character"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 7: Group Functions)."
+  },
+  {
+    "id": "dbms_q_126",
+    "original_qnum": 126,
+    "module_num": 7,
+    "module_name": "Module 7: Group Functions",
+    "question": "Which of the following is not a valid variation of the COUNT function ?",
+    "code": "",
+    "options": [
+      "COUNT(*)",
+      "COUNT(expr1, expr2)",
+      "COUNT(DISTINCT expr)",
+      "COUNT(expr)"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 7: Group Functions)."
+  },
+  {
+    "id": "dbms_q_127",
+    "original_qnum": 127,
+    "module_num": 7,
+    "module_name": "Module 7: Group Functions",
+    "question": "Which of the following statements calculates the Average commission percentage from the\nemployees table by treating the NULLs as zeros wherever the commission percentage is\nNULL ?",
+    "code": "",
+    "options": [
+      "SELECT AVG(NVL(commission_pct, 0)) FROM employees",
+      "SELECT NULLIF(AVG(commission_pct), 0) FROM employees",
+      "SELECT AVG(NULLIF(commission_pct, 0)) FROM employees",
+      "SELECT NVL(AVG(commission_pct), 0) FROM employees"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 7: Group Functions)."
+  },
+  {
+    "id": "dbms_q_128",
+    "original_qnum": 128,
+    "module_num": 7,
+    "module_name": "Module 7: Group Functions",
+    "question": "Which of the following statements will return error?",
+    "code": "",
+    "options": [
+      "SELECT AVG(salary) FROM employees GROUP BY department_id",
+      "SELECT department_id, AVG(salary) FROM employees GROUP BY department_id",
+      "SELECT job_id, AVG(salary) FROM employees GROUP BY department_id",
+      "SELECT AVG(salary), job_id FROM employees GROUP BY department_id, job_id"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 7: Group Functions)."
+  },
+  {
+    "id": "dbms_q_129",
+    "original_qnum": 129,
+    "module_num": 7,
+    "module_name": "Module 7: Group Functions",
+    "question": "Which of the following statements is not correct?",
+    "code": "",
+    "options": [
+      "You cannot use the WHERE clause to restrict groups",
+      "You can use group functions in the WHERE clause",
+      "You cannot use group functions in the WHERE clause",
+      "You use the HAVING clause to restrict groups"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 7: Group Functions)."
+  },
+  {
+    "id": "dbms_q_130",
+    "original_qnum": 130,
+    "module_num": 7,
+    "module_name": "Module 7: Group Functions",
+    "question": "Which of the following statements displays the number of distinct department values in\nthe EMPLOYEES table",
+    "code": "",
+    "options": [
+      "SELECT COUNT(department_id) FROM employees",
+      "SELECT DISTINCT COUNT(department_id) FROM employees",
+      "SELECT COUNT(DISTINCT department_id) FROM employees",
+      "SELECT DISTINCT department_id FROM employees;"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 7: Group Functions)."
+  },
+  {
+    "id": "dbms_q_131",
+    "original_qnum": 131,
+    "module_num": 7,
+    "module_name": "Module 7: Group Functions",
+    "question": "What will be the output of the following statement?\nSELECT department_id, AVG(salary)\nFROM employees\nWHERE AVG(salary) > 8000\nGROUP BY department_id;",
+    "code": "",
+    "options": [
+      "The statement will display the list of department ids and average salary of the employees table where average",
+      "The statement will display a list of departments and average salary of each department",
+      "The statement will display a list departments and average salary of each department only for departments whose average salary is greater than 8000",
+      "The statement will return an error"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 7: Group Functions)."
+  },
+  {
+    "id": "dbms_q_132",
+    "original_qnum": 132,
+    "module_num": 7,
+    "module_name": "Module 7: Group Functions",
+    "question": "Examine the description of the STUDENTS table:\nSTD_ID      NUMBER(4)\nCOURSE_ID   VARCHAR2(10)\nSTART_DATE  DATE\nEND_DATE    DATE\nWhich of the aggregate functions is valid on the START_DATE column?",
+    "code": "",
+    "options": [
+      "MIN(start_date)",
+      "AVG(start_date)",
+      "MAXIMUM(start_date)",
+      "SUM(start_date)"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 7: Group Functions)."
+  },
+  {
+    "id": "dbms_q_133",
+    "original_qnum": 133,
+    "module_num": 7,
+    "module_name": "Module 7: Group Functions",
+    "question": "What is True about the below statement?\nSELECT MAX(AVG(salary))\nFROM employees\nGROUP BY department_id;",
+    "code": "",
+    "options": [
+      "It will return an error as Group functions can not be nested",
+      "It will return Maximum average salary for each department",
+      "It will return error because Salary is not included in the group by clause",
+      "It will display the maximum of the average salaries for each department"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 7: Group Functions)."
+  },
+  {
+    "id": "dbms_q_134",
+    "original_qnum": 134,
+    "module_num": 7,
+    "module_name": "Module 7: Group Functions",
+    "question": "Examine the description of the MARKS table:\nSTD_ID        NUMBER(4)\nSTUDENT_NAME  VARCHAR2(30)\nSUBJ1         NUMBER(3)\nSUBJ2         NUMBER(3)\nSUBJ1 and SUBJ2 indicate the marks obtained by a student in two subjects. Examine this\nSELECT statement based on the MARKS table:\nSELECT subj1+subj2 total_marks, std_id\nFROM marks\nWHERE subj1 > AVG(subj1) AND subj2 > AVG(subj2)\nORDER BY total marks;\nWhat is the result of the SELECT statement?",
+    "code": "",
+    "options": [
+      "The statement returns an error at the WHERE clause.",
+      "The statement executes successfully and returns the student ID and sum of all marks for each student who obtained more than the average mark in each subject.",
+      "The statement returns an error at the SELECT clause.",
+      "The statement returns an error at the ORDER BY clause."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 7: Group Functions)."
+  },
+  {
+    "id": "dbms_q_135",
+    "original_qnum": 135,
+    "module_num": 7,
+    "module_name": "Module 7: Group Functions",
+    "question": "Which statement is true about aggregate functions?",
+    "code": "",
+    "options": [
+      "You can mix single row columns with aggregate functions in the column list of a SELECT statement by grouping on the single row columns.",
+      "You can use aggregate functions only in the column list of the SELECT clause and in the WHERE clause of a SELECT statement.",
+      "You can use aggregate functions on a table, only by grouping the whole table as one single group.",
+      "You can use aggregate functions in any clause of a SELECT statement."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 7: Group Functions)."
+  },
+  {
+    "id": "dbms_q_136",
+    "original_qnum": 136,
+    "module_num": 7,
+    "module_name": "Module 7: Group Functions",
+    "question": "Which clause should you use to exclude group results?",
+    "code": "",
+    "options": [
+      "HAVING",
+      "RESTRICT",
+      "WHERE",
+      "GROUP BY"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 7: Group Functions)."
+  },
+  {
+    "id": "dbms_q_137",
+    "original_qnum": 137,
+    "module_num": 7,
+    "module_name": "Module 7: Group Functions",
+    "question": "In a SELECT statement that includes a WHERE clause, where should the GROUP BY\nclause placed?",
+    "code": "",
+    "options": [
+      "Before the WHERE clause",
+      "After the ORDER BY clause",
+      "Immediately after the SELECT clause",
+      "After the WHERE clause"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 7: Group Functions)."
+  },
+  {
+    "id": "dbms_q_138",
+    "original_qnum": 138,
+    "module_num": 7,
+    "module_name": "Module 7: Group Functions",
+    "question": "The EVENT table contains these columns:\nEVENT_ID     NUMBER\nEVENT_NAME   VARCHAR2(30)\nEVENT_DESC   VARCHAR2(100)\nEVENT_TYPE   NUMBER\nLOCATION_ID  NUMBER\nYou have been asked to provide a report of the number of different event types at each\nlocation.\nWhich SELECT statement will produce the desired result?",
+    "code": "",
+    "options": [
+      "SELECT COUNT(*), DISTINCT(location_id) FROM event;",
+      "SELECT location_id, COUNT(DISTINCT event_type) FROM event GROUP BY location_id;",
+      "SELECT DISTINCT (event_type) FROM event GROUP BY location_id;",
+      "SELECT UNIQUE(location_id), COUNT(event_type) FROM event GROUP BY location_id;"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 7: Group Functions)."
+  },
+  {
+    "id": "dbms_q_139",
+    "original_qnum": 139,
+    "module_num": 7,
+    "module_name": "Module 7: Group Functions",
+    "question": "Which statement about the evaluation of clauses in a SELECT statement is true?",
+    "code": "",
+    "options": [
+      "The Oracle Server will evaluate an ORDER BY clause before a WHERE clause.",
+      "The Oracle Server will evaluate a WHERE clause before a GROUP BY clause.",
+      "The Oracle Server will evaluate an ORDER BY clause before a HAVING clause.",
+      "The Oracle Server will evaluate a HAVING clause before a WHERE clause"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 7: Group Functions)."
+  },
+  {
+    "id": "dbms_q_140",
+    "original_qnum": 140,
+    "module_num": 7,
+    "module_name": "Module 7: Group Functions",
+    "question": "You need to calculate the total of all salaries in the accounting department. Which group\nfunction should you use?",
+    "code": "",
+    "options": [
+      "COUNT",
+      "MAX",
+      "MIN",
+      "SUM"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 7: Group Functions)."
+  },
+  {
+    "id": "dbms_q_141",
+    "original_qnum": 141,
+    "module_num": 8,
+    "module_name": "Module 8: SQL Joins",
+    "question": "In which case would you use a FULL OUTER JOIN?",
+    "code": "",
+    "options": [
+      "You want all unmatched data from one table.",
+      "You want all unmatched data from both tables.",
+      "Both tables have NULL values.",
+      "You want all matched data from both tables."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 8: SQL Joins)."
+  },
+  {
+    "id": "dbms_q_142",
+    "original_qnum": 142,
+    "module_num": 8,
+    "module_name": "Module 8: SQL Joins",
+    "question": "What will be the output of the following query?\nSELECT *\nFROM employees, departments;",
+    "code": "",
+    "options": [
+      "It will display rows from employees table followed by rows from departments table.",
+      "It will by default the join two tables on department_id because it is a referential integrity column.",
+      "It will result in a Cartesian product as a joining condition is not specified",
+      "It will return error as a join condition is not specified"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 8: SQL Joins)."
+  },
+  {
+    "id": "dbms_q_143",
+    "original_qnum": 143,
+    "module_num": 8,
+    "module_name": "Module 8: SQL Joins",
+    "question": "Which of the following queries will produce identical output as the query below?\nSELECT last_name, department_name\nFROM employees\nCROSS JOIN departments;",
+    "code": "",
+    "options": [
+      "SELECT last_name, department_name FROM employees e, departments d WHERE e.depatment_id (+) = d.department_id (+);",
+      "SELECT last_name, department_name FROM employees JOIN departments USING (department_id)",
+      "SELECT last_name, department_name FROM employees e, departments d WHERE e.depatment_id = d.department_id;",
+      "SELECT last_name, department_name FROM employees e, departments d;"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 8: SQL Joins)."
+  },
+  {
+    "id": "dbms_q_144",
+    "original_qnum": 144,
+    "module_num": 8,
+    "module_name": "Module 8: SQL Joins",
+    "question": "Which of the following is an outer join symbol?",
+    "code": "",
+    "options": [
+      "[+]",
+      "(+)",
+      "{+}",
+      "+"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 8: SQL Joins)."
+  },
+  {
+    "id": "dbms_q_145",
+    "original_qnum": 145,
+    "module_num": 8,
+    "module_name": "Module 8: SQL Joins",
+    "question": "What will be the output of the following query?\nSELECT e.last_name, e.department_id, d.department_name\nFROM employees e, departments d\nWHERE e.department_id(+) = d.department_id;",
+    "code": "",
+    "options": [
+      "Displays employee last names, department ID's and department names for all employees irrespective of the matching department id present in departments table or not.",
+      "Displays employee last names, department ID's and department names for all employees.",
+      "Displays employee last names, department ID's for all employees and also the department names for all departments.",
+      "Displays employee last names, department ID's and department names for all employees and also the department names of departments who have no match in employees table."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 8: SQL Joins)."
+  },
+  {
+    "id": "dbms_q_146",
+    "original_qnum": 146,
+    "module_num": 8,
+    "module_name": "Module 8: SQL Joins",
+    "question": "Which of the following type of join was not available in Oracle versions 8i and prior?",
+    "code": "",
+    "options": [
+      "Full Outer Join",
+      "Self Join",
+      "Left Outer Join",
+      "Right Outer Join"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 8: SQL Joins)."
+  },
+  {
+    "id": "dbms_q_147",
+    "original_qnum": 147,
+    "module_num": 8,
+    "module_name": "Module 8: SQL Joins",
+    "question": "Which of the following statements about use of table aliases and prefixes in Join queries is\nnot Valid ?",
+    "code": "",
+    "options": [
+      "We can simplify queries by using table aliases.",
+      "Table prefixes must be used to unambiguously identify the columns with same names.",
+      "We can improve performance by using table prefixes.",
+      "Table prefixes must be used when joining more than three tables."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 8: SQL Joins)."
+  },
+  {
+    "id": "dbms_q_148",
+    "original_qnum": 148,
+    "module_num": 8,
+    "module_name": "Module 8: SQL Joins",
+    "question": "Which of the following statements indicate correct way of using a Natural Join?",
+    "code": "",
+    "options": [
+      "SELECT department_id, department_name, location_id, city FROM departments d NATURAL JOIN locations l using (l.location_id);",
+      "SELECT department_id, department_name, location_id, city FROM departments NATURAL JOIN locations on (location_id);",
+      "SELECT department_id, department_name, location_id, city FROM departments NATURAL JOIN locations;",
+      "SELECT department_id, department_name, location_id, city FROM departments d NATURAL JOIN locations l WHERE d.location_id = l.location_id"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 8: SQL Joins)."
+  },
+  {
+    "id": "dbms_q_149",
+    "original_qnum": 149,
+    "module_num": 8,
+    "module_name": "Module 8: SQL Joins",
+    "question": "Which of the following statements is not true about joins?",
+    "code": "",
+    "options": [
+      "To specify arbitrary conditions or specify columns to join, the ON clause is used.",
+      "Natural join and using clause can be used together.",
+      "Use the USING clause to match only one column when more than one column matches.",
+      "If the columns having the same names have different data types, an error is returned in case of a Natural Join."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 8: SQL Joins)."
+  },
+  {
+    "id": "dbms_q_150",
+    "original_qnum": 150,
+    "module_num": 8,
+    "module_name": "Module 8: SQL Joins",
+    "question": "Which SQL statement produces the name, department name, and the city of all the\nemployees who earn more than 10000?",
+    "code": "",
+    "options": [
+      "SELECT emp_name, department_name, city FROM employees e, departments d, locations 1 JOIN ON (e.department_id = d.department id) AND (d.location_id =1.location_id) AND salary > 10000;",
+      "SELECT emp_name, department_name, city FROM employees e, departments d, locations 1 WHERE salary > 10000;",
+      "SELECT emp_name, department_name, city FROM employees e JOIN departments d USING (department_id) JOIN locations 1 USING (location_id) WHERE salary > 10000;",
+      "SELECT emp_name, department_name, city FROM employees e NATURAL JOIN departments, locations WHERE salary > 10000;"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 8: SQL Joins)."
+  },
+  {
+    "id": "dbms_q_151",
+    "original_qnum": 151,
+    "module_num": 8,
+    "module_name": "Module 8: SQL Joins",
+    "question": "You want to retrieve all employees, whether or not they have matching departments in the\ndepartments table. Which query would you use?",
+    "code": "",
+    "options": [
+      "SELECT last_name, department_name FROM employees e LEFT OUTER JOIN departments d ON (e.department_id = d.department_id);",
+      "SELECT last_name, department_name FROM employees , departments(+);",
+      "SELECT last_name, department_name FROM employees JOIN departments (+);",
+      "SELECT last_name, department_name FROM employees e RIGHT OUTER JOIN departments d ON (e.department_id = d.department_id);"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 8: SQL Joins)."
+  },
+  {
+    "id": "dbms_q_152",
+    "original_qnum": 152,
+    "module_num": 8,
+    "module_name": "Module 8: SQL Joins",
+    "question": "Which is not true regarding the use of outer joins?",
+    "code": "",
+    "options": [
+      "In the WHERE condition, you use (+) following the name of the column in the table without matching rows, to perform an outerjoin.",
+      "You use an outerjoin to see only the rows that do not meet the join condition.",
+      "You cannot link a condition that is involved in an outerjoin to another condition by using the OR operator.",
+      "You cannot an outer join while joining more than 2 tables"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 8: SQL Joins)."
+  },
+  {
+    "id": "dbms_q_153",
+    "original_qnum": 153,
+    "module_num": 8,
+    "module_name": "Module 8: SQL Joins",
+    "question": "Which of the following joins is also called an Inner join?",
+    "code": "",
+    "options": [
+      "Self Join",
+      "Outer Join",
+      "Non-Equi Join",
+      "Equi Join"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 8: SQL Joins)."
+  },
+  {
+    "id": "dbms_q_154",
+    "original_qnum": 154,
+    "module_num": 8,
+    "module_name": "Module 8: SQL Joins",
+    "question": "What is true about joining tables through an equijoin?",
+    "code": "",
+    "options": [
+      "You specify an equijoin condition in the SELECT or FROM clauses of a SELECT statement.",
+      "You can join n tables (all having single column primary keys) in a SQL statement by specifying a minimum of n-1 join conditions.",
+      "You can join a maximum of two columns through an equijoin.",
+      "You can join a maximum of two tables through an equijoin."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 8: SQL Joins)."
+  },
+  {
+    "id": "dbms_q_155",
+    "original_qnum": 155,
+    "module_num": 8,
+    "module_name": "Module 8: SQL Joins",
+    "question": "Examine the structure of the EMPLOYEES, DEPARTMENTS, and TAX tables.\nEMPLOYEES\nEMPLOYEE_ID      NUMBER        NOT NULL, Primary Key\nEMP_NAME         VARCHAR2(30)\nJOB_ID           VARCHAR2(20)\nSALARY           NUMBER\nMGR_ID           NUMBER        References EMPLOYEE_ID column\nDEPARTMENT_ID    NUMBER        Foreign key to DEPARTMENT_ID column of the\nDEPARTMENTS table\nDEPARTMENTS\nDEPARTMENT_ID    NUMBER        NOT NULL, Primary Key\nDEPARTMENT_NAME  VARCHAR2(30)\nMGR_ID           NUMBER        References MGR_ID column of the EMPLOYEES table\nTAX\nMIN_SALARY       NUMBER",
+    "code": "",
+    "options": [
+      "To find the number of employees working for the Administrative department and earning less then 4000.",
+      "To find the tax percentage for each of the employees",
+      "To list the name, job id, and manager name for all the employees.",
+      "To find the name, salary, and department name of employees who are not working with Smith."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 8: SQL Joins)."
+  },
+  {
+    "id": "dbms_q_156",
+    "original_qnum": 156,
+    "module_num": 8,
+    "module_name": "Module 8: SQL Joins",
+    "question": "To produce a meaningful result set without any cartesian products, what is the minimum\nnumber of conditions that should appear in the WHERE clause of a four-table join?",
+    "code": "",
+    "options": [
+      "2",
+      "4",
+      "3",
+      "8"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 8: SQL Joins)."
+  },
+  {
+    "id": "dbms_q_157",
+    "original_qnum": 157,
+    "module_num": 8,
+    "module_name": "Module 8: SQL Joins",
+    "question": "In which case would you use an outer join?",
+    "code": "",
+    "options": [
+      "The tables being joined have NOT NULL columns.",
+      "The tables being joined have both matched and unmatched data.",
+      "The tables being joined have only unmatched data",
+      "The tables being joined have only matched data."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 8: SQL Joins)."
+  },
+  {
+    "id": "dbms_q_158",
+    "original_qnum": 158,
+    "module_num": 8,
+    "module_name": "Module 8: SQL Joins",
+    "question": "When will a Cartesian product occur?",
+    "code": "",
+    "options": [
+      "All rows in the first table are joined to all rows in the second table",
+      "A join condition is omitted",
+      "A join condition is invalid",
+      "Two tables are joined on the columns having different names."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 8: SQL Joins)."
+  },
+  {
+    "id": "dbms_q_159",
+    "original_qnum": 159,
+    "module_num": 8,
+    "module_name": "Module 8: SQL Joins",
+    "question": "Which of the following is not a valid type of Join?",
+    "code": "",
+    "options": [
+      "External Join",
+      "Outer Join",
+      "Inner Join",
+      "Natural join"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 8: SQL Joins)."
+  },
+  {
+    "id": "dbms_q_160",
+    "original_qnum": 160,
+    "module_num": 8,
+    "module_name": "Module 8: SQL Joins",
+    "question": "Which type of join is used in the following query?\nSELECT e.employee_id, e.last_name, d.department_id, d.location_id\nFROM employees e, departments d\nWHERE e.department_id = d.department_id;",
+    "code": "",
+    "options": [
+      "Self Join",
+      "Non-equi Join",
+      "Equi join",
+      "Left Outer join"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 8: SQL Joins)."
+  },
+  {
+    "id": "dbms_q_161",
+    "original_qnum": 161,
+    "module_num": 9,
+    "module_name": "Module 9: Sub Queries",
+    "question": "Evaluate this SELECT statement:\nSELECT employee_id, name\nFROM employee\nWHERE employee_id NOT IN (SELECT employee_id\nFROM employee\nWHERE department_id = 30\nAND job = 'CLERK');\nWhat would happen if the inner query returned a NULL value?",
+    "code": "",
+    "options": [
+      "A syntax error would be returned.",
+      "Only the rows with EMPLOYEE_ID values equal to NULL would be included in the results.",
+      "All the EMPLOYEE_ID and NAME values in the EMPLOYEE table would be displayed.",
+      "No rows would be selected from the EMPLOYEE table."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 9: Sub Queries)."
+  },
+  {
+    "id": "dbms_q_162",
+    "original_qnum": 162,
+    "module_num": 9,
+    "module_name": "Module 9: Sub Queries",
+    "question": "In which clause a subquery cannot be used?",
+    "code": "",
+    "options": [
+      "in the FROM clause of a SELECT statement",
+      "in the GROUP BY clause of a SELECT statement",
+      "in the SET clause of an UPDATE statement",
+      "in the WHERE clause of a SELECT statement"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 9: Sub Queries)."
+  },
+  {
+    "id": "dbms_q_163",
+    "original_qnum": 163,
+    "module_num": 9,
+    "module_name": "Module 9: Sub Queries",
+    "question": "Which best describes an inline view?",
+    "code": "",
+    "options": [
+      "a subquery that is part of the FROM clause of another query",
+      "a subquery that can contain an ORDER BY clause",
+      "another name for a view that contains group functions",
+      "a schema object"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 9: Sub Queries)."
+  },
+  {
+    "id": "dbms_q_164",
+    "original_qnum": 164,
+    "module_num": 9,
+    "module_name": "Module 9: Sub Queries",
+    "question": "Which statement about subqueries is true?",
+    "code": "",
+    "options": [
+      "A subquery can retrieve zero or more rows.",
+      "A subquery should retrieve only one row",
+      "Subqueries CANOT be nested by more than two levels.",
+      "A subquery can be used only in SQL query statements."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 9: Sub Queries)."
+  },
+  {
+    "id": "dbms_q_165",
+    "original_qnum": 165,
+    "module_num": 9,
+    "module_name": "Module 9: Sub Queries",
+    "question": "Which statement will display employees who have same job id as that of 'Hass' and earn\nmore than 10000 ?",
+    "code": "",
+    "options": [
+      "SELECT last_name, job_id FROM employees WHERE job_id IN (SELECT job_id FROM employees WHERE last_name = 'Haas') AND salary > 10000;",
+      "SELECT last_name, job_id FROM employees WHERE last_name = 'Haas' AND salary >10000",
+      "SELECT last_name, job_id FROM employees WHERE job_id IN (SELECT job_id FROM employees WHERE Salary > 10000) AND last_name = 'Haas'",
+      "SELECT last_name, job_id FROM employees WHERE job_id = (SELECT job_id FROM employees WHERE last_name = 'Haas' AND salary > 10000);"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 9: Sub Queries)."
+  },
+  {
+    "id": "dbms_q_166",
+    "original_qnum": 166,
+    "module_num": 9,
+    "module_name": "Module 9: Sub Queries",
+    "question": "__________ is used to retrieve data from one or more tables if there is no relation between\nthe tables.",
+    "code": "",
+    "options": [
+      "Sub query",
+      "Both",
+      "Joins",
+      "None of the above"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 9: Sub Queries)."
+  },
+  {
+    "id": "dbms_q_167",
+    "original_qnum": 167,
+    "module_num": 9,
+    "module_name": "Module 9: Sub Queries",
+    "question": "A subquery can be used to _________.",
+    "code": "",
+    "options": [
+      "Retrieve data based on an unknown condition",
+      "Create groups of data",
+      "Convert data to a different format",
+      "Sort data in a specific order"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 9: Sub Queries)."
+  },
+  {
+    "id": "dbms_q_168",
+    "original_qnum": 168,
+    "module_num": 9,
+    "module_name": "Module 9: Sub Queries",
+    "question": "Examine the data in the EMPLOYEES table:\nLAST_NAME  DEPARTMENT_ID  SALARY\n---------  -------------  ------\nGetz       10             3000\nDavis      20             1500\nKing       20             2200\nDavis      30             5000\nWhich of these sub queries will not work?",
+    "code": "",
+    "options": [
+      "SELECT distinct department_id FROM employees Where salary > ANY (SELECT AVG(salary) FROM employees GROUP BY department_id)",
+      "SELECT last_name FROM employees Where salary > ANY (SELECT MAX(salary) FROM employees GROUP BY department_id)",
+      "SELECT * FROM employees where salary > (SELECT MIN(salary) FROM employees GROUP BY department.id)",
+      "SELECT department_id FROM employees WHERE SALARY > ALL (SELECT AVG(salary) FROM employees GROUP BY department_id)"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 9: Sub Queries)."
+  },
+  {
+    "id": "dbms_q_169",
+    "original_qnum": 169,
+    "module_num": 9,
+    "module_name": "Module 9: Sub Queries",
+    "question": "What is the use of LEVEL pseudocolumn?",
+    "code": "",
+    "options": [
+      "It is used to indicate the starting node of the hierarchical query",
+      "It is used to display the level of a row in the hierarchy",
+      "None of the above",
+      "It is used to level the output of the query"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 9: Sub Queries)."
+  },
+  {
+    "id": "dbms_q_170",
+    "original_qnum": 170,
+    "module_num": 9,
+    "module_name": "Module 9: Sub Queries",
+    "question": "Which query will display the details of the employees and their manager in a TOP-\nDOWN tree structure, starting with employee 'King'?",
+    "code": "",
+    "options": [
+      "SELECT employee_id, last_name, job_id, manager_id FROM employees START WITH last_name = 'King' CONNECT BY PRIOR employee_id = manager_id ;",
+      "SELECT employee _id, last_name, job_id, manager_id FROM employees START WITH last_name = 'King' CONNECT BY PRIOR manager_id = employee_id;",
+      "SELECT employee_id, last_name, job_id, manager_id FROM employees START WITH last_name = 'King' CONNECT BY PRIOR employee_id TOP_DOWN;",
+      "D. SELECT employee_id, last_name, job_id, manager_id FROM employeesSTART WITH last_name = 'King' CONNECT BY TOP_DOWN employee_id = manager_id ;"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 9: Sub Queries)."
+  },
+  {
+    "id": "dbms_q_171",
+    "original_qnum": 171,
+    "module_num": 9,
+    "module_name": "Module 9: Sub Queries",
+    "question": "What will be the output of the below query?\nSELECT last_name, job_id, salary\nFROM employees\nWHERE job_id = (SELECT job_id FROM employees WHERE employee_id = 141)\nAND salary > (SELECT salary FROM employees WHERE employee_id = 143);",
+    "code": "",
+    "options": [
+      "Display employees whose job ID is the same as that of employee 141 or 143 and whose salary is greater than that of employee 141 or 143.",
+      "Display employees whose job ID is the same as that of employee 141 and 143 and whose salary is greater than that of employee 141 and 143.",
+      "Display employees whose job ID is the same as that of employee 141 or whose salary is greater than that of employee 143.",
+      "Display employees whose job ID is the same as that of employee 141 and whose salary is greater than that of employee 143."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 9: Sub Queries)."
+  },
+  {
+    "id": "dbms_q_172",
+    "original_qnum": 172,
+    "module_num": 9,
+    "module_name": "Module 9: Sub Queries",
+    "question": "Which statement regarding subqueries is true?",
+    "code": "",
+    "options": [
+      "A subquery CANNOT reference a table that is not included in the outer query's FROM clause.",
+      "A subquery must be placed on the right side of the comparison operator.",
+      "Subqueries can return multiple columns.",
+      "Subqueries cannot be nested up to3 levels."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 9: Sub Queries)."
+  },
+  {
+    "id": "dbms_q_173",
+    "original_qnum": 173,
+    "module_num": 9,
+    "module_name": "Module 9: Sub Queries",
+    "question": "Which of the following is not a multiple-row comparison operator?",
+    "code": "",
+    "options": [
+      "ANY",
+      "IN",
+      "EACH",
+      "ALL"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 9: Sub Queries)."
+  },
+  {
+    "id": "dbms_q_174",
+    "original_qnum": 174,
+    "module_num": 9,
+    "module_name": "Module 9: Sub Queries",
+    "question": "Evaluate this SQL statement:\nSELECT product_id, product_name, price\nFROM product\nWHERE supplier_id IN (SELECT supplier_id\nFROM product\nWHERE price > 120\nOR qty_in_stock > 100);\nWhich values will be displayed?",
+    "code": "",
+    "options": [
+      "The PRODUCT_ID , PRODUCT_NAME, and PRICE of products that are priced greater than $120.00 or that has a QTY_IN_STOCK value greater than 100",
+      "The PRODUCT_ID, PRODUCT_NAME, and PRICE of products that are priced greater than $120.00 and have a QTY_IN_STOCK value greater than 100",
+      "The PRODUCT_ID, PRODUCT_NAME, and PRICE of products supplied by a supplier with products that are priced greater than $120.00 or with products that have a QTY_IN_STOCK value greater than 100",
+      "The PRODUCT_ID, PRODUCT_NAME, and PRICE of products that are priced greater than $120.00 or that has a QTY_IN_STOCK value less than 100"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 9: Sub Queries)."
+  },
+  {
+    "id": "dbms_q_175",
+    "original_qnum": 175,
+    "module_num": 9,
+    "module_name": "Module 9: Sub Queries",
+    "question": "A subquery can be used to _________.",
+    "code": "",
+    "options": [
+      "Sort data in a specific order",
+      "Create groups of data.",
+      "Retrieve data based on an unknown condition",
+      "Convert data to a different format"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 9: Sub Queries)."
+  },
+  {
+    "id": "dbms_q_176",
+    "original_qnum": 176,
+    "module_num": 9,
+    "module_name": "Module 9: Sub Queries",
+    "question": "Which statement about subqueries is not true?",
+    "code": "",
+    "options": [
+      "A single row subquery can retrieve only one column and one row.",
+      "A multiple row subquery can retrieve multiple rows and multiple columns.",
+      "A multiple row subquery can be compared by using the \">\" operator.",
+      "A single row subquery can retrieve only one row but many columns."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 9: Sub Queries)."
+  },
+  {
+    "id": "dbms_q_177",
+    "original_qnum": 177,
+    "module_num": 9,
+    "module_name": "Module 9: Sub Queries",
+    "question": "You define a multiple-row subquery in the WHERE clause of an SQL query with a\ncomparison operator \"=\". What happens when the main query is executed?",
+    "code": "",
+    "options": [
+      "The main query fails because the multiple-row subquery cannot be used with the comparison operator.",
+      "The main query executes with the last value returned by the subquery.",
+      "The main query executes with all the values returned by the subquery.",
+      "The main query executes with the first value returned by the subquery."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 9: Sub Queries)."
+  },
+  {
+    "id": "dbms_q_178",
+    "original_qnum": 178,
+    "module_num": 9,
+    "module_name": "Module 9: Sub Queries",
+    "question": "Which operator can be used with a multiple-row subquery?",
+    "code": "",
+    "options": [
+      "LIKE",
+      "=",
+      "NOT IN",
+      "BETWEEN"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 9: Sub Queries)."
+  },
+  {
+    "id": "dbms_q_179",
+    "original_qnum": 179,
+    "module_num": 9,
+    "module_name": "Module 9: Sub Queries",
+    "question": "Which statement about subqueries is true?",
+    "code": "",
+    "options": [
+      "A single row subquery can retrieve data from only one table",
+      "A single row subquery cannot be used in a condition where the LIKE operator is used for comparison.",
+      "A SQL query statement cannot display data from table B that is referred to in its",
+      "A SQL query statement can display data from table B that is referred to in its subquery, without including table B in its own FROM clause."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 9: Sub Queries)."
+  },
+  {
+    "id": "dbms_q_180",
+    "original_qnum": 180,
+    "module_num": 9,
+    "module_name": "Module 9: Sub Queries",
+    "question": "Examine the structure of the EMPLOYEES and NEW_EMPLOYEES tables:\nEMPLOYEES\nEMPLOYEE_ID  NUMBER        Primary Key\nFIRST_NAME   VARCHAR2(25)\nLAST_NAME    VARCHAR2(25)\nHIRE_DATE    DATE\nNEW_EMPLOYEES\nEMPLOYEE_ID  NUMBER        Primary Key\nNAME         VARCHAR2(60)\nWhich DELETE statement is valid?",
+    "code": "",
+    "options": [
+      "DELETE FROM employees WHERE employee_id IN (SELECT employee_id FROM new_employees WHERE name = 'Carrey');",
+      "DELETE FROM employees WHERE employee_id = (SELECT employee_id FROM employees);",
+      "DELETE * FROM employees WHERE employee_id IN (SELECT employee_id FROM new_employees WHERE last_name = 'Carrey');",
+      "DELETE * FROM employees WHERE employee_id = (SELECT employee_id FROM new_employees);"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 9: Sub Queries)."
+  },
+  {
+    "id": "dbms_q_181",
+    "original_qnum": 181,
+    "module_num": 10,
+    "module_name": "Module 10: Advanced Sub Queries",
+    "question": "Which statement about the Sub queries is not valid?",
+    "code": "",
+    "options": [
+      "The subquery (inner query) returns a value that is used by the parent statement",
+      "A subquery is a SELECT statement that is embedded in a clause of another SQL statement",
+      "Using a nested subquery is equivalent to performing two sequential queries and using the result of the inner query as the search value in the outer query",
+      "The Outer query is executed first and then the inner subquery."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 10: Advanced Sub Queries)."
+  },
+  {
+    "id": "dbms_q_182",
+    "original_qnum": 182,
+    "module_num": 10,
+    "module_name": "Module 10: Advanced Sub Queries",
+    "question": "Which type of sub query is used in the following SQL statement?\nSELECT employee_id, last_name,\n(CASE\nWHEN department_id = (SELECT department_id FROM departments\nWHERE location_id = 1800)\nTHEN 'Canada' ELSE 'USA'\nEND) location\nFROM employees;",
+    "code": "",
+    "options": [
+      "Pair-wise comparison sub-query",
+      "Correlated sub query",
+      "Inline sub query",
+      "Scalar Sub query"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 10: Advanced Sub Queries)."
+  },
+  {
+    "id": "dbms_q_183",
+    "original_qnum": 183,
+    "module_num": 10,
+    "module_name": "Module 10: Advanced Sub Queries",
+    "question": "Which statement is not true about the Correlated sub Queries?",
+    "code": "",
+    "options": [
+      "A correlated sub query is evaluated once for each row processed by the parent statement.",
+      "The parent statement can be a SELECT, UPDATE, or DELETE statement.",
+      "A correlated sub query is evaluated once for each parent statement.",
+      "The Oracle Server performs a correlated sub query when the sub query references a column from a table referred to in the parent statement."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 10: Advanced Sub Queries)."
+  },
+  {
+    "id": "dbms_q_184",
+    "original_qnum": 184,
+    "module_num": 10,
+    "module_name": "Module 10: Advanced Sub Queries",
+    "question": "Which type of sub query is used in the following SQL statement?\nSELECT employee_id, last_name\nFROM employees e\nORDER BY (SELECT department_name\nFROM departments d\nWHERE e.department_id = d.department_id);",
+    "code": "",
+    "options": [
+      "Pair-wise comparison sub-query",
+      "Correlated sub query",
+      "nline sub query",
+      "Non-pair wise comparison query"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 10: Advanced Sub Queries)."
+  },
+  {
+    "id": "dbms_q_185",
+    "original_qnum": 185,
+    "module_num": 10,
+    "module_name": "Module 10: Advanced Sub Queries",
+    "question": "What does EXISTS operator return when the inner query selects no records?\nA. NULL\nB. 0\nC. FALSE\nD. TRUE",
+    "code": "",
+    "options": [
+      "FALSE",
+      "TRUE",
+      "NULL"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 10: Advanced Sub Queries)."
+  },
+  {
+    "id": "dbms_q_186",
+    "original_qnum": 186,
+    "module_num": 10,
+    "module_name": "Module 10: Advanced Sub Queries",
+    "question": "What will be the output of the following query?\nSELECT employee_id, last_name, job_id, department_id\nFROM employees outer\nWHERE EXISTS (SELECT 'X'\nFROM employees\nWHERE manager_id = outer.employee_id);",
+    "code": "",
+    "options": [
+      "Display employees who have at least one person reporting to them with employee_id as 'X'",
+      "Display employees who have at least one person reporting to them.",
+      "Display employees who have at least one manager assigned to them.",
+      "Display employees who have at least one person reporting to them with name 'X'"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 10: Advanced Sub Queries)."
+  },
+  {
+    "id": "dbms_q_187",
+    "original_qnum": 187,
+    "module_num": 10,
+    "module_name": "Module 10: Advanced Sub Queries",
+    "question": "Which of the following queries displays all departments that do not have any employees?",
+    "code": "",
+    "options": [
+      "SELECT department_id, department_name FROM departments d WHERE NOT EXISTS (SELECT 'X' FROM employees WHERE department_id = d.department_id);",
+      "SELECT department_id, department_name FROM departments d WHERE EXISTS (SELECT 'X' FROM employees WHERE department_id = d.department_id);",
+      "SELECT department_id, department_name FROM departments d WHERE NOT EXISTS (SELECT 'X' FROM employees WHERE department_id = department_id);",
+      "SELECT department_id, department_name FROM departments d WHERE EXISTS (SELECT 'X' FROM employees WHERE department_id = department_id);"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 10: Advanced Sub Queries)."
+  },
+  {
+    "id": "dbms_q_188",
+    "original_qnum": 188,
+    "module_num": 10,
+    "module_name": "Module 10: Advanced Sub Queries",
+    "question": "Examine the Update statement below, which type of update is this?\nUPDATE employees e\nSET department_name = (SELECT department_name\nFROM departments d\nWHERE e.department_id = d.department_id);",
+    "code": "",
+    "options": [
+      "Inline Update",
+      "Correlated Update",
+      "Direct Update",
+      "Indirect Update"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 10: Advanced Sub Queries)."
+  },
+  {
+    "id": "dbms_q_189",
+    "original_qnum": 189,
+    "module_num": 10,
+    "module_name": "Module 10: Advanced Sub Queries",
+    "question": "Which of the following is a correlated sub query to delete only those rows from the\nEMPLOYEES table that also exist in the EMP_HISTORY table?",
+    "code": "",
+    "options": [
+      "DELETE FROM employees E WHERE employee_id IN (SELECT employee_id FROM employees E, emp_history H WHERE E.employee_id = H. employee_id; );",
+      "DELETE FROM employees E WHERE employee_id = (SELECT employee_id FROM emp_history WHERE employee_id = E.employee_id);",
+      "DELETE FROM employees E WHERE employee_id IN (SELECT employee_id FROM emp_history H)",
+      "DELETE FROM employees E , emp_history H WHERE E.employee_id = H. employee_id;"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 10: Advanced Sub Queries)."
+  },
+  {
+    "id": "dbms_q_190",
+    "original_qnum": 190,
+    "module_num": 10,
+    "module_name": "Module 10: Advanced Sub Queries",
+    "question": "Which of the following is not true about using the WITH clause?",
+    "code": "",
+    "options": [
+      "Using the WITH clause, you can define a query block before using it in a query.",
+      "The WITH clause is also known as subquery_factoring_clause.",
+      "The WITH clause enables you to reuse the same query block in a SELECT statement when it occurs more than once within a complex query",
+      "The WITH clause, unlike the Inline views, can create permanent and reusable views"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 10: Advanced Sub Queries)."
+  },
+  {
+    "id": "dbms_q_191",
+    "original_qnum": 191,
+    "module_num": 10,
+    "module_name": "Module 10: Advanced Sub Queries",
+    "question": "When should the use of WITH clause be more effective?",
+    "code": "",
+    "options": [
+      "WITH clause is used when the query has many number of tables to be joined.",
+      "When using the Inline sub queries in the FROM clause.",
+      "When a query has many references to the same query block and there are joins and aggregations.",
+      "WITH clause can be used to replace the correlated sub queries for faster performance"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 10: Advanced Sub Queries)."
+  },
+  {
+    "id": "dbms_q_192",
+    "original_qnum": 192,
+    "module_num": 10,
+    "module_name": "Module 10: Advanced Sub Queries",
+    "question": "Which of the following is a valid usage of a sub-query?",
+    "code": "",
+    "options": [
+      "To define the set of rows to be inserted into the target table of an INSERT or CREATE TABLE statement",
+      "To provide values for conditions in WHERE, HAVING, and START WITH clauses of SELECT statements",
+      "All of the above",
+      "To define one or more values to be assigned to existing rows in an UPDATE statement"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 10: Advanced Sub Queries)."
+  },
+  {
+    "id": "dbms_q_193",
+    "original_qnum": 193,
+    "module_num": 10,
+    "module_name": "Module 10: Advanced Sub Queries",
+    "question": "Which of the following is not a benefit of using the WITH Clause?",
+    "code": "",
+    "options": [
+      "It automatically sorts the output of the query",
+      "It evaluates a clause only once, even if it appears multiple times in the query.",
+      "It can enhance performance of the queries",
+      "It makes the query easy to read"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 10: Advanced Sub Queries)."
+  },
+  {
+    "id": "dbms_q_194",
+    "original_qnum": 194,
+    "module_num": 10,
+    "module_name": "Module 10: Advanced Sub Queries",
+    "question": "Identify the odd one among the following operators used along with Sub-queries.",
+    "code": "",
+    "options": [
+      "=",
+      "ANY",
+      "ALL",
+      "IN"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 10: Advanced Sub Queries)."
+  },
+  {
+    "id": "dbms_q_195",
+    "original_qnum": 195,
+    "module_num": 10,
+    "module_name": "Module 10: Advanced Sub Queries",
+    "question": "Which query will display the details of all employees who earn less than the average salary in\nthe company?",
+    "code": "",
+    "options": [
+      "SELECT last_name, job_id, salary FROM employees WHERE salary < (SELECT AVG(salary) FROM employees GROUP BY Department_id);",
+      "SELECT last_name, job_id, salary FROM employees HAVING salary < (SELECT AVG(salary) FROM employees);",
+      "SELECT last_name, job_id, salary FROM employees WHERE salary ANY (SELECT AVG(salary) FROM employees GROUP BY department_id);",
+      "SELECT last_name, job_id, salary FROM employees WHERE salary < (SELECT AVG(salary) FROM employees);"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 10: Advanced Sub Queries)."
+  },
+  {
+    "id": "dbms_q_196",
+    "original_qnum": 196,
+    "module_num": 10,
+    "module_name": "Module 10: Advanced Sub Queries",
+    "question": "What is a multicolumn sub query?",
+    "code": "",
+    "options": [
+      "There is no sub query as Multi-column sub query, there is only multi-row sub query",
+      "A sub query which selects more than one column is called a multi-column sub query",
+      "A multi-column sub query is the one that uses single-row operators for comparison",
+      "A sub query which uses decode statements to process multiple columns is called a multi-column sub query"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 10: Advanced Sub Queries)."
+  },
+  {
+    "id": "dbms_q_197",
+    "original_qnum": 197,
+    "module_num": 10,
+    "module_name": "Module 10: Advanced Sub Queries",
+    "question": "What will be the output of the following multi-column sub query?\nSELECT employee_id, manager_id, department_id\nFROM employees\nWHERE (manager_id, department_id) IN\n(SELECT manager_id, department_id\nFROM employees\nWHERE employee_id IN (178, 174));",
+    "code": "",
+    "options": [
+      "Display the details of the employees who are managed by the same manager and work in the same department as the employees with EMPLOYEE_ID 178 or 174.",
+      "Display the details of the employees who are managed by the same manager and work in the same department as the employees with EMPLOYEE_ID 178 and 174.",
+      "Display the details of the employees managed by the same manager as that of the employees with EMPLOYEE_ID 178 or 174 and work in the same department as the employees with EMPLOYEE_ID 178 or 174.",
+      "This statement will return Error"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 10: Advanced Sub Queries)."
+  },
+  {
+    "id": "dbms_q_198",
+    "original_qnum": 198,
+    "module_num": 10,
+    "module_name": "Module 10: Advanced Sub Queries",
+    "question": "What will be the output of the following multi-column sub query?\nSELECT employee_id, manager_id, department_id\nFROM employees\nWHERE manager_id IN\n(SELECT manager_id\nFROM employees\nWHERE employee_id IN (174, 141))\nAND department_id IN\n(SELECT department_id\nFROM employees\nWHERE employee_id IN (174, 141))\nAND employee_id NOT IN (174, 141);",
+    "code": "",
+    "options": [
+      "Display the details of the employees who are managed by the same manager and work in the same department as the employees with EMPLOYEE_ID 178 or 174.",
+      "This statement will return Error",
+      "Display the details of the employees who are managed by the same manager and work in the same department as the employees with EMPLOYEE_ID 178 and 174.",
+      "Display the details of the employees managed by the same manager as that of the employees with EMPLOYEE_ID 178 or 174 and work in the same department as the employees with EMPLOYEE_ID 178 or 174."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 10: Advanced Sub Queries)."
+  },
+  {
+    "id": "dbms_q_199",
+    "original_qnum": 199,
+    "module_num": 10,
+    "module_name": "Module 10: Advanced Sub Queries",
+    "question": "What is not true about the Inline Sub Queries?",
+    "code": "",
+    "options": [
+      "A sub query in the FROM clause of a SELECT statement defines a data source for that particular SELECT statement, and only that SELECT statement.",
+      "A sub query in the FROM clause of a SELECT statement is also called an inline view.",
+      "The inline views created during the Sub query can be used later by same or other queries.",
+      "You can use a sub query in the FROM clause of a SELECT statement, which is very similar to how views are used."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 10: Advanced Sub Queries)."
+  },
+  {
+    "id": "dbms_q_200",
+    "original_qnum": 200,
+    "module_num": 10,
+    "module_name": "Module 10: Advanced Sub Queries",
+    "question": "Which of the following is not true about the Scalar sub queries?",
+    "code": "",
+    "options": [
+      "Multiple-column sub queries written to compare two or more columns, using a compound WHERE clause and logical operators, do not qualify as scalar sub queries",
+      "The value of the scalar sub query expression is the value of the select list item of the sub query.",
+      "If the sub query returns 0 rows, the value of the scalar sub query expression is NULL.",
+      "A sub query that returns exactly one column value from one row is also referred to as a scalar sub query."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 10: Advanced Sub Queries)."
+  },
+  {
+    "id": "dbms_q_201",
+    "original_qnum": 201,
+    "module_num": 11,
+    "module_name": "Module 11: Views",
+    "question": "In which scenario would TOP N analysis be the best solution?",
+    "code": "",
+    "options": [
+      "You want to identify the person who makes the highest salary for all employees",
+      "You want to find the manager supervising the largest number of employees.",
+      "You want to rank the top three sales representatives who have sold the maximum number of products",
+      "You want to identify the most senior employee in the company"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 11: Views)."
+  },
+  {
+    "id": "dbms_q_202",
+    "original_qnum": 202,
+    "module_num": 11,
+    "module_name": "Module 11: Views",
+    "question": "Examine the structure of the EMP_DEPT_VU view:\nColumn Name    Type          Remarks\n-------------  ------------  ---------------------------\nEMPLOYEE_ID    NUMBER        From the EMPLOYEES table\nEMP_NAME       VARCHAR2(30)  From the EMPLOYEES table\nJOB_ID         VARCHAR2(20)  From the EMPLOYEES table\nSALARY         NUMBER        From the EMPLOYEES table\nDEPARTMENT_ID  NUMBER        From the DEPARTMENTS table\nDEPT_NAME      VARCHAR2(30)  From the DEPARTMENTS table\nWhich of the following SQL statement produces an error?",
+    "code": "",
+    "options": [
+      "SELECT * FROM emp_dept_vu;",
+      "SELECT department_id, SUM(salary) FROM emp_dept_vu GROUP BY department_id;",
+      "SELECT department_id, job_id, AVG(salary) FROM emp_dept_vu GROUP BY department_id, job_id;",
+      "None of the statements produce an error; all are valid"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 11: Views)."
+  },
+  {
+    "id": "dbms_q_203",
+    "original_qnum": 203,
+    "module_num": 11,
+    "module_name": "Module 11: Views",
+    "question": "Which SQL statement would you use to remove a view called EMP_DEPT_VU from your\nschema?",
+    "code": "",
+    "options": [
+      "REMOVE emp_dept_vu;",
+      "DELETE emp_dept_vu;",
+      "DROP emp_dept_vu",
+      "DROP VIEW emp_dept_vu"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 11: Views)."
+  },
+  {
+    "id": "dbms_q_204",
+    "original_qnum": 204,
+    "module_num": 11,
+    "module_name": "Module 11: Views",
+    "question": "Top N analysis requires:",
+    "code": "",
+    "options": [
+      "Only an inline view",
+      "The use of ROWNUM pseudo column",
+      "The use of ROWID",
+      "a GROUP BY clause"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 11: Views)."
+  },
+  {
+    "id": "dbms_q_205",
+    "original_qnum": 205,
+    "module_num": 11,
+    "module_name": "Module 11: Views",
+    "question": "What is true about updates through a view?",
+    "code": "",
+    "options": [
+      "When you update a view the constraints on the views always override the constraints on theunderlying tables",
+      "When you update a view group functions are automatically computed",
+      "You cannot update a view with group functions",
+      "When you update a view only the data in the view will be updated and not the table data"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 11: Views)."
+  },
+  {
+    "id": "dbms_q_206",
+    "original_qnum": 206,
+    "module_num": 11,
+    "module_name": "Module 11: Views",
+    "question": "What does the FORCE option do for creating a view?",
+    "code": "",
+    "options": [
+      "creates a view regardless of whether or not the base tables exist",
+      "creates a view in another schema even if you don't have privileges",
+      "creates a view even if the underlying parent table has constraints",
+      "creates a view with constraints"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 11: Views)."
+  },
+  {
+    "id": "dbms_q_207",
+    "original_qnum": 207,
+    "module_num": 11,
+    "module_name": "Module 11: Views",
+    "question": "Which of the following best describes an inline view?",
+    "code": "",
+    "options": [
+      "a schema object",
+      "a sub query that is part of the FROM clause of another query",
+      "a sub query that can contain an ORDER BY clause",
+      "another name for a view that contains group functions"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 11: Views)."
+  },
+  {
+    "id": "dbms_q_208",
+    "original_qnum": 208,
+    "module_num": 11,
+    "module_name": "Module 11: Views",
+    "question": "Which statement about views is not true?",
+    "code": "",
+    "options": [
+      "A view can be created as read only",
+      "The table must exist to create a view on it",
+      "A view can be created with a GROUP BY clause in the SELECT statement.",
+      "A view can be created based on another view"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 11: Views)."
+  },
+  {
+    "id": "dbms_q_209",
+    "original_qnum": 209,
+    "module_num": 11,
+    "module_name": "Module 11: Views",
+    "question": "Evaluate this SQL statement:\nSELECT a.emp_name, a.sal, a.dept_id, b.maxsal\nFROM employees a,\n(SELECT dept_id, MAX(sal) maxsal\nFROM employees\nGROUP BY dept_id) b\nWHERE a.dept_id = b.dept_id\nAND a.sal < b.maxsal;\nWhat is the result of the statement?",
+    "code": "",
+    "options": [
+      "The statement produces an error at line 3",
+      "The statement produces an error at line 4",
+      "The statement returns the employee name, salary, department ID, and maximum salary earned in the department of the employee for all employees who earn less than the maximum salary in their department",
+      "The statement produces an error at line 1"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 11: Views)."
+  },
+  {
+    "id": "dbms_q_210",
+    "original_qnum": 210,
+    "module_num": 11,
+    "module_name": "Module 11: Views",
+    "question": "You need to create a view called EMP_VU that allows the user to insert rows through the\nview. Which of the following SQL statement, when used to create the EMP_VU view,\nallows the user to insert rows?",
+    "code": "",
+    "options": [
+      "CREATE VIEW emp_Vu AS SELECT department_id, SUM(sal) TOTALSAL FROM employees WHERE mgr_id IN (102, 120) GROUP BY department_id;",
+      "CREATE VIEW emp_Vu AS SELECT employee_id, emp_name,department_id FROM employees WHERE mgr_id IN (102, 120);",
+      "CREATE VIEW emp_Vu AS SELECT employee_id, emp_name, job_id,DISTINCT department_id FROM employees;",
+      "CREATE VIEW emp_Vu AS SELECT employee_id, emp_name, job_iddepartment_id FROM employees WHERE mgr_id IN (102, 120);"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 11: Views)."
+  },
+  {
+    "id": "dbms_q_211",
+    "original_qnum": 211,
+    "module_num": 11,
+    "module_name": "Module 11: Views",
+    "question": "You need to perform certain data manipulation operations through a view called\nEMP_DEPT_VU, which you previously created. You want to look at the definition of the\nview (the SELECT statement on which the view was created).\nHow do you obtain the definition of the view?",
+    "code": "",
+    "options": [
+      "Query the USER_VIEWS data dictionary view to search for the EMP_DEPT_VU view",
+      "Use the DESCRIBE VIEW command on the EMP_DEPT VU view",
+      "Use the DEFINE VIEW command on the EMP_DEPT VU view",
+      "Query the USER_SOURCE data dictionary view to search for the EMP_DEPT_VU view"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 11: Views)."
+  },
+  {
+    "id": "dbms_q_212",
+    "original_qnum": 212,
+    "module_num": 11,
+    "module_name": "Module 11: Views",
+    "question": "What is necessary for your query on an existing view to execute successfully?",
+    "code": "",
+    "options": [
+      "The underlying tables must be in the same schema",
+      "The underlying tables must have data.",
+      "You need SELECT privileges only on the underlying tables",
+      "You need SELECT privileges on the view."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 11: Views)."
+  },
+  {
+    "id": "dbms_q_213",
+    "original_qnum": 213,
+    "module_num": 11,
+    "module_name": "Module 11: Views",
+    "question": "When you use SQL Subquery in ________ clause of the select statement it is called inline\nview",
+    "code": "",
+    "options": [
+      "group by",
+      "order by",
+      "where",
+      "from"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 11: Views)."
+  },
+  {
+    "id": "dbms_q_214",
+    "original_qnum": 214,
+    "module_num": 11,
+    "module_name": "Module 11: Views",
+    "question": "You created a view called EMP_DEPT_VU that contains three columns from the\nEMPLOYEES and DEPARTMENTS tables: EMPLOYEE_ID, EMPLOYEE_NAME and\nDEPARTMENT_NAME.\nThe DEPARTMENT_ID column of the EMPLOYEES table is the foreign key to the primary\nkey DEPARTMENT_ID column of the DEPARTMENTS table.\nYou want to modify the view by adding a fourth column, MANAGER_ID of NUMBER data\ntype from the EMPLOYEES tables.\nHow can you accomplish this task?",
+    "code": "",
+    "options": [
+      "ALTER VIEW emp_dept_vu AS SELECT employee_id, employee_name,department_name, manager_id FROM employee e, departments d WHERE e.department_id = d.department_id;",
+      "MODIFY VIEW emp_dept_vu (ADD manager_id NUMBER);",
+      "ALTER VIEW emp_dept_vu (ADD manager_id NUMBER);",
+      "CREATE OR REPLACE VIEW emp_dept_vu AS SELECT employee_id, employee_name,department_name, manager_id FROM employees e, departments d WHERE e.department_id = d.department_id;"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 11: Views)."
+  },
+  {
+    "id": "dbms_q_215",
+    "original_qnum": 215,
+    "module_num": 11,
+    "module_name": "Module 11: Views",
+    "question": "Which statements concerning the creation of a view are true? (Choose all that apply.)",
+    "code": "",
+    "options": [
+      "View columns that are the result of derived values are named by Oracle.",
+      "When the view already exists, using the OR REPLACE option requires the re-granting of the object privileges previously granted on the view",
+      "A constraint name must be provided when using the WITH CHECK OPTION clause or theStatement will fail",
+      "A view can have column names that are different than the actual base table(s) column names by using column aliases."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 11: Views)."
+  },
+  {
+    "id": "dbms_q_216",
+    "original_qnum": 216,
+    "module_num": 11,
+    "module_name": "Module 11: Views",
+    "question": "You are granted the CREATE VIEW privilege. What does this allow you to do?",
+    "code": "",
+    "options": [
+      "Create a table view",
+      "Create a view in any schema",
+      "Create a view in your schema",
+      "Create a sequence view in any schema"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 11: Views)."
+  },
+  {
+    "id": "dbms_q_217",
+    "original_qnum": 217,
+    "module_num": 11,
+    "module_name": "Module 11: Views",
+    "question": "Which of the following is a valid option while creating a view?",
+    "code": "",
+    "options": [
+      "WITH BREAK OPTION",
+      "ON DELETE CASCADE",
+      "WITH GRANT OPTION",
+      "WITH CHECK OPTION"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 11: Views)."
+  },
+  {
+    "id": "dbms_q_218",
+    "original_qnum": 218,
+    "module_num": 11,
+    "module_name": "Module 11: Views",
+    "question": "An inline view is a SELECT statement that is given an alias and is embedded in the ______\nclause of another SELECT statement.",
+    "code": "",
+    "options": [
+      "CASE",
+      "FROM",
+      "WHERE",
+      "SELECT"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 11: Views)."
+  },
+  {
+    "id": "dbms_q_219",
+    "original_qnum": 219,
+    "module_num": 11,
+    "module_name": "Module 11: Views",
+    "question": "You need to create a view EMP_VU. The view should allow the users to manipulate the\nrecords of only the employees that are working for departments 10 or 20.\nWhich SQL statement would you use to create the view EMP_VU?",
+    "code": "",
+    "options": [
+      "CREATE VIEW emp_vu AS SELECT * FROM employees WHERE department_id IN (10,20) WITH READ ONLY;",
+      "CREATE VIEW emp_vu AS SELECT * FROM employees WHERE department_id IN (10,20) WITH CHECK OPTION;",
+      "CREATE VIEW emp_vu AS SELECT * FROM employees WHERE department_id IN (10,20);",
+      "CREATE FORCE VIEW emp_vu AS SELECT * FROM employees WHERE department_id IN (10,20);"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 11: Views)."
+  },
+  {
+    "id": "dbms_q_220",
+    "original_qnum": 220,
+    "module_num": 11,
+    "module_name": "Module 11: Views",
+    "question": "Which statement about views is true?",
+    "code": "",
+    "options": [
+      "A view cannot have an ORDER BY clause in the SELECT statement",
+      "A view cannot be created with a GROUP BY clause in the SELECT statement.",
+      "A view can be created as read only",
+      "A view must have aliases defined for the column names in the SELECT statement"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 11: Views)."
+  },
+  {
+    "id": "dbms_q_221",
+    "original_qnum": 221,
+    "module_num": 12,
+    "module_name": "Module 12: Set Operators & Pseudo Column",
+    "question": "Which of the following is not a SET operator?",
+    "code": "",
+    "options": [
+      "Intersect",
+      "Union",
+      "Minus",
+      "Plus"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 12: Set Operators & Pseudo Column)."
+  },
+  {
+    "id": "dbms_q_222",
+    "original_qnum": 222,
+    "module_num": 12,
+    "module_name": "Module 12: Set Operators & Pseudo Column",
+    "question": "If the JOB_HISTORY table contains the records for those employees who have changed their\njobs at least once, and you want to display the employee IDs of those employees who have\nnot changed their jobs even once, which set operator should you use to write a query?",
+    "code": "",
+    "options": [
+      "Intersect",
+      "Minus",
+      "Union",
+      "Union All"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 12: Set Operators & Pseudo Column)."
+  },
+  {
+    "id": "dbms_q_223",
+    "original_qnum": 223,
+    "module_num": 12,
+    "module_name": "Module 12: Set Operators & Pseudo Column",
+    "question": "Which of the following is not true about the use of Set operators in general?",
+    "code": "",
+    "options": [
+      "SET operators cannot be used in sub queries",
+      "The expressions in the SELECT lists must match in number and data type.",
+      "Parentheses can be used to alter the sequence of execution.",
+      "Queries that use UNION, UNION ALL, INTERSECT, and MINUS SET operators in their WHERE clause must have the same number and type of columns in their SELECT list"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 12: Set Operators & Pseudo Column)."
+  },
+  {
+    "id": "dbms_q_224",
+    "original_qnum": 224,
+    "module_num": 12,
+    "module_name": "Module 12: Set Operators & Pseudo Column",
+    "question": "Which statement about the use of ORDER BY clause in conjunction with the SET Operators\nis not correct?",
+    "code": "",
+    "options": [
+      "The column name or alias, if used in an ORDER BY clause, must be from the first SELECT list.",
+      "The ORDER BY clause: Can accept the column name, an alias, or the positional notation",
+      "The ORDER BY clause: Can appear only at the very end of the statement",
+      "The ORDER BY clause: Can appear only at the end of the first SELECT statement"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 12: Set Operators & Pseudo Column)."
+  },
+  {
+    "id": "dbms_q_225",
+    "original_qnum": 225,
+    "module_num": 12,
+    "module_name": "Module 12: Set Operators & Pseudo Column",
+    "question": "Which statement about the Oracle Server and SET Operators is not true?",
+    "code": "",
+    "options": [
+      "By default, the output is sorted in ascending order of the first column of the SELECT clause.",
+      "The column names in the output are decided by the column list in the first SELECT statement",
+      "The data types of the output columns are same as the selected columns",
+      "the Oracle Server eliminates duplicate rows automatically except in the case of the UNION ALL operator"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 12: Set Operators & Pseudo Column)."
+  },
+  {
+    "id": "dbms_q_226",
+    "original_qnum": 226,
+    "module_num": 12,
+    "module_name": "Module 12: Set Operators & Pseudo Column",
+    "question": "What data does the DUAL table contain by default?",
+    "code": "",
+    "options": [
+      "One column named DUMMY and one row with value X",
+      "One column named D and one row with value X",
+      "One column named COL and one row with value 1",
+      "DUAL table doesn't contain any data by default."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 12: Set Operators & Pseudo Column)."
+  },
+  {
+    "id": "dbms_q_227",
+    "original_qnum": 227,
+    "module_num": 12,
+    "module_name": "Module 12: Set Operators & Pseudo Column",
+    "question": "What is not true about the Oracle Pseudo columns?",
+    "code": "",
+    "options": [
+      "A pseudo column behaves like a table column, but is not actually stored in the table.",
+      "Pseudo columns are internally maintained by the Oracle server.",
+      "You cannot insert value of a pseudo column in other table's columns.",
+      "You can select from pseudo columns, but you cannot insert, update, or delete their values."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 12: Set Operators & Pseudo Column)."
+  },
+  {
+    "id": "dbms_q_228",
+    "original_qnum": 228,
+    "module_num": 12,
+    "module_name": "Module 12: Set Operators & Pseudo Column",
+    "question": "Which of the following is not a valid type or name of an Oracle Pseudo-column?",
+    "code": "",
+    "options": [
+      "Hierarchical Query Pseudo columns",
+      "Sequence Pseudo columns",
+      "Sub Query Pseudo columns",
+      "ROWNUM Pseudo column"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 12: Set Operators & Pseudo Column)."
+  },
+  {
+    "id": "dbms_q_229",
+    "original_qnum": 229,
+    "module_num": 12,
+    "module_name": "Module 12: Set Operators & Pseudo Column",
+    "question": "Which of the following statement, about sequence pseudo columns is true?",
+    "code": "",
+    "options": [
+      "You use a CURRVAL pseudo column to generate a value from a sequence that would be used for a specified database column.",
+      "You use a NEXTVAL pseudo column to look at the next possible value that would be generated from a sequence, without actually retrieving the value.",
+      "You use a CURRVAL pseudo column to generated next value of the sequence to be used.",
+      "You use a NEXTVAL pseudo column to obtain the next possible value from a sequence by actually retrieving the value from the sequence."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 12: Set Operators & Pseudo Column)."
+  },
+  {
+    "id": "dbms_q_230",
+    "original_qnum": 230,
+    "module_num": 12,
+    "module_name": "Module 12: Set Operators & Pseudo Column",
+    "question": "Which of the following is not part of the information contained inside the ROWID pseudo\ncolumn?",
+    "code": "",
+    "options": [
+      "The data object number of the object",
+      "The data file in which the row resides",
+      "The position of the row in the oracle table",
+      "The data block in the data file in which the row resides"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 12: Set Operators & Pseudo Column)."
+  },
+  {
+    "id": "dbms_q_231",
+    "original_qnum": 231,
+    "module_num": 12,
+    "module_name": "Module 12: Set Operators & Pseudo Column",
+    "question": "Which of these pseudo columns is useful while performing the TOP-N analysis?",
+    "code": "",
+    "options": [
+      "RANK",
+      "ROWID",
+      "LEVEL",
+      "ROWNUM"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 12: Set Operators & Pseudo Column)."
+  },
+  {
+    "id": "dbms_q_232",
+    "original_qnum": 232,
+    "module_num": 12,
+    "module_name": "Module 12: Set Operators & Pseudo Column",
+    "question": "If you want to select employees details from two different tables which may contain records\nfor same employee ids, but want to display each employees record only once, which set\noperator should you use?",
+    "code": "",
+    "options": [
+      "Union",
+      "Union all",
+      "Minus",
+      "Intersect"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 12: Set Operators & Pseudo Column)."
+  },
+  {
+    "id": "dbms_q_233",
+    "original_qnum": 233,
+    "module_num": 12,
+    "module_name": "Module 12: Set Operators & Pseudo Column",
+    "question": "What will be the output of the below query?\nSELECT *\nFROM employees\nWHERE ROWNUM < 10;",
+    "code": "",
+    "options": [
+      "This Query will perform TOP-N analysis to display TOP nine earning employees as ROWNUM is used.",
+      "This query will return error as ROWNUM is not used in the SELECT clause and only in the WHERE clause",
+      "The query will select only 10 records from employees table",
+      "This query will return 9 rows from the Employees table, if there are 9 or more records in the employees table"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 12: Set Operators & Pseudo Column)."
+  },
+  {
+    "id": "dbms_q_234",
+    "original_qnum": 234,
+    "module_num": 12,
+    "module_name": "Module 12: Set Operators & Pseudo Column",
+    "question": "Queries containing SET operators are called _______ queries.",
+    "code": "",
+    "options": [
+      "Compound",
+      "Set",
+      "Complex",
+      "Set Manipulation"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 12: Set Operators & Pseudo Column)."
+  },
+  {
+    "id": "dbms_q_235",
+    "original_qnum": 235,
+    "module_num": 12,
+    "module_name": "Module 12: Set Operators & Pseudo Column",
+    "question": "What is not true about the Union operator?",
+    "code": "",
+    "options": [
+      "UNION operates over all of the columns being selected.",
+      "The IN operator has a higher precedence than the UNION operator.",
+      "By default, the output is sorted in ascending order of the first column of the SELECT clause.",
+      "NULL values are ignored during duplicate checking."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 12: Set Operators & Pseudo Column)."
+  },
+  {
+    "id": "dbms_q_236",
+    "original_qnum": 236,
+    "module_num": 12,
+    "module_name": "Module 12: Set Operators & Pseudo Column",
+    "question": "Which of the set operators when used, the output of the query is not sorted by default?",
+    "code": "",
+    "options": [
+      "Minus",
+      "Intersect",
+      "Union",
+      "Union All"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 12: Set Operators & Pseudo Column)."
+  },
+  {
+    "id": "dbms_q_237",
+    "original_qnum": 237,
+    "module_num": 12,
+    "module_name": "Module 12: Set Operators & Pseudo Column",
+    "question": "Which of the following statement is not true about the UNION ALL operator?",
+    "code": "",
+    "options": [
+      "The DISTINCT keyword can be used",
+      "The output is not sorted by default",
+      "The UNION ALL operator to return all rows from multiple queries.",
+      "duplicate rows are not eliminated"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 12: Set Operators & Pseudo Column)."
+  },
+  {
+    "id": "dbms_q_238",
+    "original_qnum": 238,
+    "module_num": 12,
+    "module_name": "Module 12: Set Operators & Pseudo Column",
+    "question": "What is not true about the use of Intersect operator?",
+    "code": "",
+    "options": [
+      "INTERSECT does not ignore NULL values.",
+      "The names of the columns need not be identical",
+      "The number of columns and the data types of the columns being selected by the SELECT statements in the queries must be identical in all the SELECT statements used in the query",
+      "Reversing the order of the intersected tables may result in a changed output"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 12: Set Operators & Pseudo Column)."
+  },
+  {
+    "id": "dbms_q_239",
+    "original_qnum": 239,
+    "module_num": 12,
+    "module_name": "Module 12: Set Operators & Pseudo Column",
+    "question": "Which operator should you use to display the records which are a common result of each of\nthe queries?",
+    "code": "",
+    "options": [
+      "Union",
+      "Minus",
+      "Intersect",
+      "Union All"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 12: Set Operators & Pseudo Column)."
+  },
+  {
+    "id": "dbms_q_240",
+    "original_qnum": 240,
+    "module_num": 12,
+    "module_name": "Module 12: Set Operators & Pseudo Column",
+    "question": "Which of the following is correct about the use of Union operator?",
+    "code": "",
+    "options": [
+      "The data types of the columns being selected must be identical but the number of columns may be different.",
+      "The number of columns and the data types of the columns being selected must be identical in all the SELECT statements used in the query",
+      "The names of the columns must also be identical",
+      "The number of columns being selected must be identical but the data types of the columns may be different."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 12: Set Operators & Pseudo Column)."
+  },
+  {
+    "id": "dbms_q_241",
+    "original_qnum": 241,
+    "module_num": 13,
+    "module_name": "Module 13: Normalization",
+    "question": "Which the following statement is not true about Database Normalization ?",
+    "code": "",
+    "options": [
+      "Normalization usually involves combining small tables and consolidating them into a single table so that maximum data can be accessed through each table.",
+      "In the design of a relational database management system, the process of organizing data to minimize redundancy is called 'Normalization'.",
+      "The goal of database normalization is to decompose relations with anomalies in order to produce smaller, well-structured relations.",
+      "Normalization usually involves dividing large tables into smaller (and less redundant) tables and defining relationships between them."
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 13: Normalization)."
+  },
+  {
+    "id": "dbms_q_242",
+    "original_qnum": 242,
+    "module_num": 13,
+    "module_name": "Module 13: Normalization",
+    "question": "An attribute is fully functionally dependent on a set of attributes X if it is _________.",
+    "code": "",
+    "options": [
+      "Functionally dependent on X",
+      "Not functionally dependent on any proper subset of X.",
+      "Either A or B but not both",
+      "Both A and B"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 13: Normalization)."
+  },
+  {
+    "id": "dbms_q_243",
+    "original_qnum": 243,
+    "module_num": 13,
+    "module_name": "Module 13: Normalization",
+    "question": "What is true about the Multivalued dependency?",
+    "code": "",
+    "options": [
+      "A multivalued dependency is a constraint according to which the presence of primary key in a table implies the presence of foreign keys.",
+      "A multivalued dependency is a constraint according to which the presence of certain rows in a table implies the presence of certain other rows.",
+      "A multivalued dependency is a constraint according to which the presence of functional dependency implies the presence of transitive dependency.",
+      "A multivalued dependency is a constraint according to which the presence of transitive dependency implies the presence of functional dependency."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 13: Normalization)."
+  },
+  {
+    "id": "dbms_q_244",
+    "original_qnum": 244,
+    "module_num": 13,
+    "module_name": "Module 13: Normalization",
+    "question": "Which statement is true about the Super Keys?",
+    "code": "",
+    "options": [
+      "A super key cannot be a candidate key.",
+      "A table can have only one super key.",
+      "Super key may not contain all the columns present in the Candidate key of a table.",
+      "A super key is a combination of attributes that can be used to uniquely identify a database record"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 13: Normalization)."
+  },
+  {
+    "id": "dbms_q_245",
+    "original_qnum": 245,
+    "module_num": 13,
+    "module_name": "Module 13: Normalization",
+    "question": "Which of the following statements is not true?",
+    "code": "",
+    "options": [
+      "A prime attribute is also part of all super keys of a table.",
+      "A prime attribute is an attribute that does occur in any candidate key.",
+      "A non-prime attribute is an attribute that does not occur in any super key.",
+      "A non-prime attribute is an attribute that does not occur in any candidate key."
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 13: Normalization)."
+  },
+  {
+    "id": "dbms_q_246",
+    "original_qnum": 246,
+    "module_num": 13,
+    "module_name": "Module 13: Normalization",
+    "question": "Which of the following conditions is not a valid condition for a table to be in First Normal\nForm (1NF)?",
+    "code": "",
+    "options": [
+      "There are no duplicate rows.",
+      "There's no top-to-bottom ordering to the rows.",
+      "There's left-to-right ordering to the columns.",
+      "Every row-and-column intersection contains exactly one value from the applicable domain"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 13: Normalization)."
+  },
+  {
+    "id": "dbms_q_247",
+    "original_qnum": 247,
+    "module_num": 13,
+    "module_name": "Module 13: Normalization",
+    "question": "Why is the following 1NF table not in the 2NF?\nEmployees' Skills\nEmployee  Skill           Current Work Location\n--------  --------------  ---------------------\nJones     Typing          114 Main Street\nJones     Shorthand       114 Main Street\nJones     Whittling       114 Main Street\nBravo     Light Cleaning  73 Industrial Way\nEllis     Alchemy         73 Industrial Way\nEllis     Flying          73 Industrial Way\nHarrison  Light Cleaning  73 Industrial Way",
+    "code": "",
+    "options": [
+      "The non-prime attribute(s) are not dependent on each of the prime attributes.",
+      "The table contains multiple records for Same Employee name, so not in 2NF",
+      "The non-prime attribute(s) are dependent on each of the prime attributes.",
+      "The table is not in 1NF hence not in 2NF"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 13: Normalization)."
+  },
+  {
+    "id": "dbms_q_248",
+    "original_qnum": 248,
+    "module_num": 13,
+    "module_name": "Module 13: Normalization",
+    "question": "Which of the 3NF conditions is not satisfied by the table below?\nTournament Winners\nTournament            Year  Winner          Winner Date of Birth\n--------------------  ----  --------------  --------------------\nDes Moines Masters    1998  Chip Masterson  14 March 1977\nIndiana Invitational  1998  Al Fredrickson  21 July 1975\nCleveland Open        1999  Bob Albertson   28 September 1968\nDes Moines Masters    1999  Al Fredrickson  21 July 1975\nIndiana Invitational  1999  Chip Masterson  14 March 1977",
+    "code": "",
+    "options": [
+      "Every prime attribute of a Table is non-transitively dependent on every candidate key of the table.",
+      "Every non-prime attribute of a Table is non-transitively dependent on every candidate key of the table.",
+      "The table must be in 2NF",
+      "The table must be in 1NF"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 13: Normalization)."
+  },
+  {
+    "id": "dbms_q_249",
+    "original_qnum": 249,
+    "module_num": 13,
+    "module_name": "Module 13: Normalization",
+    "question": "Which statement about the Boyce-Codd Normal Form is not true?",
+    "code": "",
+    "options": [
+      "Only in rare cases does a 3NF table not meet the requirements of BCNF",
+      "BCNF was developed to address certain types of anomaly not dealt with by 3NF as originally defined.",
+      "Boyce-Codd normal form is a slightly stronger version of the third normal form.",
+      "A 3NF table which does not have multiple overlapping candidate keys is supposed to be not in BCNF."
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 13: Normalization)."
+  },
+  {
+    "id": "dbms_q_250",
+    "original_qnum": 250,
+    "module_num": 13,
+    "module_name": "Module 13: Normalization",
+    "question": "What is the full form of the DKNF?",
+    "code": "",
+    "options": [
+      "Donner-Korth Normal Form",
+      "Domain-Key Normal Form",
+      "Dual-Key Normal Form",
+      "Domain-Knowledge Normal Form"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 13: Normalization)."
+  },
+  {
+    "id": "dbms_q_251",
+    "original_qnum": 251,
+    "module_num": 13,
+    "module_name": "Module 13: Normalization",
+    "question": "If a table is said to be in 3NF then which of the following may not be true?",
+    "code": "",
+    "options": [
+      "Every row-and-column intersection contains exactly one value from the applicable domain.",
+      "The table is free of modification anomalies.",
+      "Every non-prime attribute is non-transitively dependent (i.e. directly dependent) on every candidate key.",
+      "All its non-prime attributes are functionally dependent on the whole of every candidate key."
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 13: Normalization)."
+  },
+  {
+    "id": "dbms_q_252",
+    "original_qnum": 252,
+    "module_num": 13,
+    "module_name": "Module 13: Normalization",
+    "question": "Which of the following statements correctly describe the modification anomalies?",
+    "code": "",
+    "options": [
+      "Modification anomalies occur only up to Second Normal form",
+      "When modification anomalies exist, the table data cannot be modified",
+      "When an attempt is made to modify a table, undesired side-effects may follow",
+      "When modifying a table, errors frequently occur due to modification anomalies"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 13: Normalization)."
+  },
+  {
+    "id": "dbms_q_253",
+    "original_qnum": 253,
+    "module_num": 13,
+    "module_name": "Module 13: Normalization",
+    "question": "Which of the following indicate that Y is transitively dependent on X?",
+    "code": "",
+    "options": [
+      "X->Y , Z->X",
+      "X->Y, Z->X",
+      "Y->Z, Z->X",
+      "Z->Y , X->Z"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 13: Normalization)."
+  },
+  {
+    "id": "dbms_q_254",
+    "original_qnum": 254,
+    "module_num": 13,
+    "module_name": "Module 13: Normalization",
+    "question": "What is correct full form of the BCNF normal form?",
+    "code": "",
+    "options": [
+      "Boyce-Cartesian normal form",
+      "Boyce-Codd normal form",
+      "Bond-Codd normal form",
+      "Borne-Codd normal form"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 13: Normalization)."
+  },
+  {
+    "id": "dbms_q_255",
+    "original_qnum": 255,
+    "module_num": 13,
+    "module_name": "Module 13: Normalization",
+    "question": "Which of the following is not a valid type of Modification anomaly?",
+    "code": "",
+    "options": [
+      "Update Anomaly",
+      "Insertion anomaly",
+      "Deletion anomaly",
+      "Drop anomaly"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 13: Normalization)."
+  },
+  {
+    "id": "dbms_q_256",
+    "original_qnum": 256,
+    "module_num": 13,
+    "module_name": "Module 13: Normalization",
+    "question": "Considering the table structure and the data in the following table, which all modification\nanomalies can occur while modifying this table?\nFaculty ID  Faculty Name    Faculty Hire Date  Course Code\n----------  --------------  -----------------  -----------\n389         Dr. Giddens     10-Feb-1985        ENG-206\n407         Dr. Saperstein  19-Apr-1999        CMP-101\n407         Dr. Saperstein  19-Apr-1999        CMP-201",
+    "code": "",
+    "options": [
+      "Insertion, Update and Deletion anomaly",
+      "Only Insertion anomaly",
+      "Insertion and Update anomaly",
+      "Update and Deletion anomaly"
+    ],
+    "correctAnswer": 0,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 13: Normalization)."
+  },
+  {
+    "id": "dbms_q_257",
+    "original_qnum": 257,
+    "module_num": 13,
+    "module_name": "Module 13: Normalization",
+    "question": "Which of the following is not a valid objective of normalization?",
+    "code": "",
+    "options": [
+      "Get rid of the modification anomalies",
+      "Make the data model more informative to users",
+      "Completely avoid the need to change the table structure after normalization",
+      "Minimize redesign when extending the database structure"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 13: Normalization)."
+  },
+  {
+    "id": "dbms_q_258",
+    "original_qnum": 258,
+    "module_num": 13,
+    "module_name": "Module 13: Normalization",
+    "question": "Consider following table structure, in which normal form is it?\nTransactions\nCustomer  Tr. ID  Date         Amount\n--------  ------  -----------  ------\nJones     12890   14-Oct-2003  −87\n12904   15-Oct-2003  −50\nWilkins   12898   14-Oct-2003  −21\nStevens   12907   15-Oct-2003  −18\n14920   20-Nov-2003  −70\n15003   27-Nov-2003  −60",
+    "code": "",
+    "options": [
+      "3NF",
+      "1NF",
+      "2NF",
+      "Non 1NF"
+    ],
+    "correctAnswer": 3,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 13: Normalization)."
+  },
+  {
+    "id": "dbms_q_259",
+    "original_qnum": 259,
+    "module_num": 13,
+    "module_name": "Module 13: Normalization",
+    "question": "What is Functional dependency?",
+    "code": "",
+    "options": [
+      "In a given table, an attribute Y is said to have a functional dependency on a set of attributes X, if and only if each X value is associated with more than one Y value",
+      "In a given table, an attribute Y is said to have a functional dependency on a set of attributes X, if and only if each Y value is associated with precisely one X value",
+      "In a given table, an attribute Y is said to have a functional dependency on a set of attributes X, if and only if each X value is associated with precisely one Y value",
+      "In a given table, an attribute Y is said to have a functional dependency on a set of attributes X, if and only if each X value is associated with at least one Y value"
+    ],
+    "correctAnswer": 2,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 13: Normalization)."
+  },
+  {
+    "id": "dbms_q_260",
+    "original_qnum": 260,
+    "module_num": 13,
+    "module_name": "Module 13: Normalization",
+    "question": "What does X -> Y mean about the attributes X and Y?",
+    "code": "",
+    "options": [
+      "X is functionally dependent on Y",
+      "Y is functionally dependent on X",
+      "None of the above",
+      "X and Y are functionally dependent on each other"
+    ],
+    "correctAnswer": 1,
+    "explanation": "Đáp án đúng theo ngân hàng chuẩn CDAC DBMS (Module 13: Normalization)."
+  }
+]

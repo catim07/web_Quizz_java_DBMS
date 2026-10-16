@@ -209,7 +209,9 @@ CÂU 16 (Module 1 - Câu 16): JDK contains _________ .
 🎯 MẸO THI: MẸO PHÒNG THI: Công thức: JDK = JRE + Development Tools (javac, jar...). JRE = JVM + Core Libraries!
 --------------------------------------------------------------------------------
 
-CÂU 17 (Module 1 - Câu 17): public class Dummy {
+CÂU 17 (Module 1 - Câu 17): At what line will the Object created on line 10 be eligible for garbage collection?
+--- Đoạn mã code ---
+public class Dummy {
     class HappyGarbage01 {
         public static void main(String args[]) {
             HappyGarbage01 h = new HappyGarbage01();
@@ -226,14 +228,15 @@ CÂU 17 (Module 1 - Câu 17): public class Dummy {
         }
     }
 }
+--------------------
   A. After line 9
   B. After line 10
   C. After line 11
   D. Garbage collector never invoked in methodA()
 
 => ĐÁP ÁN ĐÚNG: D. Garbage collector never invoked in methodA()
-💡 GIẢI THÍCH: Cơ chế thu gom rác trong Java: Việc gọi `System.gc()` chỉ là gửi lời yêu cầu/đề nghị đến JVM, không thể ép buộc GC chạy ngay lập tức. Nếu các biến vẫn còn được tham chiếu (như được lưu vào mảng hoặc return ra ngoài), đối tượng sẽ không bao giờ bị GC thu hồi. Đáp án: Garbage collector never invoked in methodA().
-🎯 MẸO THI: MẸO PHÒNG THI: Đối tượng còn được return hoặc còn nằm trong mảng sống -> GC không bao giờ dọn dẹp được!
+💡 GIẢI THÍCH: Đối tượng `obj1` được tạo tại dòng 10 và được gán vào mảng `obj2[0]`. Dù dòng 12 gán `obj1 = null`, tham chiếu tới đối tượng vẫn được giữ bởi phần tử `obj2[0]`. Phương thức `methodA()` sau đó trả về `obj2[0]`, do đó đối tượng vẫn được giữ tham chiếu bên ngoài và không bao giờ đủ điều kiện để bộ thu gom rác (GC) thu dọn trong phạm vi `methodA()`.
+🎯 MẸO THI: MẸO PHÒNG THI: `obj2[0] = obj1` rồi `return obj2[0]` -> Đối tượng vẫn được trả về và giữ tham chiếu bên ngoài -> Chọn 'Garbage collector never invoked in methodA()'!
 --------------------------------------------------------------------------------
 
 CÂU 18 (Module 1 - Câu 18): which method run before an object is Garbage collected?
@@ -247,7 +250,9 @@ CÂU 18 (Module 1 - Câu 18): which method run before an object is Garbage colle
 🎯 MẸO THI: MẸO PHÒNG THI: Phương thức chạy trước khi dọn rác -> Luôn là 'finalize'!
 --------------------------------------------------------------------------------
 
-CÂU 19 (Module 1 - Câu 19): public class Dummy {
+CÂU 19 (Module 1 - Câu 19): When is the Bar object, created on line 6, eligible for garbage collection?
+--- Đoạn mã code ---
+public class Dummy {
     class Bar {}
 
     class Test {
@@ -265,14 +270,15 @@ CÂU 19 (Module 1 - Câu 19): public class Dummy {
         }
     }
 }
+--------------------
   A. after line 7, when doBar() completes
   B. after line 12
   C. after line 14
   D. after line 15, when main() completes
 
 => ĐÁP ÁN ĐÚNG: C. after line 14
-💡 GIẢI THÍCH: Phương án "after line 14" là câu trả lời chính xác cho câu hỏi này trong chuyên đề 'Module 1: Giới thiệu Java & Cú pháp cơ bản'. Kiến thức này phản ánh đúng đặc tả kỹ thuật của ngôn ngữ lập trình Java và cơ chế thực thi của máy ảo JVM.
-🎯 MẸO THI: MẸO PHÒNG THI (Module 1: Giới thiệu Java & Cú pháp cơ bản): Chú ý từ khóa trọng tâm 'after line 14'. Đề thi Java luôn ưu tiên các chuẩn cú pháp bất biến và thuật ngữ chính xác trong Java API.
+💡 GIẢI THÍCH: Đối tượng `Bar` tạo tại dòng 6 được trả về và gán cho biến `newBar` tại dòng 12. Đến dòng 14, `newBar` được gán sang một đối tượng `new Bar()` hoàn toàn mới, làm mất đi tham chiếu duy nhất tới đối tượng ban đầu tạo ở dòng 6. Do đó, đối tượng tạo ở dòng 6 đủ điều kiện bị thu gom rác ngay sau dòng 14 ('after line 14').
+🎯 MẸO THI: MẸO PHÒNG THI: Biến tham chiếu `newBar` bị gán lại đối tượng mới ở dòng 14 (`newBar = new Bar(); /* Line 14 */`) -> Đối tượng cũ bị bỏ rơi ngay sau dòng 14 -> Chọn 'after line 14'!
 --------------------------------------------------------------------------------
 
 CÂU 20 (Module 1 - Câu 20): Which of the following data type come under floating data types?
@@ -1332,7 +1338,9 @@ CÂU 98 (Module 5 - Câu 18): What is Collection in Java?
 🎯 MẸO THI: MẸO PHÒNG THI (Module 5: Java Collections Framework): Chú ý từ khóa trọng tâm 'A group of objects'. Đề thi Java luôn ưu tiên các chuẩn cú pháp bất biến và thuật ngữ chính xác trong Java API.
 --------------------------------------------------------------------------------
 
-CÂU 99 (Module 5 - Câu 19): import java.util.*;
+CÂU 99 (Module 5 - Câu 19): What is the output of this program?
+--- Đoạn mã code ---
+import java.util.*;
 
 class stack {
     public static void main(String args[]) {
@@ -1344,14 +1352,20 @@ class stack {
         System.out.println(obj);
     }
 }
+--------------------
   A. [3, 5]
   B. [3, 2, 5]
   C. [3, 5, 2]
   D. [3, 2]
 
 => ĐÁP ÁN ĐÚNG: A. [3, 5]
-💡 GIẢI THÍCH: Phương án "[3, 5]" là câu trả lời chính xác cho câu hỏi này trong chuyên đề 'Module 5: Java Collections Framework'. Kiến thức này phản ánh đúng đặc tả kỹ thuật của ngôn ngữ lập trình Java và cơ chế thực thi của máy ảo JVM.
-🎯 MẸO THI: MẸO PHÒNG THI (Module 5: Java Collections Framework): Chú ý từ khóa trọng tâm '[3, 5]'. Đề thi Java luôn ưu tiên các chuẩn cú pháp bất biến và thuật ngữ chính xác trong Java API.
+💡 GIẢI THÍCH: Lớp `Stack` hoạt động theo nguyên lý LIFO (Last-In First-Out):
+1. `push(3)` -> Stack: [3]
+2. `push(2)` -> Stack: [3, 2]
+3. `pop()` -> Lấy phần tử trên đỉnh là 2 ra -> Stack còn: [3]
+4. `push(5)` -> Stack: [3, 5]
+Kết quả in ra đối tượng Stack là `[3, 5]`.
+🎯 MẸO THI: MẸO PHÒNG THI: Stack LIFO: Đẩy 3, đẩy 2, pop (bỏ 2), đẩy 5 -> Còn lại [3, 5]!
 --------------------------------------------------------------------------------
 
 CÂU 100 (Module 5 - Câu 20): Which of the following is collection sort pairs in map?
@@ -1381,12 +1395,11 @@ CÂU 101 (Module 6 - Câu 1): ____________ is the superclass of all errors and e
 🎯 MẸO THI: MẸO PHÒNG THI: Superclass của mọi ngoại lệ và lỗi -> Chọn 'Throwable'!
 --------------------------------------------------------------------------------
 
-CÂU 102 (Module 6 - Câu 2): Select the one correct answer.
+CÂU 102 (Module 6 - Câu 2): What is wrong with the following code?
 --- Đoạn mã code ---
-What is wrong with the following code?
-public class MyClass{
-    public static void main(String[] args) throws A{
-        Try {
+public class MyClass {
+    public static void main(String[] args) throws A {
+        try {
             f();
         } finally {
             System.out.println("Done.");
@@ -1407,8 +1420,8 @@ class B extends A {}
   D. The catch block in the main() method must declare that it catches B rather than A.
 
 => ĐÁP ÁN ĐÚNG: A. The finally block must follow the catch block in the main() method.
-💡 GIẢI THÍCH: Khối `finally` luôn luôn được thực thi dù trong khối `try` có xảy ra ngoại lệ hay không, và kể cả khi trong khối `try` có lệnh `return`. Trường hợp duy nhất finally không chạy là khi hệ thống gọi `System.exit(0)` hoặc JVM bị tắt đột ngột.
-🎯 MẸO THI: MẸO PHÒNG THI: Thấy 'always executed' -> Chọn 'finally'!
+💡 GIẢI THÍCH: Trong cú pháp Java, cấu trúc khối `try-catch-finally` bắt buộc khối `finally` phải luôn đứng ở cuối cùng sau tất cả các khối `catch`. Việc đặt `finally` trước `catch` (`try { ... } finally { ... } catch { ... }`) vi phạm ngữ pháp Java dẫn đến lỗi biên dịch.
+🎯 MẸO THI: MẸO PHÒNG THI: Thứ tự bất biến trong Java là `try -> catch -> finally`. Thấy `finally` nằm trước `catch` -> Chọn ngay 'The finally block must follow the catch block'!
 --------------------------------------------------------------------------------
 
 CÂU 103 (Module 6 - Câu 3): What will happen when you attempt to compile and run the following code?
@@ -1441,14 +1454,14 @@ public class MyIf {
 
 CÂU 104 (Module 6 - Câu 4): What will happen when you attempt to compile and run this code?
 --- Đoạn mã code ---
-public class MyIf{
-    public static void main(String argv[]){
+public class MyIf {
+    public static void main(String argv[]) {
         MyIf mi = new MyIf();
     }
-    MyIf(){
+    MyIf() {
         boolean b = false;
-        If(b=false){
-            System.out.println("The value of b is"+b);
+        if (b = false) {
+            System.out.println("The value of b is " + b);
         }
     }
 }
@@ -1459,8 +1472,8 @@ public class MyIf{
   D. Compilation and run with no output
 
 => ĐÁP ÁN ĐÚNG: D. Compilation and run with no output
-💡 GIẢI THÍCH: Phương án "Compilation and run with no output" là câu trả lời chính xác cho câu hỏi này trong chuyên đề 'Module 6: Xử lý Ngoại lệ (Exception Handling)'. Kiến thức này phản ánh đúng đặc tả kỹ thuật của ngôn ngữ lập trình Java và cơ chế thực thi của máy ảo JVM.
-🎯 MẸO THI: MẸO PHÒNG THI (Module 6: Xử lý Ngoại lệ (Exception Handling)): Chú ý từ khóa trọng tâm 'Compilation and run with no output'. Đề thi Java luôn ưu tiên các chuẩn cú pháp bất biến và thuật ngữ chính xác trong Java API.
+💡 GIẢI THÍCH: Trong Java, cú pháp điều kiện là chữ thường `if (b = false)`. Phép gán `b = false` gán giá trị `false` cho biến `b` và trả về chính giá trị `false` (kiểu boolean hợp lệ nên biên dịch hoàn toàn thành công). Do điều kiện trong `if` là `false`, khối lệnh in ra màn hình bị bỏ qua. Kết quả: Chương trình biên dịch thành công và chạy nhưng không in ra bất kỳ output nào ('Compilation and run with no output').
+🎯 MẸO THI: MẸO PHÒNG THI: Thấy `if (b = false)` với kiểu boolean -> Biên dịch hoàn toàn hợp lệ nhưng điều kiện là `false` nên KHÔNG in ra gì cả -> Chọn 'Compilation and run with no output'!
 --------------------------------------------------------------------------------
 
 CÂU 105 (Module 6 - Câu 5): What, if anything, would cause the following code not to compile?
@@ -1500,7 +1513,9 @@ public class MyClass extends A {
 🎯 MẸO THI: MẸO PHÒNG THI: Unchecked Exception = Kế thừa từ RuntimeException!
 --------------------------------------------------------------------------------
 
-CÂU 106 (Module 6 - Câu 6): public class exceptions {
+CÂU 106 (Module 6 - Câu 6): What will happen when you attempt to compile and run this code?
+--- Đoạn mã code ---
+public class exceptions {
     public static void main(String Args[]) {
         int[] array = new int[3];
         try {
@@ -1513,14 +1528,15 @@ CÂU 106 (Module 6 - Câu 6): public class exceptions {
         }
     }
 }
+--------------------
   A. The program will print 0 1 2 4 in that order.
   B. Compile time errors.
   C. The program will throw ArrayIndexOutOfBoundsException.
   D. The program will only print 0 1 2 in that order.
 
 => ĐÁP ÁN ĐÚNG: C. The program will throw ArrayIndexOutOfBoundsException.
-💡 GIẢI THÍCH: Phương án "The program will throw ArrayIndexOutOfBoundsException." là câu trả lời chính xác cho câu hỏi này trong chuyên đề 'Module 6: Xử lý Ngoại lệ (Exception Handling)'. Kiến thức này phản ánh đúng đặc tả kỹ thuật của ngôn ngữ lập trình Java và cơ chế thực thi của máy ảo JVM.
-🎯 MẸO THI: MẸO PHÒNG THI (Module 6: Xử lý Ngoại lệ (Exception Handling)): Chú ý từ khóa trọng tâm 'The program will throw ArrayIndexOutOfBoundsException.'. Đề thi Java luôn ưu tiên các chuẩn cú pháp bất biến và thuật ngữ chính xác trong Java API.
+💡 GIẢI THÍCH: Mảng `array` có kích thước là 3 (các chỉ số hợp lệ là 0, 1, 2). Vòng lặp `for (int i = 0; i < 4; ++i)` khi chạy đến `i = 3` sẽ truy cập `array[3]`, vượt quá giới hạn mảng nên chương trình sẽ ném ra ngoại lệ `ArrayIndexOutOfBoundsException` tại runtime.
+🎯 MẸO THI: MẸO PHÒNG THI: Mảng `new int[3]` mà lặp `i < 4` -> Chắc chắn văng ngoại lệ `ArrayIndexOutOfBoundsException`!
 --------------------------------------------------------------------------------
 
 CÂU 107 (Module 6 - Câu 7): Which of the following is not Java Checked Exceptions?
@@ -1665,13 +1681,8 @@ CÂU 118 (Module 6 - Câu 18): Which of the following is not true about Error Cl
 🎯 MẸO THI: MẸO PHÒNG THI (Module 6: Xử lý Ngoại lệ (Exception Handling)): Chú ý từ khóa trọng tâm 'Errors are explicitly caught.'. Đề thi Java luôn ưu tiên các chuẩn cú pháp bất biến và thuật ngữ chính xác trong Java API.
 --------------------------------------------------------------------------------
 
-CÂU 119 (Module 6 - Câu 19): System.out.println("5");
-    }
-}
-
-Select the one correct answer.
+CÂU 119 (Module 6 - Câu 19): Which digits, and in what order, will be printed when the following program is run?
 --- Đoạn mã code ---
-Which digits, and in what order, will be printed when the following program is run?
 public class MyClass {
     public static void main(String[] args) {
         int k = 0;
@@ -1687,6 +1698,9 @@ public class MyClass {
         } finally {
             System.out.println("4");
         }
+        System.out.println("5");
+    }
+}
 --------------------
   A. The program will only print 5.
   B. The program will only print 1, 4, and 5, in that order
@@ -1694,13 +1708,15 @@ public class MyClass {
   D. The program will only print 1, 2, and 4, in that order
 
 => ĐÁP ÁN ĐÚNG: B. The program will only print 1, 4, and 5, in that order
-💡 GIẢI THÍCH: Ngoại lệ Unchecked (không bắt buộc try-catch khi biên dịch) là tất cả các lớp kế thừa từ `RuntimeException` và `Error` (ví dụ: NullPointerException, ArrayIndexOutOfBoundsException).
-🎯 MẸO THI: MẸO PHÒNG THI: Unchecked Exception = Kế thừa từ RuntimeException!
+💡 GIẢI THÍCH: 1. Phép chia `5 / 0` ném ra ngoại lệ `ArithmeticException` -> Khối `catch (ArithmeticException e)` bắt được và in ra '1'.
+2. Khối `finally` luôn luôn thực thi bất kể có ngoại lệ hay không -> in ra '4'.
+3. Vì ngoại lệ đã được xử lý xong và không có lệnh return trong khối catch đầu tiên, luồng chương trình tiếp tục chạy câu lệnh tiếp theo sau try-finally -> in ra '5'.
+-> Kết quả in ra theo thứ tự là 1, 4, và 5.
+🎯 MẸO THI: MẸO PHÒNG THI: Catch bắt lỗi chia 0 (in 1) -> Finally luôn chạy (in 4) -> Tiếp tục chạy lệnh cuối (in 5) -> Đáp án: '1, 4, and 5'!
 --------------------------------------------------------------------------------
 
-CÂU 120 (Module 6 - Câu 20): Select the one correct answer
+CÂU 120 (Module 6 - Câu 20): What will be the result of attempting to compile and run the following program?
 --- Đoạn mã code ---
-What will be the result of attempting to compile and run the following program?
 public class MyClass {
     public static void main(String[] args) {
         RuntimeException re = null;
@@ -1714,8 +1730,8 @@ public class MyClass {
   D. The program will compile without error and will throw java.lang.Runtime- Exception when run.
 
 => ĐÁP ÁN ĐÚNG: A. The program will compile without error and will throw java.lang.NullPointerException when run.
-💡 GIẢI THÍCH: Ngoại lệ Unchecked (không bắt buộc try-catch khi biên dịch) là tất cả các lớp kế thừa từ `RuntimeException` và `Error` (ví dụ: NullPointerException, ArrayIndexOutOfBoundsException).
-🎯 MẸO THI: MẸO PHÒNG THI: Unchecked Exception = Kế thừa từ RuntimeException!
+💡 GIẢI THÍCH: Trong Java, lệnh `throw re;` biên dịch thành công vì `re` có kiểu là `RuntimeException`. Tuy nhiên khi thực thi tại runtime, biến `re` có giá trị là `null`. Việc ném một đối tượng `null` bằng câu lệnh `throw` sẽ khiến JVM tự động ném ra ngoại lệ `java.lang.NullPointerException`.
+🎯 MẸO THI: MẸO PHÒNG THI: Thấy `throw null` hoặc `throw re` với `re = null` -> Luôn luôn gây ra `java.lang.NullPointerException` khi chạy!
 --------------------------------------------------------------------------------
 
 
@@ -3022,15 +3038,20 @@ CÂU 234 (Module 12 - Câu 14): Which method is used to specify a container’s 
 🎯 MẸO THI: MẸO PHÒNG THI (Module 12: Giao diện đồ họa nâng cao Java Swing): Chú ý từ khóa trọng tâm 'setLayout()'. Đề thi Java luôn ưu tiên các chuẩn cú pháp bất biến và thuật ngữ chính xác trong Java API.
 --------------------------------------------------------------------------------
 
-CÂU 235 (Module 12 - Câu 15): ...//Container pane = aFrame.getContentPane()...JButton button = new JButton("Button 1 (LINE_START)");pane.add(button, BorderLayout.LINE_START);The above code will set the “button” at which position?
+CÂU 235 (Module 12 - Câu 15): The following code will set the 'button' at which position in BorderLayout?
+--- Đoạn mã code ---
+// Container pane = aFrame.getContentPane();
+JButton button = new JButton("Button 1 (LINE_START)");
+pane.add(button, BorderLayout.LINE_START);
+--------------------
   A. North
   B. West
   C. East
   D. South
 
 => ĐÁP ÁN ĐÚNG: B. West
-💡 GIẢI THÍCH: Phương án "West" là câu trả lời chính xác cho câu hỏi này trong chuyên đề 'Module 12: Giao diện đồ họa nâng cao Java Swing'. Kiến thức này phản ánh đúng đặc tả kỹ thuật của ngôn ngữ lập trình Java và cơ chế thực thi của máy ảo JVM.
-🎯 MẸO THI: MẸO PHÒNG THI (Module 12: Giao diện đồ họa nâng cao Java Swing): Chú ý từ khóa trọng tâm 'West'. Đề thi Java luôn ưu tiên các chuẩn cú pháp bất biến và thuật ngữ chính xác trong Java API.
+💡 GIẢI THÍCH: Trong bố cục `BorderLayout` của Java Swing/AWT, `BorderLayout.LINE_START` tương ứng với vị trí `BorderLayout.WEST` (bên trái theo hướng đọc từ trái sang phải mặc định).
+🎯 MẸO THI: MẸO PHÒNG THI: Trong BorderLayout: `LINE_START` = `WEST` (Tây/Trái), `LINE_END` = `EAST` (Đông/Phải), `PAGE_START` = `NORTH`, `PAGE_END` = `SOUTH`!
 --------------------------------------------------------------------------------
 
 CÂU 236 (Module 12 - Câu 16): Text components use an EditorKit to tie the various pieces of the text component together. The Swing text package provides which of the following editor kits?

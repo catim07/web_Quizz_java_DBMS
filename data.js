@@ -235,8 +235,8 @@ window.DEFAULT_QUIZZES = [
       },
       {
         "id": "q_17",
-        "question": "public class Dummy {\n    class HappyGarbage01 {\n        public static void main(String args[]) {\n            HappyGarbage01 h = new HappyGarbage01();\n            h.methodA(); /* Line 6 */\n        } /* Line 7 */\n\n        Object methodA() /* Line 8 */ {\n            /* Line 9 */\n            Object obj1 = new Object(); /* Line 10 */\n            Object[] obj2 = new Object[1]; /* Line 11 */\n            obj2[0] = obj1;\n            obj1 = null;\n            return obj2[0];\n        }\n    }\n}",
-        "code": "",
+        "question": "At what line will the Object created on line 10 be eligible for garbage collection?",
+        "code": "public class Dummy {\n    class HappyGarbage01 {\n        public static void main(String args[]) {\n            HappyGarbage01 h = new HappyGarbage01();\n            h.methodA(); /* Line 6 */\n        } /* Line 7 */\n\n        Object methodA() /* Line 8 */ {\n            /* Line 9 */\n            Object obj1 = new Object(); /* Line 10 */\n            Object[] obj2 = new Object[1]; /* Line 11 */\n            obj2[0] = obj1;\n            obj1 = null;\n            return obj2[0];\n        }\n    }\n}",
         "options": [
           "After line 9",
           "After line 10",
@@ -244,8 +244,8 @@ window.DEFAULT_QUIZZES = [
           "Garbage collector never invoked in methodA()"
         ],
         "correctAnswer": 3,
-        "explanation": "Cơ chế thu gom rác trong Java: Việc gọi `System.gc()` chỉ là gửi lời yêu cầu/đề nghị đến JVM, không thể ép buộc GC chạy ngay lập tức. Nếu các biến vẫn còn được tham chiếu (như được lưu vào mảng hoặc return ra ngoài), đối tượng sẽ không bao giờ bị GC thu hồi. Đáp án: Garbage collector never invoked in methodA().",
-        "tip": "MẸO PHÒNG THI: Đối tượng còn được return hoặc còn nằm trong mảng sống -> GC không bao giờ dọn dẹp được!"
+        "explanation": "Đối tượng `obj1` được tạo tại dòng 10 và được gán vào mảng `obj2[0]`. Dù dòng 12 gán `obj1 = null`, tham chiếu tới đối tượng vẫn được giữ bởi phần tử `obj2[0]`. Phương thức `methodA()` sau đó trả về `obj2[0]`, do đó đối tượng vẫn được giữ tham chiếu bên ngoài và không bao giờ đủ điều kiện để bộ thu gom rác (GC) thu dọn trong phạm vi `methodA()`.",
+        "tip": "MẸO PHÒNG THI: `obj2[0] = obj1` rồi `return obj2[0]` -> Đối tượng vẫn được trả về và giữ tham chiếu bên ngoài -> Chọn 'Garbage collector never invoked in methodA()'!"
       },
       {
         "id": "q_18",
@@ -263,8 +263,8 @@ window.DEFAULT_QUIZZES = [
       },
       {
         "id": "q_19",
-        "question": "public class Dummy {\n    class Bar {}\n\n    class Test {\n        Bar doBar() {\n            Bar b = new Bar(); /* Line 6 */\n            return b; /* Line 7 */\n        }\n\n        public static void main(String args[]) {\n            Test t = new Test(); /* Line 11 */\n            Bar newBar = t.doBar(); /* Line 12 */\n            System.out.println(\"newBar\");\n            newBar = new Bar(); /* Line 14 */\n            System.out.println(\"finishing\"); /* Line 15 */\n        }\n    }\n}",
-        "code": "",
+        "question": "When is the Bar object, created on line 6, eligible for garbage collection?",
+        "code": "public class Dummy {\n    class Bar {}\n\n    class Test {\n        Bar doBar() {\n            Bar b = new Bar(); /* Line 6 */\n            return b; /* Line 7 */\n        }\n\n        public static void main(String args[]) {\n            Test t = new Test(); /* Line 11 */\n            Bar newBar = t.doBar(); /* Line 12 */\n            System.out.println(\"newBar\");\n            newBar = new Bar(); /* Line 14 */\n            System.out.println(\"finishing\"); /* Line 15 */\n        }\n    }\n}",
         "options": [
           "after line 7, when doBar() completes",
           "after line 12",
@@ -272,8 +272,8 @@ window.DEFAULT_QUIZZES = [
           "after line 15, when main() completes"
         ],
         "correctAnswer": 2,
-        "explanation": "Phương án \"after line 14\" là câu trả lời chính xác cho câu hỏi này trong chuyên đề 'Module 1: Giới thiệu Java & Cú pháp cơ bản'. Kiến thức này phản ánh đúng đặc tả kỹ thuật của ngôn ngữ lập trình Java và cơ chế thực thi của máy ảo JVM.",
-        "tip": "MẸO PHÒNG THI (Module 1: Giới thiệu Java & Cú pháp cơ bản): Chú ý từ khóa trọng tâm 'after line 14'. Đề thi Java luôn ưu tiên các chuẩn cú pháp bất biến và thuật ngữ chính xác trong Java API."
+        "explanation": "Đối tượng `Bar` tạo tại dòng 6 được trả về và gán cho biến `newBar` tại dòng 12. Đến dòng 14, `newBar` được gán sang một đối tượng `new Bar()` hoàn toàn mới, làm mất đi tham chiếu duy nhất tới đối tượng ban đầu tạo ở dòng 6. Do đó, đối tượng tạo ở dòng 6 đủ điều kiện bị thu gom rác ngay sau dòng 14 ('after line 14').",
+        "tip": "MẸO PHÒNG THI: Biến tham chiếu `newBar` bị gán lại đối tượng mới ở dòng 14 (`newBar = new Bar(); /* Line 14 */`) -> Đối tượng cũ bị bỏ rơi ngay sau dòng 14 -> Chọn 'after line 14'!"
       },
       {
         "id": "q_20",
@@ -1383,8 +1383,8 @@ window.DEFAULT_QUIZZES = [
       },
       {
         "id": "q_99",
-        "question": "import java.util.*;\n\nclass stack {\n    public static void main(String args[]) {\n        Stack obj = new Stack();\n        obj.push(new Integer(3));\n        obj.push(new Integer(2));\n        obj.pop();\n        obj.push(new Integer(5));\n        System.out.println(obj);\n    }\n}",
-        "code": "",
+        "question": "What is the output of this program?",
+        "code": "import java.util.*;\n\nclass stack {\n    public static void main(String args[]) {\n        Stack obj = new Stack();\n        obj.push(new Integer(3));\n        obj.push(new Integer(2));\n        obj.pop();\n        obj.push(new Integer(5));\n        System.out.println(obj);\n    }\n}",
         "options": [
           "[3, 5]",
           "[3, 2, 5]",
@@ -1392,8 +1392,8 @@ window.DEFAULT_QUIZZES = [
           "[3, 2]"
         ],
         "correctAnswer": 0,
-        "explanation": "Phương án \"[3, 5]\" là câu trả lời chính xác cho câu hỏi này trong chuyên đề 'Module 5: Java Collections Framework'. Kiến thức này phản ánh đúng đặc tả kỹ thuật của ngôn ngữ lập trình Java và cơ chế thực thi của máy ảo JVM.",
-        "tip": "MẸO PHÒNG THI (Module 5: Java Collections Framework): Chú ý từ khóa trọng tâm '[3, 5]'. Đề thi Java luôn ưu tiên các chuẩn cú pháp bất biến và thuật ngữ chính xác trong Java API."
+        "explanation": "Lớp `Stack` hoạt động theo nguyên lý LIFO (Last-In First-Out):\n1. `push(3)` -> Stack: [3]\n2. `push(2)` -> Stack: [3, 2]\n3. `pop()` -> Lấy phần tử trên đỉnh là 2 ra -> Stack còn: [3]\n4. `push(5)` -> Stack: [3, 5]\nKết quả in ra đối tượng Stack là `[3, 5]`.",
+        "tip": "MẸO PHÒNG THI: Stack LIFO: Đẩy 3, đẩy 2, pop (bỏ 2), đẩy 5 -> Còn lại [3, 5]!"
       },
       {
         "id": "q_100",
@@ -1425,8 +1425,8 @@ window.DEFAULT_QUIZZES = [
       },
       {
         "id": "q_102",
-        "question": "Select the one correct answer.",
-        "code": "What is wrong with the following code?\npublic class MyClass{\n    public static void main(String[] args) throws A{\n        Try {\n            f();\n        } finally {\n            System.out.println(\"Done.\");\n        } catch (A e) {\n            throw e;\n        }\n    }\n    public static void f() throws B {\n        throw new B();\n    }\n}\nclass A extends Throwable {}\nclass B extends A {}",
+        "question": "What is wrong with the following code?",
+        "code": "public class MyClass {\n    public static void main(String[] args) throws A {\n        try {\n            f();\n        } finally {\n            System.out.println(\"Done.\");\n        } catch (A e) {\n            throw e;\n        }\n    }\n    public static void f() throws B {\n        throw new B();\n    }\n}\nclass A extends Throwable {}\nclass B extends A {}",
         "options": [
           "The finally block must follow the catch block in the main() method.",
           "The main() method must declare that it throws B.",
@@ -1434,8 +1434,8 @@ window.DEFAULT_QUIZZES = [
           "The catch block in the main() method must declare that it catches B rather than A."
         ],
         "correctAnswer": 0,
-        "explanation": "Khối `finally` luôn luôn được thực thi dù trong khối `try` có xảy ra ngoại lệ hay không, và kể cả khi trong khối `try` có lệnh `return`. Trường hợp duy nhất finally không chạy là khi hệ thống gọi `System.exit(0)` hoặc JVM bị tắt đột ngột.",
-        "tip": "MẸO PHÒNG THI: Thấy 'always executed' -> Chọn 'finally'!"
+        "explanation": "Trong cú pháp Java, cấu trúc khối `try-catch-finally` bắt buộc khối `finally` phải luôn đứng ở cuối cùng sau tất cả các khối `catch`. Việc đặt `finally` trước `catch` (`try { ... } finally { ... } catch { ... }`) vi phạm ngữ pháp Java dẫn đến lỗi biên dịch.",
+        "tip": "MẸO PHÒNG THI: Thứ tự bất biến trong Java là `try -> catch -> finally`. Thấy `finally` nằm trước `catch` -> Chọn ngay 'The finally block must follow the catch block'!"
       },
       {
         "id": "q_103",
@@ -1454,7 +1454,7 @@ window.DEFAULT_QUIZZES = [
       {
         "id": "q_104",
         "question": "What will happen when you attempt to compile and run this code?",
-        "code": "public class MyIf{\n    public static void main(String argv[]){\n        MyIf mi = new MyIf();\n    }\n    MyIf(){\n        boolean b = false;\n        If(b=false){\n            System.out.println(\"The value of b is\"+b);\n        }\n    }\n}",
+        "code": "public class MyIf {\n    public static void main(String argv[]) {\n        MyIf mi = new MyIf();\n    }\n    MyIf() {\n        boolean b = false;\n        if (b = false) {\n            System.out.println(\"The value of b is \" + b);\n        }\n    }\n}",
         "options": [
           "Run time error, a boolean cannot be appended using the + operator.",
           "Compile time error, cannot simultaneously create and assign value for Boolean value.",
@@ -1462,8 +1462,8 @@ window.DEFAULT_QUIZZES = [
           "Compilation and run with no output"
         ],
         "correctAnswer": 3,
-        "explanation": "Phương án \"Compilation and run with no output\" là câu trả lời chính xác cho câu hỏi này trong chuyên đề 'Module 6: Xử lý Ngoại lệ (Exception Handling)'. Kiến thức này phản ánh đúng đặc tả kỹ thuật của ngôn ngữ lập trình Java và cơ chế thực thi của máy ảo JVM.",
-        "tip": "MẸO PHÒNG THI (Module 6: Xử lý Ngoại lệ (Exception Handling)): Chú ý từ khóa trọng tâm 'Compilation and run with no output'. Đề thi Java luôn ưu tiên các chuẩn cú pháp bất biến và thuật ngữ chính xác trong Java API."
+        "explanation": "Trong Java, cú pháp điều kiện là chữ thường `if (b = false)`. Phép gán `b = false` gán giá trị `false` cho biến `b` và trả về chính giá trị `false` (kiểu boolean hợp lệ nên biên dịch hoàn toàn thành công). Do điều kiện trong `if` là `false`, khối lệnh in ra màn hình bị bỏ qua. Kết quả: Chương trình biên dịch thành công và chạy nhưng không in ra bất kỳ output nào ('Compilation and run with no output').",
+        "tip": "MẸO PHÒNG THI: Thấy `if (b = false)` với kiểu boolean -> Biên dịch hoàn toàn hợp lệ nhưng điều kiện là `false` nên KHÔNG in ra gì cả -> Chọn 'Compilation and run with no output'!"
       },
       {
         "id": "q_105",
@@ -1481,8 +1481,8 @@ window.DEFAULT_QUIZZES = [
       },
       {
         "id": "q_106",
-        "question": "public class exceptions {\n    public static void main(String Args[]) {\n        int[] array = new int[3];\n        try {\n            for (int i = 0; i < 4; ++i) {\n                array[i] = i;\n            }\n            System.out.println(array);\n        } catch (ArrayIndexOutOfBoundsException e) {\n            System.out.println(\"ArrayIndexOutOfBoundsException!!\");\n        }\n    }\n}",
-        "code": "",
+        "question": "What will happen when you attempt to compile and run this code?",
+        "code": "public class exceptions {\n    public static void main(String Args[]) {\n        int[] array = new int[3];\n        try {\n            for (int i = 0; i < 4; ++i) {\n                array[i] = i;\n            }\n            System.out.println(array);\n        } catch (ArrayIndexOutOfBoundsException e) {\n            System.out.println(\"ArrayIndexOutOfBoundsException!!\");\n        }\n    }\n}",
         "options": [
           "The program will print 0 1 2 4 in that order.",
           "Compile time errors.",
@@ -1490,8 +1490,8 @@ window.DEFAULT_QUIZZES = [
           "The program will only print 0 1 2 in that order."
         ],
         "correctAnswer": 2,
-        "explanation": "Phương án \"The program will throw ArrayIndexOutOfBoundsException.\" là câu trả lời chính xác cho câu hỏi này trong chuyên đề 'Module 6: Xử lý Ngoại lệ (Exception Handling)'. Kiến thức này phản ánh đúng đặc tả kỹ thuật của ngôn ngữ lập trình Java và cơ chế thực thi của máy ảo JVM.",
-        "tip": "MẸO PHÒNG THI (Module 6: Xử lý Ngoại lệ (Exception Handling)): Chú ý từ khóa trọng tâm 'The program will throw ArrayIndexOutOfBoundsException.'. Đề thi Java luôn ưu tiên các chuẩn cú pháp bất biến và thuật ngữ chính xác trong Java API."
+        "explanation": "Mảng `array` có kích thước là 3 (các chỉ số hợp lệ là 0, 1, 2). Vòng lặp `for (int i = 0; i < 4; ++i)` khi chạy đến `i = 3` sẽ truy cập `array[3]`, vượt quá giới hạn mảng nên chương trình sẽ ném ra ngoại lệ `ArrayIndexOutOfBoundsException` tại runtime.",
+        "tip": "MẸO PHÒNG THI: Mảng `new int[3]` mà lặp `i < 4` -> Chắc chắn văng ngoại lệ `ArrayIndexOutOfBoundsException`!"
       },
       {
         "id": "q_107",
@@ -1663,8 +1663,8 @@ window.DEFAULT_QUIZZES = [
       },
       {
         "id": "q_119",
-        "question": "System.out.println(\"5\");\n    }\n}\n\nSelect the one correct answer.",
-        "code": "Which digits, and in what order, will be printed when the following program is run?\npublic class MyClass {\n    public static void main(String[] args) {\n        int k = 0;\n        try {\n            int i = 5 / k;\n        } catch (ArithmeticException e) {\n            System.out.println(\"1\");\n        } catch (RuntimeException e) {\n            System.out.println(\"2\");\n            return;\n        } catch (Exception e) {\n            System.out.println(\"3\");\n        } finally {\n            System.out.println(\"4\");\n        }",
+        "question": "Which digits, and in what order, will be printed when the following program is run?",
+        "code": "public class MyClass {\n    public static void main(String[] args) {\n        int k = 0;\n        try {\n            int i = 5 / k;\n        } catch (ArithmeticException e) {\n            System.out.println(\"1\");\n        } catch (RuntimeException e) {\n            System.out.println(\"2\");\n            return;\n        } catch (Exception e) {\n            System.out.println(\"3\");\n        } finally {\n            System.out.println(\"4\");\n        }\n        System.out.println(\"5\");\n    }\n}",
         "options": [
           "The program will only print 5.",
           "The program will only print 1, 4, and 5, in that order",
@@ -1672,13 +1672,13 @@ window.DEFAULT_QUIZZES = [
           "The program will only print 1, 2, and 4, in that order"
         ],
         "correctAnswer": 1,
-        "explanation": "Ngoại lệ Unchecked (không bắt buộc try-catch khi biên dịch) là tất cả các lớp kế thừa từ `RuntimeException` và `Error` (ví dụ: NullPointerException, ArrayIndexOutOfBoundsException).",
-        "tip": "MẸO PHÒNG THI: Unchecked Exception = Kế thừa từ RuntimeException!"
+        "explanation": "1. Phép chia `5 / 0` ném ra ngoại lệ `ArithmeticException` -> Khối `catch (ArithmeticException e)` bắt được và in ra '1'.\n2. Khối `finally` luôn luôn thực thi bất kể có ngoại lệ hay không -> in ra '4'.\n3. Vì ngoại lệ đã được xử lý xong và không có lệnh return trong khối catch đầu tiên, luồng chương trình tiếp tục chạy câu lệnh tiếp theo sau try-finally -> in ra '5'.\n-> Kết quả in ra theo thứ tự là 1, 4, và 5.",
+        "tip": "MẸO PHÒNG THI: Catch bắt lỗi chia 0 (in 1) -> Finally luôn chạy (in 4) -> Tiếp tục chạy lệnh cuối (in 5) -> Đáp án: '1, 4, and 5'!"
       },
       {
         "id": "q_120",
-        "question": "Select the one correct answer",
-        "code": "What will be the result of attempting to compile and run the following program?\npublic class MyClass {\n    public static void main(String[] args) {\n        RuntimeException re = null;\n        throw re;\n    }\n}",
+        "question": "What will be the result of attempting to compile and run the following program?",
+        "code": "public class MyClass {\n    public static void main(String[] args) {\n        RuntimeException re = null;\n        throw re;\n    }\n}",
         "options": [
           "The program will compile without error and will throw java.lang.NullPointerException when run.",
           "The program will fail to compile because it cannot throw re.",
@@ -1686,8 +1686,8 @@ window.DEFAULT_QUIZZES = [
           "The program will compile without error and will throw java.lang.Runtime- Exception when run."
         ],
         "correctAnswer": 0,
-        "explanation": "Ngoại lệ Unchecked (không bắt buộc try-catch khi biên dịch) là tất cả các lớp kế thừa từ `RuntimeException` và `Error` (ví dụ: NullPointerException, ArrayIndexOutOfBoundsException).",
-        "tip": "MẸO PHÒNG THI: Unchecked Exception = Kế thừa từ RuntimeException!"
+        "explanation": "Trong Java, lệnh `throw re;` biên dịch thành công vì `re` có kiểu là `RuntimeException`. Tuy nhiên khi thực thi tại runtime, biến `re` có giá trị là `null`. Việc ném một đối tượng `null` bằng câu lệnh `throw` sẽ khiến JVM tự động ném ra ngoại lệ `java.lang.NullPointerException`.",
+        "tip": "MẸO PHÒNG THI: Thấy `throw null` hoặc `throw re` với `re = null` -> Luôn luôn gây ra `java.lang.NullPointerException` khi chạy!"
       },
       {
         "id": "q_121",
@@ -3287,8 +3287,8 @@ window.DEFAULT_QUIZZES = [
       },
       {
         "id": "q_235",
-        "question": "...//Container pane = aFrame.getContentPane()...JButton button = new JButton(\"Button 1 (LINE_START)\");pane.add(button, BorderLayout.LINE_START);The above code will set the “button” at which position?",
-        "code": "",
+        "question": "The following code will set the 'button' at which position in BorderLayout?",
+        "code": "// Container pane = aFrame.getContentPane();\nJButton button = new JButton(\"Button 1 (LINE_START)\");\npane.add(button, BorderLayout.LINE_START);",
         "options": [
           "North",
           "West",
@@ -3296,8 +3296,8 @@ window.DEFAULT_QUIZZES = [
           "South"
         ],
         "correctAnswer": 1,
-        "explanation": "Phương án \"West\" là câu trả lời chính xác cho câu hỏi này trong chuyên đề 'Module 12: Giao diện đồ họa nâng cao Java Swing'. Kiến thức này phản ánh đúng đặc tả kỹ thuật của ngôn ngữ lập trình Java và cơ chế thực thi của máy ảo JVM.",
-        "tip": "MẸO PHÒNG THI (Module 12: Giao diện đồ họa nâng cao Java Swing): Chú ý từ khóa trọng tâm 'West'. Đề thi Java luôn ưu tiên các chuẩn cú pháp bất biến và thuật ngữ chính xác trong Java API."
+        "explanation": "Trong bố cục `BorderLayout` của Java Swing/AWT, `BorderLayout.LINE_START` tương ứng với vị trí `BorderLayout.WEST` (bên trái theo hướng đọc từ trái sang phải mặc định).",
+        "tip": "MẸO PHÒNG THI: Trong BorderLayout: `LINE_START` = `WEST` (Tây/Trái), `LINE_END` = `EAST` (Đông/Phải), `PAGE_START` = `NORTH`, `PAGE_END` = `SOUTH`!"
       },
       {
         "id": "q_236",
@@ -4726,8 +4726,8 @@ window.DEFAULT_QUIZZES = [
       },
       {
         "id": "q_17",
-        "question": "public class Dummy {\n    class HappyGarbage01 {\n        public static void main(String args[]) {\n            HappyGarbage01 h = new HappyGarbage01();\n            h.methodA(); /* Line 6 */\n        } /* Line 7 */\n\n        Object methodA() /* Line 8 */ {\n            /* Line 9 */\n            Object obj1 = new Object(); /* Line 10 */\n            Object[] obj2 = new Object[1]; /* Line 11 */\n            obj2[0] = obj1;\n            obj1 = null;\n            return obj2[0];\n        }\n    }\n}",
-        "code": "",
+        "question": "At what line will the Object created on line 10 be eligible for garbage collection?",
+        "code": "public class Dummy {\n    class HappyGarbage01 {\n        public static void main(String args[]) {\n            HappyGarbage01 h = new HappyGarbage01();\n            h.methodA(); /* Line 6 */\n        } /* Line 7 */\n\n        Object methodA() /* Line 8 */ {\n            /* Line 9 */\n            Object obj1 = new Object(); /* Line 10 */\n            Object[] obj2 = new Object[1]; /* Line 11 */\n            obj2[0] = obj1;\n            obj1 = null;\n            return obj2[0];\n        }\n    }\n}",
         "options": [
           "After line 9",
           "After line 10",
@@ -4735,8 +4735,8 @@ window.DEFAULT_QUIZZES = [
           "Garbage collector never invoked in methodA()"
         ],
         "correctAnswer": 3,
-        "explanation": "Cơ chế thu gom rác trong Java: Việc gọi `System.gc()` chỉ là gửi lời yêu cầu/đề nghị đến JVM, không thể ép buộc GC chạy ngay lập tức. Nếu các biến vẫn còn được tham chiếu (như được lưu vào mảng hoặc return ra ngoài), đối tượng sẽ không bao giờ bị GC thu hồi. Đáp án: Garbage collector never invoked in methodA().",
-        "tip": "MẸO PHÒNG THI: Đối tượng còn được return hoặc còn nằm trong mảng sống -> GC không bao giờ dọn dẹp được!"
+        "explanation": "Đối tượng `obj1` được tạo tại dòng 10 và được gán vào mảng `obj2[0]`. Dù dòng 12 gán `obj1 = null`, tham chiếu tới đối tượng vẫn được giữ bởi phần tử `obj2[0]`. Phương thức `methodA()` sau đó trả về `obj2[0]`, do đó đối tượng vẫn được giữ tham chiếu bên ngoài và không bao giờ đủ điều kiện để bộ thu gom rác (GC) thu dọn trong phạm vi `methodA()`.",
+        "tip": "MẸO PHÒNG THI: `obj2[0] = obj1` rồi `return obj2[0]` -> Đối tượng vẫn được trả về và giữ tham chiếu bên ngoài -> Chọn 'Garbage collector never invoked in methodA()'!"
       },
       {
         "id": "q_18",
@@ -4754,8 +4754,8 @@ window.DEFAULT_QUIZZES = [
       },
       {
         "id": "q_19",
-        "question": "public class Dummy {\n    class Bar {}\n\n    class Test {\n        Bar doBar() {\n            Bar b = new Bar(); /* Line 6 */\n            return b; /* Line 7 */\n        }\n\n        public static void main(String args[]) {\n            Test t = new Test(); /* Line 11 */\n            Bar newBar = t.doBar(); /* Line 12 */\n            System.out.println(\"newBar\");\n            newBar = new Bar(); /* Line 14 */\n            System.out.println(\"finishing\"); /* Line 15 */\n        }\n    }\n}",
-        "code": "",
+        "question": "When is the Bar object, created on line 6, eligible for garbage collection?",
+        "code": "public class Dummy {\n    class Bar {}\n\n    class Test {\n        Bar doBar() {\n            Bar b = new Bar(); /* Line 6 */\n            return b; /* Line 7 */\n        }\n\n        public static void main(String args[]) {\n            Test t = new Test(); /* Line 11 */\n            Bar newBar = t.doBar(); /* Line 12 */\n            System.out.println(\"newBar\");\n            newBar = new Bar(); /* Line 14 */\n            System.out.println(\"finishing\"); /* Line 15 */\n        }\n    }\n}",
         "options": [
           "after line 7, when doBar() completes",
           "after line 12",
@@ -4763,8 +4763,8 @@ window.DEFAULT_QUIZZES = [
           "after line 15, when main() completes"
         ],
         "correctAnswer": 2,
-        "explanation": "Phương án \"after line 14\" là câu trả lời chính xác cho câu hỏi này trong chuyên đề 'Module 1: Giới thiệu Java & Cú pháp cơ bản'. Kiến thức này phản ánh đúng đặc tả kỹ thuật của ngôn ngữ lập trình Java và cơ chế thực thi của máy ảo JVM.",
-        "tip": "MẸO PHÒNG THI (Module 1: Giới thiệu Java & Cú pháp cơ bản): Chú ý từ khóa trọng tâm 'after line 14'. Đề thi Java luôn ưu tiên các chuẩn cú pháp bất biến và thuật ngữ chính xác trong Java API."
+        "explanation": "Đối tượng `Bar` tạo tại dòng 6 được trả về và gán cho biến `newBar` tại dòng 12. Đến dòng 14, `newBar` được gán sang một đối tượng `new Bar()` hoàn toàn mới, làm mất đi tham chiếu duy nhất tới đối tượng ban đầu tạo ở dòng 6. Do đó, đối tượng tạo ở dòng 6 đủ điều kiện bị thu gom rác ngay sau dòng 14 ('after line 14').",
+        "tip": "MẸO PHÒNG THI: Biến tham chiếu `newBar` bị gán lại đối tượng mới ở dòng 14 (`newBar = new Bar(); /* Line 14 */`) -> Đối tượng cũ bị bỏ rơi ngay sau dòng 14 -> Chọn 'after line 14'!"
       },
       {
         "id": "q_20",
@@ -5918,8 +5918,8 @@ window.DEFAULT_QUIZZES = [
       },
       {
         "id": "q_99",
-        "question": "import java.util.*;\n\nclass stack {\n    public static void main(String args[]) {\n        Stack obj = new Stack();\n        obj.push(new Integer(3));\n        obj.push(new Integer(2));\n        obj.pop();\n        obj.push(new Integer(5));\n        System.out.println(obj);\n    }\n}",
-        "code": "",
+        "question": "What is the output of this program?",
+        "code": "import java.util.*;\n\nclass stack {\n    public static void main(String args[]) {\n        Stack obj = new Stack();\n        obj.push(new Integer(3));\n        obj.push(new Integer(2));\n        obj.pop();\n        obj.push(new Integer(5));\n        System.out.println(obj);\n    }\n}",
         "options": [
           "[3, 5]",
           "[3, 2, 5]",
@@ -5927,8 +5927,8 @@ window.DEFAULT_QUIZZES = [
           "[3, 2]"
         ],
         "correctAnswer": 0,
-        "explanation": "Phương án \"[3, 5]\" là câu trả lời chính xác cho câu hỏi này trong chuyên đề 'Module 5: Java Collections Framework'. Kiến thức này phản ánh đúng đặc tả kỹ thuật của ngôn ngữ lập trình Java và cơ chế thực thi của máy ảo JVM.",
-        "tip": "MẸO PHÒNG THI (Module 5: Java Collections Framework): Chú ý từ khóa trọng tâm '[3, 5]'. Đề thi Java luôn ưu tiên các chuẩn cú pháp bất biến và thuật ngữ chính xác trong Java API."
+        "explanation": "Lớp `Stack` hoạt động theo nguyên lý LIFO (Last-In First-Out):\n1. `push(3)` -> Stack: [3]\n2. `push(2)` -> Stack: [3, 2]\n3. `pop()` -> Lấy phần tử trên đỉnh là 2 ra -> Stack còn: [3]\n4. `push(5)` -> Stack: [3, 5]\nKết quả in ra đối tượng Stack là `[3, 5]`.",
+        "tip": "MẸO PHÒNG THI: Stack LIFO: Đẩy 3, đẩy 2, pop (bỏ 2), đẩy 5 -> Còn lại [3, 5]!"
       },
       {
         "id": "q_100",
@@ -5971,8 +5971,8 @@ window.DEFAULT_QUIZZES = [
       },
       {
         "id": "q_102",
-        "question": "Select the one correct answer.",
-        "code": "What is wrong with the following code?\npublic class MyClass{\n    public static void main(String[] args) throws A{\n        Try {\n            f();\n        } finally {\n            System.out.println(\"Done.\");\n        } catch (A e) {\n            throw e;\n        }\n    }\n    public static void f() throws B {\n        throw new B();\n    }\n}\nclass A extends Throwable {}\nclass B extends A {}",
+        "question": "What is wrong with the following code?",
+        "code": "public class MyClass {\n    public static void main(String[] args) throws A {\n        try {\n            f();\n        } finally {\n            System.out.println(\"Done.\");\n        } catch (A e) {\n            throw e;\n        }\n    }\n    public static void f() throws B {\n        throw new B();\n    }\n}\nclass A extends Throwable {}\nclass B extends A {}",
         "options": [
           "The finally block must follow the catch block in the main() method.",
           "The main() method must declare that it throws B.",
@@ -5980,8 +5980,8 @@ window.DEFAULT_QUIZZES = [
           "The catch block in the main() method must declare that it catches B rather than A."
         ],
         "correctAnswer": 0,
-        "explanation": "Khối `finally` luôn luôn được thực thi dù trong khối `try` có xảy ra ngoại lệ hay không, và kể cả khi trong khối `try` có lệnh `return`. Trường hợp duy nhất finally không chạy là khi hệ thống gọi `System.exit(0)` hoặc JVM bị tắt đột ngột.",
-        "tip": "MẸO PHÒNG THI: Thấy 'always executed' -> Chọn 'finally'!"
+        "explanation": "Trong cú pháp Java, cấu trúc khối `try-catch-finally` bắt buộc khối `finally` phải luôn đứng ở cuối cùng sau tất cả các khối `catch`. Việc đặt `finally` trước `catch` (`try { ... } finally { ... } catch { ... }`) vi phạm ngữ pháp Java dẫn đến lỗi biên dịch.",
+        "tip": "MẸO PHÒNG THI: Thứ tự bất biến trong Java là `try -> catch -> finally`. Thấy `finally` nằm trước `catch` -> Chọn ngay 'The finally block must follow the catch block'!"
       },
       {
         "id": "q_103",
@@ -6000,7 +6000,7 @@ window.DEFAULT_QUIZZES = [
       {
         "id": "q_104",
         "question": "What will happen when you attempt to compile and run this code?",
-        "code": "public class MyIf{\n    public static void main(String argv[]){\n        MyIf mi = new MyIf();\n    }\n    MyIf(){\n        boolean b = false;\n        If(b=false){\n            System.out.println(\"The value of b is\"+b);\n        }\n    }\n}",
+        "code": "public class MyIf {\n    public static void main(String argv[]) {\n        MyIf mi = new MyIf();\n    }\n    MyIf() {\n        boolean b = false;\n        if (b = false) {\n            System.out.println(\"The value of b is \" + b);\n        }\n    }\n}",
         "options": [
           "Run time error, a boolean cannot be appended using the + operator.",
           "Compile time error, cannot simultaneously create and assign value for Boolean value.",
@@ -6008,8 +6008,8 @@ window.DEFAULT_QUIZZES = [
           "Compilation and run with no output"
         ],
         "correctAnswer": 3,
-        "explanation": "Phương án \"Compilation and run with no output\" là câu trả lời chính xác cho câu hỏi này trong chuyên đề 'Module 6: Xử lý Ngoại lệ (Exception Handling)'. Kiến thức này phản ánh đúng đặc tả kỹ thuật của ngôn ngữ lập trình Java và cơ chế thực thi của máy ảo JVM.",
-        "tip": "MẸO PHÒNG THI (Module 6: Xử lý Ngoại lệ (Exception Handling)): Chú ý từ khóa trọng tâm 'Compilation and run with no output'. Đề thi Java luôn ưu tiên các chuẩn cú pháp bất biến và thuật ngữ chính xác trong Java API."
+        "explanation": "Trong Java, cú pháp điều kiện là chữ thường `if (b = false)`. Phép gán `b = false` gán giá trị `false` cho biến `b` và trả về chính giá trị `false` (kiểu boolean hợp lệ nên biên dịch hoàn toàn thành công). Do điều kiện trong `if` là `false`, khối lệnh in ra màn hình bị bỏ qua. Kết quả: Chương trình biên dịch thành công và chạy nhưng không in ra bất kỳ output nào ('Compilation and run with no output').",
+        "tip": "MẸO PHÒNG THI: Thấy `if (b = false)` với kiểu boolean -> Biên dịch hoàn toàn hợp lệ nhưng điều kiện là `false` nên KHÔNG in ra gì cả -> Chọn 'Compilation and run with no output'!"
       },
       {
         "id": "q_105",
@@ -6027,8 +6027,8 @@ window.DEFAULT_QUIZZES = [
       },
       {
         "id": "q_106",
-        "question": "public class exceptions {\n    public static void main(String Args[]) {\n        int[] array = new int[3];\n        try {\n            for (int i = 0; i < 4; ++i) {\n                array[i] = i;\n            }\n            System.out.println(array);\n        } catch (ArrayIndexOutOfBoundsException e) {\n            System.out.println(\"ArrayIndexOutOfBoundsException!!\");\n        }\n    }\n}",
-        "code": "",
+        "question": "What will happen when you attempt to compile and run this code?",
+        "code": "public class exceptions {\n    public static void main(String Args[]) {\n        int[] array = new int[3];\n        try {\n            for (int i = 0; i < 4; ++i) {\n                array[i] = i;\n            }\n            System.out.println(array);\n        } catch (ArrayIndexOutOfBoundsException e) {\n            System.out.println(\"ArrayIndexOutOfBoundsException!!\");\n        }\n    }\n}",
         "options": [
           "The program will print 0 1 2 4 in that order.",
           "Compile time errors.",
@@ -6036,8 +6036,8 @@ window.DEFAULT_QUIZZES = [
           "The program will only print 0 1 2 in that order."
         ],
         "correctAnswer": 2,
-        "explanation": "Phương án \"The program will throw ArrayIndexOutOfBoundsException.\" là câu trả lời chính xác cho câu hỏi này trong chuyên đề 'Module 6: Xử lý Ngoại lệ (Exception Handling)'. Kiến thức này phản ánh đúng đặc tả kỹ thuật của ngôn ngữ lập trình Java và cơ chế thực thi của máy ảo JVM.",
-        "tip": "MẸO PHÒNG THI (Module 6: Xử lý Ngoại lệ (Exception Handling)): Chú ý từ khóa trọng tâm 'The program will throw ArrayIndexOutOfBoundsException.'. Đề thi Java luôn ưu tiên các chuẩn cú pháp bất biến và thuật ngữ chính xác trong Java API."
+        "explanation": "Mảng `array` có kích thước là 3 (các chỉ số hợp lệ là 0, 1, 2). Vòng lặp `for (int i = 0; i < 4; ++i)` khi chạy đến `i = 3` sẽ truy cập `array[3]`, vượt quá giới hạn mảng nên chương trình sẽ ném ra ngoại lệ `ArrayIndexOutOfBoundsException` tại runtime.",
+        "tip": "MẸO PHÒNG THI: Mảng `new int[3]` mà lặp `i < 4` -> Chắc chắn văng ngoại lệ `ArrayIndexOutOfBoundsException`!"
       },
       {
         "id": "q_107",
@@ -6209,8 +6209,8 @@ window.DEFAULT_QUIZZES = [
       },
       {
         "id": "q_119",
-        "question": "System.out.println(\"5\");\n    }\n}\n\nSelect the one correct answer.",
-        "code": "Which digits, and in what order, will be printed when the following program is run?\npublic class MyClass {\n    public static void main(String[] args) {\n        int k = 0;\n        try {\n            int i = 5 / k;\n        } catch (ArithmeticException e) {\n            System.out.println(\"1\");\n        } catch (RuntimeException e) {\n            System.out.println(\"2\");\n            return;\n        } catch (Exception e) {\n            System.out.println(\"3\");\n        } finally {\n            System.out.println(\"4\");\n        }",
+        "question": "Which digits, and in what order, will be printed when the following program is run?",
+        "code": "public class MyClass {\n    public static void main(String[] args) {\n        int k = 0;\n        try {\n            int i = 5 / k;\n        } catch (ArithmeticException e) {\n            System.out.println(\"1\");\n        } catch (RuntimeException e) {\n            System.out.println(\"2\");\n            return;\n        } catch (Exception e) {\n            System.out.println(\"3\");\n        } finally {\n            System.out.println(\"4\");\n        }\n        System.out.println(\"5\");\n    }\n}",
         "options": [
           "The program will only print 5.",
           "The program will only print 1, 4, and 5, in that order",
@@ -6218,13 +6218,13 @@ window.DEFAULT_QUIZZES = [
           "The program will only print 1, 2, and 4, in that order"
         ],
         "correctAnswer": 1,
-        "explanation": "Ngoại lệ Unchecked (không bắt buộc try-catch khi biên dịch) là tất cả các lớp kế thừa từ `RuntimeException` và `Error` (ví dụ: NullPointerException, ArrayIndexOutOfBoundsException).",
-        "tip": "MẸO PHÒNG THI: Unchecked Exception = Kế thừa từ RuntimeException!"
+        "explanation": "1. Phép chia `5 / 0` ném ra ngoại lệ `ArithmeticException` -> Khối `catch (ArithmeticException e)` bắt được và in ra '1'.\n2. Khối `finally` luôn luôn thực thi bất kể có ngoại lệ hay không -> in ra '4'.\n3. Vì ngoại lệ đã được xử lý xong và không có lệnh return trong khối catch đầu tiên, luồng chương trình tiếp tục chạy câu lệnh tiếp theo sau try-finally -> in ra '5'.\n-> Kết quả in ra theo thứ tự là 1, 4, và 5.",
+        "tip": "MẸO PHÒNG THI: Catch bắt lỗi chia 0 (in 1) -> Finally luôn chạy (in 4) -> Tiếp tục chạy lệnh cuối (in 5) -> Đáp án: '1, 4, and 5'!"
       },
       {
         "id": "q_120",
-        "question": "Select the one correct answer",
-        "code": "What will be the result of attempting to compile and run the following program?\npublic class MyClass {\n    public static void main(String[] args) {\n        RuntimeException re = null;\n        throw re;\n    }\n}",
+        "question": "What will be the result of attempting to compile and run the following program?",
+        "code": "public class MyClass {\n    public static void main(String[] args) {\n        RuntimeException re = null;\n        throw re;\n    }\n}",
         "options": [
           "The program will compile without error and will throw java.lang.NullPointerException when run.",
           "The program will fail to compile because it cannot throw re.",
@@ -6232,8 +6232,8 @@ window.DEFAULT_QUIZZES = [
           "The program will compile without error and will throw java.lang.Runtime- Exception when run."
         ],
         "correctAnswer": 0,
-        "explanation": "Ngoại lệ Unchecked (không bắt buộc try-catch khi biên dịch) là tất cả các lớp kế thừa từ `RuntimeException` và `Error` (ví dụ: NullPointerException, ArrayIndexOutOfBoundsException).",
-        "tip": "MẸO PHÒNG THI: Unchecked Exception = Kế thừa từ RuntimeException!"
+        "explanation": "Trong Java, lệnh `throw re;` biên dịch thành công vì `re` có kiểu là `RuntimeException`. Tuy nhiên khi thực thi tại runtime, biến `re` có giá trị là `null`. Việc ném một đối tượng `null` bằng câu lệnh `throw` sẽ khiến JVM tự động ném ra ngoại lệ `java.lang.NullPointerException`.",
+        "tip": "MẸO PHÒNG THI: Thấy `throw null` hoặc `throw re` với `re = null` -> Luôn luôn gây ra `java.lang.NullPointerException` khi chạy!"
       }
     ]
   },
@@ -7899,8 +7899,8 @@ window.DEFAULT_QUIZZES = [
       },
       {
         "id": "q_235",
-        "question": "...//Container pane = aFrame.getContentPane()...JButton button = new JButton(\"Button 1 (LINE_START)\");pane.add(button, BorderLayout.LINE_START);The above code will set the “button” at which position?",
-        "code": "",
+        "question": "The following code will set the 'button' at which position in BorderLayout?",
+        "code": "// Container pane = aFrame.getContentPane();\nJButton button = new JButton(\"Button 1 (LINE_START)\");\npane.add(button, BorderLayout.LINE_START);",
         "options": [
           "North",
           "West",
@@ -7908,8 +7908,8 @@ window.DEFAULT_QUIZZES = [
           "South"
         ],
         "correctAnswer": 1,
-        "explanation": "Phương án \"West\" là câu trả lời chính xác cho câu hỏi này trong chuyên đề 'Module 12: Giao diện đồ họa nâng cao Java Swing'. Kiến thức này phản ánh đúng đặc tả kỹ thuật của ngôn ngữ lập trình Java và cơ chế thực thi của máy ảo JVM.",
-        "tip": "MẸO PHÒNG THI (Module 12: Giao diện đồ họa nâng cao Java Swing): Chú ý từ khóa trọng tâm 'West'. Đề thi Java luôn ưu tiên các chuẩn cú pháp bất biến và thuật ngữ chính xác trong Java API."
+        "explanation": "Trong bố cục `BorderLayout` của Java Swing/AWT, `BorderLayout.LINE_START` tương ứng với vị trí `BorderLayout.WEST` (bên trái theo hướng đọc từ trái sang phải mặc định).",
+        "tip": "MẸO PHÒNG THI: Trong BorderLayout: `LINE_START` = `WEST` (Tây/Trái), `LINE_END` = `EAST` (Đông/Phải), `PAGE_START` = `NORTH`, `PAGE_END` = `SOUTH`!"
       },
       {
         "id": "q_236",

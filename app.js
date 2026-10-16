@@ -201,6 +201,140 @@
   let allQuizSets = [];
   let userHistory = {};
   let mistakeNotebook = {}; // { questionId: { question, options, correctAnswer, explanation, addedAt } }
+  let lastMockConfig = { subject: 'java', timeMinutes: 40, mode: 'exam' };
+
+  // Predefined Mock Exam Presets (40 questions extracted randomly)
+  const MOCK_40_QUIZZES = [
+    {
+      id: 'mock_40_java',
+      title: '🎯 Đề Thi Thử Core Java (40 Câu Ngẫu Nhiên)',
+      badge: '40 Câu Chuẩn',
+      category: 'Thi thử 40 câu',
+      icon: '☕',
+      durationMinutes: 40,
+      description: 'Mô phỏng kỳ thi thực tế: 40 câu hỏi trích ngẫu nhiên từ kho 320 câu Core Java, tự động đảo ngẫu nhiên đáp án A-B-C-D mỗi lần thi.'
+    },
+    {
+      id: 'mock_40_dbms',
+      title: '🎯 Đề Thi Thử DBMS (40 Câu Ngẫu Nhiên)',
+      badge: '40 Câu Chuẩn',
+      category: 'Thi thử 40 câu',
+      icon: '🗄️',
+      durationMinutes: 40,
+      description: 'Mô phỏng kỳ thi chuẩn CDAC DBMS: 40 câu trích ngẫu nhiên từ kho 260 câu DBMS (Oracle RDBMS, SQL, Normalization, Concurrency).'
+    },
+    {
+      id: 'mock_40_mix',
+      title: '🎯 Đề Thi Thử Tổng Hợp Java & DBMS (40 Câu)',
+      badge: '40 Câu Chuẩn',
+      category: 'Thi thử 40 câu',
+      icon: '🔀',
+      durationMinutes: 40,
+      description: 'Đề thi kết hợp toàn diện: 20 câu Core Java + 20 câu DBMS trích xuất ngẫu nhiên, thời gian làm bài chuẩn 40 phút.'
+    }
+  ];
+
+  function ensureMock40Sets() {
+    MOCK_40_QUIZZES.forEach(mockSet => {
+      const idx = allQuizSets.findIndex(s => s.id === mockSet.id);
+      if (idx !== -1) {
+        allQuizSets[idx] = { ...mockSet, questions: [] };
+      } else {
+        allQuizSets.unshift({ ...mockSet, questions: [] });
+      }
+    });
+  }
+
+  function generateMock40Questions(subject = 'java') {
+    let javaPool = [];
+    let dbmsPool = [];
+
+    // Java question pool
+    const fullJava = allQuizSets.find(s => s.id === 'java_mega_full_320');
+    if (fullJava && fullJava.questions && fullJava.questions.length > 0) {
+      javaPool = fullJava.questions;
+    } else {
+      allQuizSets.filter(s => s.id && s.id.startsWith('java_mod_')).forEach(s => {
+        if (s.questions) javaPool.push(...s.questions);
+      });
+    }
+
+    // DBMS question pool
+    const fullDbms = allQuizSets.find(s => s.id === 'dbms_mega_full_260' || s.id === 'dbms_mega_full_118');
+    if (fullDbms && fullDbms.questions && fullDbms.questions.length > 0) {
+      dbmsPool = fullDbms.questions;
+    } else {
+      allQuizSets.filter(s => s.id && s.id.startsWith('dbms_mod_')).forEach(s => {
+        if (s.questions) dbmsPool.push(...s.questions);
+      });
+    }
+
+    // Fallbacks
+    if (javaPool.length === 0 && window.DEFAULT_QUIZZES) {
+      const jFull = window.DEFAULT_QUIZZES.find(s => s.id === 'java_mega_full_320');
+      if (jFull) javaPool = jFull.questions || [];
+    }
+    if (dbmsPool.length === 0 && window.DBMS_QUIZZES) {
+      const dFull = window.DBMS_QUIZZES.find(s => s.id === 'dbms_mega_full_260');
+      if (dFull) dbmsPool = dFull.questions || [];
+    }
+
+    let picked = [];
+    if (subject === 'java') {
+      picked = shuffle(javaPool).slice(0, 40);
+    } else if (subject === 'dbms') {
+      picked = shuffle(dbmsPool).slice(0, 40);
+    } else {
+      const jPicked = shuffle(javaPool).slice(0, 20);
+      const dPicked = shuffle(dbmsPool).slice(0, 20);
+      picked = shuffle([...jPicked, ...dPicked]);
+    }
+    return picked;
+  }
+
+  function openMock40Modal() {
+    sound.playClick();
+    const modal = document.getElementById('mock-40-modal');
+    if (modal) modal.style.display = 'flex';
+  }
+
+  function closeMock40Modal() {
+    const modal = document.getElementById('mock-40-modal');
+    if (modal) modal.style.display = 'none';
+  }
+
+  function startMock40Exam(subject = 'java', timeMinutes = 40, mode = 'exam') {
+    lastMockConfig = { subject, timeMinutes, mode };
+    const pickedQuestions = generateMock40Questions(subject);
+    if (pickedQuestions.length === 0) {
+      showToast('Không tìm thấy câu hỏi trong ngân hàng đề!', 'error');
+      return;
+    }
+
+    const titleMap = {
+      java: '🎯 Đề Thi Thử Core Java (40 Câu Ngẫu Nhiên)',
+      dbms: '🎯 Đề Thi Thử DBMS (40 Câu Ngẫu Nhiên)',
+      mix: '🎯 Đề Thi Thử Tổng Hợp Java & DBMS (40 Câu)'
+    };
+
+    closeMock40Modal();
+    const quizId = `mock_40_${subject}`;
+    let mockQuiz = allQuizSets.find(s => s.id === quizId);
+    if (!mockQuiz) {
+      mockQuiz = {
+        id: quizId,
+        title: titleMap[subject] || '🎯 Thi Thử 40 Câu Ngẫu Nhiên',
+        badge: '40 Câu Chuẩn',
+        durationMinutes: timeMinutes,
+        questions: []
+      };
+      allQuizSets.unshift(mockQuiz);
+    } else {
+      mockQuiz.durationMinutes = timeMinutes;
+    }
+
+    startQuizSession(quizId, mode, pickedQuestions, timeMinutes);
+  }
 
   function loadQuizzesFromStorage() {
     try {
@@ -231,6 +365,7 @@
             }
           });
         }
+        ensureMock40Sets();
         saveQuizzesToStorage();
       } else {
         allQuizSets = [];
@@ -240,11 +375,13 @@
         if (window.DBMS_QUIZZES && Array.isArray(window.DBMS_QUIZZES)) {
           allQuizSets = allQuizSets.concat(JSON.parse(JSON.stringify(window.DBMS_QUIZZES)));
         }
+        ensureMock40Sets();
         saveQuizzesToStorage();
       }
     } catch (e) {
       console.error('Failed to load quizzes from storage:', e);
       allQuizSets = (window.DEFAULT_QUIZZES || []).concat(window.DBMS_QUIZZES || []);
+      ensureMock40Sets();
     }
 
     try {
@@ -554,9 +691,36 @@
     }
 
     filtered.forEach(quiz => {
-      const qCount = quiz.questions ? quiz.questions.length : 0;
+      const isMock = quiz.id && quiz.id.startsWith('mock_40');
+      const qCount = isMock ? 40 : (quiz.questions ? quiz.questions.length : 0);
       const history = userHistory[quiz.id];
       const bestScoreText = history ? `Điểm cao nhất: ${history.bestScore}/${history.totalQuestions}` : 'Chưa thi';
+
+      const actionsHtml = isMock ? `
+        <div class="quiz-card-actions">
+          <button class="btn btn-warning btn-play" data-quiz-id="${quiz.id}" data-mode="exam" title="Bắt đầu thi thử 40 câu tính giờ 40 phút, nộp bài mới biết điểm">
+            🎯 Thi Thử 40 Phút
+          </button>
+          <button class="btn btn-secondary" data-quiz-id="${quiz.id}" data-mode="study" title="Làm bài và biết kết quả đúng sai ngay từng câu">
+            ⚡ Hiện Đúng/Sai
+          </button>
+        </div>
+      ` : `
+        <div class="quiz-card-actions">
+          <button class="btn btn-accent btn-play" data-quiz-id="${quiz.id}" data-mode="study" title="Làm bài và biết kết quả đúng sai ngay từng câu">
+            ⚡ Hiện Đúng/Sai
+          </button>
+          <button class="btn btn-secondary" data-quiz-id="${quiz.id}" data-mode="exam" title="Bắt đầu thi thử có tính giờ, nộp bài mới biết điểm">
+            ⏱️ Thi Thử
+          </button>
+          <button class="btn btn-ghost btn-icon-only btn-edit-quiz" data-quiz-id="${quiz.id}" title="Chỉnh sửa bộ đề">
+            ✏️
+          </button>
+          <button class="btn btn-ghost btn-icon-only btn-delete-quiz" data-quiz-id="${quiz.id}" title="Xóa bộ đề này" style="color: var(--danger);">
+            🗑️
+          </button>
+        </div>
+      `;
 
       const card = document.createElement('div');
       card.className = 'quiz-card';
@@ -580,20 +744,7 @@
           </div>
         </div>
 
-        <div class="quiz-card-actions">
-          <button class="btn btn-accent btn-play" data-quiz-id="${quiz.id}" data-mode="study" title="Làm bài và biết kết quả đúng sai ngay từng câu">
-            ⚡ Hiện Đúng/Sai
-          </button>
-          <button class="btn btn-secondary" data-quiz-id="${quiz.id}" data-mode="exam" title="Bắt đầu thi thử có tính giờ, nộp bài mới biết điểm">
-            ⏱️ Thi Thử
-          </button>
-          <button class="btn btn-ghost btn-icon-only btn-edit-quiz" data-quiz-id="${quiz.id}" title="Chỉnh sửa bộ đề">
-            ✏️
-          </button>
-          <button class="btn btn-ghost btn-icon-only btn-delete-quiz" data-quiz-id="${quiz.id}" title="Xóa bộ đề này" style="color: var(--danger);">
-            🗑️
-          </button>
-        </div>
+        ${actionsHtml}
       `;
 
       // Event listeners for card buttons
@@ -624,7 +775,7 @@
   let secondsRemaining = 0;
   let totalTimeSpentSeconds = 0;
 
-  function startQuizSession(quizId, mode = 'study', customQuestions = null) {
+  function startQuizSession(quizId, mode = 'study', customQuestions = null, customDurationMinutes = null) {
     activeQuiz = allQuizSets.find(q => q.id === quizId);
     if (!activeQuiz && !customQuestions) {
       showToast('Không tìm thấy đề thi!', 'error');
@@ -640,11 +791,15 @@
     let rawQuestions;
     if (customQuestions) {
       rawQuestions = customQuestions;
+    } else if (quizId && quizId.startsWith('mock_40_')) {
+      const subject = quizId.replace('mock_40_', '');
+      rawQuestions = generateMock40Questions(subject);
+      lastMockConfig = { subject, timeMinutes: activeQuiz?.durationMinutes || 40, mode };
     } else {
       rawQuestions = JSON.parse(JSON.stringify(activeQuiz.questions || []));
     }
 
-    if (rawQuestions.length === 0) {
+    if (!rawQuestions || rawQuestions.length === 0) {
       showToast('Bộ đề này chưa có câu hỏi nào!', 'error');
       return;
     }
@@ -663,26 +818,42 @@
 
     // Setup Timer
     clearInterval(timerInterval);
-    const durationMins = activeQuiz ? (activeQuiz.durationMinutes || 25) : Math.ceil(activeQuestions.length * 1.5);
-    secondsRemaining = durationMins * 60;
-    totalTimeSpentSeconds = 0;
-    updateTimerDisplay();
+    let durationMins;
+    if (customDurationMinutes !== null && customDurationMinutes !== undefined) {
+      durationMins = customDurationMinutes;
+    } else if (activeQuiz && activeQuiz.durationMinutes !== undefined) {
+      durationMins = activeQuiz.durationMinutes;
+    } else {
+      durationMins = Math.ceil(activeQuestions.length * 1.5);
+    }
 
-    timerInterval = setInterval(() => {
-      totalTimeSpentSeconds++;
-      if (secondsRemaining > 0) {
-        secondsRemaining--;
-        updateTimerDisplay();
-        if (secondsRemaining === 60) {
-          showToast('⚠️ Còn lại 1 phút làm bài!', 'error');
-          document.getElementById('player-timer-box').classList.add('warning');
+    totalTimeSpentSeconds = 0;
+    if (durationMins > 0) {
+      secondsRemaining = durationMins * 60;
+      updateTimerDisplay();
+
+      timerInterval = setInterval(() => {
+        totalTimeSpentSeconds++;
+        if (secondsRemaining > 0) {
+          secondsRemaining--;
+          updateTimerDisplay();
+          if (secondsRemaining === 60) {
+            showToast('⚠️ Còn lại 1 phút làm bài!', 'error');
+            document.getElementById('player-timer-box').classList.add('warning');
+          }
+        } else {
+          clearInterval(timerInterval);
+          showToast('⏰ Đã hết giờ làm bài! Tự động nộp bài.', 'info');
+          submitQuizSession();
         }
-      } else {
-        clearInterval(timerInterval);
-        showToast('⏰ Đã hết giờ làm bài! Tự động nộp bài.', 'info');
-        submitQuizSession();
-      }
-    }, 1000);
+      }, 1000);
+    } else {
+      secondsRemaining = 0;
+      document.getElementById('player-timer-text').textContent = '∞';
+      timerInterval = setInterval(() => {
+        totalTimeSpentSeconds++;
+      }, 1000);
+    }
 
     // Render Question
     renderCurrentQuestion();
@@ -1052,7 +1223,7 @@
     const subEl = document.getElementById('result-subtitle-text');
     if (accuracy >= 90) {
       verdictEl.textContent = '🏆 Xuất Sắc!';
-      subEl.textContent = 'Bạn nắm kiến thức Core Java rất vững vàng và chuẩn xác!';
+      subEl.textContent = 'Bạn nắm kiến thức rất vững vàng và chuẩn xác!';
     } else if (accuracy >= 75) {
       verdictEl.textContent = '🎉 Giỏi Lắm!';
       subEl.textContent = 'Kết quả rất tốt, chỉ cần ôn lại một vài câu thiếu sót.';
@@ -1062,6 +1233,16 @@
     } else {
       verdictEl.textContent = '💪 Cần Cố Gắng!';
       subEl.textContent = 'Hãy ôn tập lại lý thuyết và làm lại bài thi để củng cố kiến thức nhé.';
+    }
+
+    // Show/hide "Thi Đề 40 Câu Mới" button
+    const btnRetryNew40 = document.getElementById('btn-retry-new-40');
+    if (btnRetryNew40) {
+      if ((activeQuiz && activeQuiz.id && activeQuiz.id.startsWith('mock_40')) || activeQuestions.length === 40) {
+        btnRetryNew40.style.display = 'inline-flex';
+      } else {
+        btnRetryNew40.style.display = 'none';
+      }
     }
 
     renderReviewCards('all');
@@ -1243,6 +1424,7 @@
       // Keep custom quizzes
       const customSets = allQuizSets.filter(s => s.category === 'Tự tạo' && !defaultSets.some(d => d.id === s.id));
       allQuizSets = JSON.parse(JSON.stringify(defaultSets)).concat(customSets);
+      ensureMock40Sets();
       saveQuizzesToStorage();
       renderDashboard();
       showToast('Đã khôi phục thành công 320 câu Java + 260 câu DBMS!', 'success');
@@ -1417,16 +1599,68 @@
       });
     }
 
-    document.getElementById('btn-quick-random-20').addEventListener('click', () => {
-      const pool = [];
-      allQuizSets.forEach(s => {
-        if (s.questions) pool.push(...s.questions);
-      });
-      if (pool.length === 0) return;
+    // Mock 40 Exam Modal Controls
+    let selectedMockSubject = 'java';
+    let selectedMockTime = 40;
+    let selectedMockMode = 'exam';
 
-      const picked = shuffle(pool).slice(0, 20);
-      startQuizSession(allQuizSets[0]?.id || 'random', heroSelectedMode, picked);
+    const btnHeaderMock = document.getElementById('btn-header-mock-40');
+    if (btnHeaderMock) {
+      btnHeaderMock.addEventListener('click', openMock40Modal);
+    }
+
+    const btnHeroMock = document.getElementById('btn-hero-mock-40');
+    if (btnHeroMock) {
+      btnHeroMock.addEventListener('click', openMock40Modal);
+    }
+
+    const mockCloseBtn = document.getElementById('mock-40-close-btn');
+    if (mockCloseBtn) mockCloseBtn.addEventListener('click', closeMock40Modal);
+    const mockCancelBtn = document.getElementById('mock-40-cancel-btn');
+    if (mockCancelBtn) mockCancelBtn.addEventListener('click', closeMock40Modal);
+
+    // Subject selection cards
+    const subjectCards = document.querySelectorAll('.mock-subject-card');
+    subjectCards.forEach(card => {
+      card.addEventListener('click', () => {
+        sound.playClick();
+        subjectCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+        selectedMockSubject = card.getAttribute('data-subject') || 'java';
+      });
     });
+
+    // Time selection buttons
+    const timeBtns = document.querySelectorAll('.mock-time-btn');
+    timeBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        sound.playClick();
+        timeBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        selectedMockTime = parseInt(btn.getAttribute('data-time'), 10);
+      });
+    });
+
+    // Mode selection cards
+    const modeCards = document.querySelectorAll('.mock-mode-card');
+    modeCards.forEach(card => {
+      card.addEventListener('click', () => {
+        sound.playClick();
+        modeCards.forEach(c => c.classList.remove('active'));
+        card.classList.add('active');
+        selectedMockMode = card.getAttribute('data-mode') || 'exam';
+        const radio = card.querySelector('input[type="radio"]');
+        if (radio) radio.checked = true;
+      });
+    });
+
+    // Start 40 questions button inside modal
+    const btnStartMockNow = document.getElementById('btn-start-mock-40-now');
+    if (btnStartMockNow) {
+      btnStartMockNow.addEventListener('click', () => {
+        startMock40Exam(selectedMockSubject, selectedMockTime, selectedMockMode);
+      });
+    }
 
     // Player header mode toggle button
     const playerModeToggleBtn = document.getElementById('player-mode-toggle-btn');
@@ -1581,6 +1815,15 @@
       }
       startQuizSession(activeQuiz ? activeQuiz.id : 'wrong_practice', 'study', wrongList);
     });
+
+    // "Thi Đề 40 Câu Mới" button in Result view
+    const btnRetryNew40 = document.getElementById('btn-retry-new-40');
+    if (btnRetryNew40) {
+      btnRetryNew40.addEventListener('click', () => {
+        startMock40Exam(lastMockConfig.subject || 'java', lastMockConfig.timeMinutes || 40, lastMockConfig.mode || 'exam');
+        showToast('🎯 Đã rút ngẫu nhiên 40 câu hỏi mới! Chúc bạn làm bài đạt điểm cao.', 'success');
+      });
+    }
 
     document.getElementById('btn-result-back-home').addEventListener('click', () => {
       document.getElementById('view-result').style.display = 'none';

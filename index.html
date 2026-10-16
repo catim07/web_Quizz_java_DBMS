@@ -30,9 +30,13 @@
     </div>
 
     <div class="header-actions">
-      <!-- Create Quiz Button -->
+      <!-- Mock 40 Exam Button -->
+      <button class="btn btn-warning" id="btn-header-mock-40" title="Thi thử 40 câu ngẫu nhiên chuẩn phòng thi">
+        <span>🎯</span> Thi Thử 40 Câu
+      </button>
+
       <!-- Mistake Notebook Button -->
-      <button class="btn btn-warning" id="btn-open-mistake-notebook" title="Xem Sổ tay câu sai để ôn tập lại">
+      <button class="btn btn-secondary" id="btn-open-mistake-notebook" title="Xem Sổ tay câu sai để ôn tập lại">
         <span>📓</span> Sổ Tay Câu Sai
       </button>
 
@@ -103,14 +107,14 @@
         </div>
 
         <div class="hero-actions-group">
-          <button class="btn btn-accent btn-play" id="btn-quick-full-test">
+          <button class="btn btn-warning btn-play" id="btn-hero-mock-40" style="font-weight: 700; box-shadow: 0 0 20px rgba(245, 158, 11, 0.45);">
+            🎯 Thi Thử 40 Câu Ngẫu Nhiên
+          </button>
+          <button class="btn btn-accent" id="btn-quick-full-test">
             🏆 Đề 320 Câu Core Java
           </button>
           <button class="btn btn-secondary" id="btn-quick-dbms-test">
             🗄️ Đề 260 Câu DBMS
-          </button>
-          <button class="btn btn-secondary" id="btn-quick-random-20">
-            🎲 Luyện Nhanh 20 Câu Ngẫu Nhiên
           </button>
           <button class="btn btn-ghost" id="btn-open-mistake-notebook-hero">
             📓 Sổ Tay Câu Sai
@@ -127,6 +131,7 @@
 
         <div class="filter-pills" id="category-filter-pills">
           <button class="filter-pill active" data-category="all">Tất cả đề</button>
+          <button class="filter-pill" data-category="Thi thử 40 câu">🎯 Thi Thử 40 Câu</button>
           <button class="filter-pill" data-category="Tổng hợp">Java Tổng hợp</button>
           <button class="filter-pill" data-category="DBMS">DBMS</button>
           <button class="filter-pill" data-category="Theo Module">Java Modules</button>
@@ -267,6 +272,9 @@
         </div>
 
         <div class="result-actions-row">
+          <button class="btn btn-warning" id="btn-retry-new-40" style="display: none; font-weight: 700; box-shadow: 0 0 16px rgba(245, 158, 11, 0.4);">
+            🎯 Thi Đề 40 Câu Mới
+          </button>
           <button class="btn btn-primary" id="btn-retry-same-quiz">
             🔄 Làm Lại Đề Này
           </button>
@@ -492,6 +500,103 @@ Giải thích: Tiền tố ++a tăng giá trị trước khi in.</pre>
         <div id="notebook-questions-list" style="max-height: 55vh; overflow-y: auto;">
           <!-- Rendered by JS -->
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       MODAL: MOCK EXAM 40 QUESTIONS (THI THỬ 40 CÂU NGẪU NHIÊN)
+       ===================================================================== -->
+  <div class="modal-overlay" id="mock-40-modal" style="display:none;">
+    <div class="modal-content" style="max-width: 620px;">
+      <div class="modal-header">
+        <h3 class="modal-title">🎯 Thi Thử 40 Câu Chuẩn Phòng Thi</h3>
+        <button class="btn btn-ghost btn-icon-only" id="mock-40-close-btn">✖</button>
+      </div>
+      <div class="modal-body" style="padding: 1.5rem;">
+        <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.25rem;">
+          Mỗi lần vào thi, hệ thống sẽ trích xuất <strong>40 câu hỏi ngẫu nhiên</strong> từ kho ngân hàng và <strong>đảo ngẫu nhiên các đáp án A, B, C, D</strong> để mô phỏng chính xác kỳ thi thực tế.
+        </p>
+
+        <!-- Step 1: Subject Selection -->
+        <div class="form-group">
+          <label class="form-label" style="font-weight: 700; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span>📚</span> 1. Chọn môn thi:
+          </label>
+          <div class="mock-subject-grid" id="mock-subject-grid">
+            <div class="mock-subject-card active" data-subject="java">
+              <div class="subject-icon">☕</div>
+              <div class="subject-info">
+                <div class="subject-title">Core Java</div>
+                <div class="subject-sub">40 câu / Kho 320 câu</div>
+              </div>
+              <div class="subject-check">✓</div>
+            </div>
+
+            <div class="mock-subject-card" data-subject="dbms">
+              <div class="subject-icon">🗄️</div>
+              <div class="subject-info">
+                <div class="subject-title">DBMS (Oracle)</div>
+                <div class="subject-sub">40 câu / Kho 260 câu</div>
+              </div>
+              <div class="subject-check">✓</div>
+            </div>
+
+            <div class="mock-subject-card" data-subject="mix">
+              <div class="subject-icon">🔀</div>
+              <div class="subject-info">
+                <div class="subject-title">Tổng hợp (Mix)</div>
+                <div class="subject-sub">20 Java + 20 DBMS</div>
+              </div>
+              <div class="subject-check">✓</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2: Time limit -->
+        <div class="form-group" style="margin-top: 1.25rem;">
+          <label class="form-label" style="font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span>⏱️</span> 2. Thời gian làm bài:
+          </label>
+          <div class="mock-time-options" id="mock-time-options">
+            <button class="mock-time-btn active" data-time="40">40 phút (Chuẩn 1p/câu)</button>
+            <button class="mock-time-btn" data-time="50">50 phút</button>
+            <button class="mock-time-btn" data-time="60">60 phút</button>
+            <button class="mock-time-btn" data-time="0">Không giới hạn</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Exam Mode -->
+        <div class="form-group" style="margin-top: 1.25rem;">
+          <label class="form-label" style="font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+            <span>⚙️</span> 3. Chế độ hiển thị:
+          </label>
+          <div class="mock-mode-options" id="mock-mode-options">
+            <label class="mock-mode-card active" data-mode="exam">
+              <input type="radio" name="mock-exam-mode" value="exam" checked style="display:none;">
+              <div class="mode-card-header">
+                <span class="mode-icon">⏱️</span>
+                <span class="mode-name">Thi Thử Chuẩn (Khuyên Dùng)</span>
+              </div>
+              <div class="mode-card-desc">Làm bài liên tục có tính giờ, nộp bài mới biết điểm & xem giải thích chi tiết như thi thật.</div>
+            </label>
+            <label class="mock-mode-card" data-mode="study">
+              <input type="radio" name="mock-exam-mode" value="study" style="display:none;">
+              <div class="mode-card-header">
+                <span class="mode-icon">⚡</span>
+                <span class="mode-name">Luyện Tập Nhanh</span>
+              </div>
+              <div class="mode-card-desc">Chọn đáp án là biết Đúng / Sai ngay lập tức kèm giải thích và mẹo nhớ từng câu.</div>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer" style="padding: 1rem 1.5rem; border-top: 1px solid var(--surface-border); display: flex; justify-content: space-between; align-items: center;">
+        <button class="btn btn-ghost" id="mock-40-cancel-btn">Đóng</button>
+        <button class="btn btn-warning btn-play" id="btn-start-mock-40-now" style="font-size: 1.05rem; padding: 0.8rem 1.8rem; font-weight: 700; box-shadow: 0 0 16px rgba(245, 158, 11, 0.4);">
+          🚀 Bắt Đầu Làm Bài Ngay
+        </button>
       </div>
     </div>
   </div>

@@ -187,9 +187,9 @@ window.DEFAULT_QUIZZES = [
           ".bc",
           "None of the above"
         ],
-        "correctAnswer": 0,
-        "explanation": "Mã nguồn Java lưu ở tệp `.java`, khi biên dịch bằng `javac` sẽ tạo ra tệp Bytecode có phần mở rộng `.class`. Do ngân hàng câu hỏi gốc lưu trữ đáp án: \".java\", ta chọn phương án này theo tài liệu chuẩn.",
-        "tip": "MẸO PHÒNG THI: Nhớ cặp đôi: Mã nguồn nguồn = `.java` | Mã bytecode máy ảo = `.class`!"
+        "correctAnswer": 1,
+        "explanation": "Mã nguồn Java được lưu ở tệp tin `.java`, sau khi được trình biên dịch `javac` biên dịch sẽ tạo ra tệp Bytecode có phần mở rộng là `.class` để chạy trên máy ảo JVM.",
+        "tip": "MẸO PHÒNG THI: File mã nguồn = `.java` | File chứa mã máy ảo Bytecode = `.class`!"
       },
       {
         "id": "q_14",
@@ -621,9 +621,9 @@ window.DEFAULT_QUIZZES = [
           "Run time error",
           "Hi"
         ],
-        "correctAnswer": 3,
-        "explanation": "Phương án \"Hi\" là câu trả lời chính xác cho câu hỏi này trong chuyên đề 'Module 3: Access Control, Kế thừa & Interface'. Kiến thức này phản ánh đúng đặc tả kỹ thuật của ngôn ngữ lập trình Java và cơ chế thực thi của máy ảo JVM.",
-        "tip": "MẸO PHÒNG THI (Module 3: Access Control, Kế thừa & Interface): Chú ý từ khóa trọng tâm 'Hi'. Đề thi Java luôn ưu tiên các chuẩn cú pháp bất biến và thuật ngữ chính xác trong Java API."
+        "correctAnswer": 1,
+        "explanation": "Thuộc tính `j` được khai báo là `private` trong lớp `A` (`private int j;`). Theo nguyên tắc đóng gói của Java, các thành viên `private` chỉ có thể được truy cập bên trong nội bộ lớp `A`, lớp con `B` (`super.j`) và các lớp bên ngoài như `inheritance` (`obj.j`) không thể truy cập trực tiếp, dẫn đến lỗi biên dịch (Compile-time error: *j has private access in A*).",
+        "tip": "MẸO PHÒNG THI: Thấy biến lớp cha khai báo là `private`, mà lớp con hoặc hàm main gọi `.j` trực tiếp -> Chắc chắn 100% chọn 'Compiler error'!"
       },
       {
         "id": "q_45",
@@ -686,14 +686,14 @@ window.DEFAULT_QUIZZES = [
         "question": "What will be output of following program?",
         "code": "public class Dummy {\n    interface A {\n        public void method1();\n    }\n\n    class One implements A {\n        public void method1() {\n            System.out.println(\"hello\");\n        }\n    }\n\n    class Two extends One {}\n\n    public class Test extends Two {\n        public static void main(String[] args) {\n            A a;\n            Two t = new Two();\n            a = t;\n            a.method1();\n        }\n    }\n}",
         "options": [
-          "#include",
-          "#pragma",
-          "#define",
-          "#ifdef and #endif"
+          "hello",
+          "Compilation error",
+          "Runtime error",
+          "None of the above"
         ],
-        "correctAnswer": 2,
-        "explanation": "Phương án \"#define\" là câu trả lời chính xác cho câu hỏi này trong chuyên đề 'Module 3: Access Control, Kế thừa & Interface'. Kiến thức này phản ánh đúng đặc tả kỹ thuật của ngôn ngữ lập trình Java và cơ chế thực thi của máy ảo JVM.",
-        "tip": "MẸO PHÒNG THI (Module 3: Access Control, Kế thừa & Interface): Chú ý từ khóa trọng tâm '#define'. Đề thi Java luôn ưu tiên các chuẩn cú pháp bất biến và thuật ngữ chính xác trong Java API."
+        "correctAnswer": 0,
+        "explanation": "Lớp `One` cài đặt giao diện `A` và định nghĩa phương thức `method1()` in ra chữ \"hello\". Lớp `Two` kế thừa `One`. Khi khai báo biến tham chiếu `A a;` và gán `a = t;` (với `t` là thể hiện của `Two`), gọi `a.method1()` sẽ kích hoạt cơ chế đa hình runtime và gọi phương thức `method1()` của lớp `One`, in ra màn hình chuỗi \"hello\".",
+        "tip": "MẸO PHÒNG THI: Đa hình giao diện (Interface Polymorphism): `One` implements `A` và in ra \"hello\", đối tượng `Two` kế thừa `One` -> Khi gọi qua tham chiếu `A` sẽ in ra 'hello'!"
       },
       {
         "id": "q_50",
@@ -4678,9 +4678,9 @@ window.DEFAULT_QUIZZES = [
           ".bc",
           "None of the above"
         ],
-        "correctAnswer": 0,
-        "explanation": "Mã nguồn Java lưu ở tệp `.java`, khi biên dịch bằng `javac` sẽ tạo ra tệp Bytecode có phần mở rộng `.class`. Do ngân hàng câu hỏi gốc lưu trữ đáp án: \".java\", ta chọn phương án này theo tài liệu chuẩn.",
-        "tip": "MẸO PHÒNG THI: Nhớ cặp đôi: Mã nguồn nguồn = `.java` | Mã bytecode máy ảo = `.class`!"
+        "correctAnswer": 1,
+        "explanation": "Mã nguồn Java được lưu ở tệp tin `.java`, sau khi được trình biên dịch `javac` biên dịch sẽ tạo ra tệp Bytecode có phần mở rộng là `.class` để chạy trên máy ảo JVM.",
+        "tip": "MẸO PHÒNG THI: File mã nguồn = `.java` | File chứa mã máy ảo Bytecode = `.class`!"
       },
       {
         "id": "q_14",
@@ -5134,9 +5134,9 @@ window.DEFAULT_QUIZZES = [
           "Run time error",
           "Hi"
         ],
-        "correctAnswer": 3,
-        "explanation": "Phương án \"Hi\" là câu trả lời chính xác cho câu hỏi này trong chuyên đề 'Module 3: Access Control, Kế thừa & Interface'. Kiến thức này phản ánh đúng đặc tả kỹ thuật của ngôn ngữ lập trình Java và cơ chế thực thi của máy ảo JVM.",
-        "tip": "MẸO PHÒNG THI (Module 3: Access Control, Kế thừa & Interface): Chú ý từ khóa trọng tâm 'Hi'. Đề thi Java luôn ưu tiên các chuẩn cú pháp bất biến và thuật ngữ chính xác trong Java API."
+        "correctAnswer": 1,
+        "explanation": "Thuộc tính `j` được khai báo là `private` trong lớp `A` (`private int j;`). Theo nguyên tắc đóng gói của Java, các thành viên `private` chỉ có thể được truy cập bên trong nội bộ lớp `A`, lớp con `B` (`super.j`) và các lớp bên ngoài như `inheritance` (`obj.j`) không thể truy cập trực tiếp, dẫn đến lỗi biên dịch (Compile-time error: *j has private access in A*).",
+        "tip": "MẸO PHÒNG THI: Thấy biến lớp cha khai báo là `private`, mà lớp con hoặc hàm main gọi `.j` trực tiếp -> Chắc chắn 100% chọn 'Compiler error'!"
       },
       {
         "id": "q_45",
@@ -5199,14 +5199,14 @@ window.DEFAULT_QUIZZES = [
         "question": "What will be output of following program?",
         "code": "public class Dummy {\n    interface A {\n        public void method1();\n    }\n\n    class One implements A {\n        public void method1() {\n            System.out.println(\"hello\");\n        }\n    }\n\n    class Two extends One {}\n\n    public class Test extends Two {\n        public static void main(String[] args) {\n            A a;\n            Two t = new Two();\n            a = t;\n            a.method1();\n        }\n    }\n}",
         "options": [
-          "#include",
-          "#pragma",
-          "#define",
-          "#ifdef and #endif"
+          "hello",
+          "Compilation error",
+          "Runtime error",
+          "None of the above"
         ],
-        "correctAnswer": 2,
-        "explanation": "Phương án \"#define\" là câu trả lời chính xác cho câu hỏi này trong chuyên đề 'Module 3: Access Control, Kế thừa & Interface'. Kiến thức này phản ánh đúng đặc tả kỹ thuật của ngôn ngữ lập trình Java và cơ chế thực thi của máy ảo JVM.",
-        "tip": "MẸO PHÒNG THI (Module 3: Access Control, Kế thừa & Interface): Chú ý từ khóa trọng tâm '#define'. Đề thi Java luôn ưu tiên các chuẩn cú pháp bất biến và thuật ngữ chính xác trong Java API."
+        "correctAnswer": 0,
+        "explanation": "Lớp `One` cài đặt giao diện `A` và định nghĩa phương thức `method1()` in ra chữ \"hello\". Lớp `Two` kế thừa `One`. Khi khai báo biến tham chiếu `A a;` và gán `a = t;` (với `t` là thể hiện của `Two`), gọi `a.method1()` sẽ kích hoạt cơ chế đa hình runtime và gọi phương thức `method1()` của lớp `One`, in ra màn hình chuỗi \"hello\".",
+        "tip": "MẸO PHÒNG THI: Đa hình giao diện (Interface Polymorphism): `One` implements `A` và in ra \"hello\", đối tượng `Two` kế thừa `One` -> Khi gọi qua tham chiếu `A` sẽ in ra 'hello'!"
       },
       {
         "id": "q_50",

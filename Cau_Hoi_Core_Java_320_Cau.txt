@@ -1,5 +1,5 @@
 ================================================================================
-   NGÂN HÀNG CÂU HỎI TRẮC NGHIỆM CORE JAVA (ĐẦY ĐỦ 320 CÂU CÓ ĐÁP ÁN)
+   NGÂN HÀNG CÂU HỎI TRẮC NGHIỆM CORE JAVA (ĐẦY ĐỦ 320 CÂU CÓ ĐÁP ÁN CHUẨN XÁC)
    Trích xuất chuẩn từ tài liệu: NHCH-Core_Java_formatted.pdf
    Bao gồm 16 Modules chuyên đề + Đầy đủ A, B, C, D + Đáp án đúng + Giải thích & Mẹo thi
 ================================================================================
@@ -171,9 +171,9 @@ CÂU 13 (Module 1 - Câu 13): What is the File Extension of java byte codes?
   C. .bc
   D. None of the above
 
-=> ĐÁP ÁN ĐÚNG: A. .java
-💡 GIẢI THÍCH: Mã nguồn Java lưu ở tệp `.java`, khi biên dịch bằng `javac` sẽ tạo ra tệp Bytecode có phần mở rộng `.class`. Do ngân hàng câu hỏi gốc lưu trữ đáp án: ".java", ta chọn phương án này theo tài liệu chuẩn.
-🎯 MẸO THI: MẸO PHÒNG THI: Nhớ cặp đôi: Mã nguồn nguồn = `.java` | Mã bytecode máy ảo = `.class`!
+=> ĐÁP ÁN ĐÚNG: B. .class
+💡 GIẢI THÍCH: Mã nguồn Java được lưu ở tệp tin `.java`, sau khi được trình biên dịch `javac` biên dịch sẽ tạo ra tệp Bytecode có phần mở rộng là `.class` để chạy trên máy ảo JVM.
+🎯 MẸO THI: MẸO PHÒNG THI: File mã nguồn = `.java` | File chứa mã máy ảo Bytecode = `.class`!
 --------------------------------------------------------------------------------
 
 CÂU 14 (Module 1 - Câu 14): Which of the following command is used to compile the java application through command prompt, assuming class file “Hello World.java”?
@@ -669,9 +669,9 @@ public class Dummy {
   C. Run time error
   D. Hi
 
-=> ĐÁP ÁN ĐÚNG: D. Hi
-💡 GIẢI THÍCH: Phương án "Hi" là câu trả lời chính xác cho câu hỏi này trong chuyên đề 'Module 3: Access Control, Kế thừa & Interface'. Kiến thức này phản ánh đúng đặc tả kỹ thuật của ngôn ngữ lập trình Java và cơ chế thực thi của máy ảo JVM.
-🎯 MẸO THI: MẸO PHÒNG THI (Module 3: Access Control, Kế thừa & Interface): Chú ý từ khóa trọng tâm 'Hi'. Đề thi Java luôn ưu tiên các chuẩn cú pháp bất biến và thuật ngữ chính xác trong Java API.
+=> ĐÁP ÁN ĐÚNG: B. Compiler error
+💡 GIẢI THÍCH: Thuộc tính `j` được khai báo là `private` trong lớp `A` (`private int j;`). Theo nguyên tắc đóng gói của Java, các thành viên `private` chỉ có thể được truy cập bên trong nội bộ lớp `A`, lớp con `B` (`super.j`) và các lớp bên ngoài như `inheritance` (`obj.j`) không thể truy cập trực tiếp, dẫn đến lỗi biên dịch (Compile-time error: *j has private access in A*).
+🎯 MẸO THI: MẸO PHÒNG THI: Thấy biến lớp cha khai báo là `private`, mà lớp con hoặc hàm main gọi `.j` trực tiếp -> Chắc chắn 100% chọn 'Compiler error'!
 --------------------------------------------------------------------------------
 
 CÂU 45 (Module 3 - Câu 5): Which of the following statement is incorrect?
@@ -743,14 +743,14 @@ public class Dummy {
     }
 }
 --------------------
-  A. #include
-  B. #pragma
-  C. #define
-  D. #ifdef and #endif
+  A. hello
+  B. Compilation error
+  C. Runtime error
+  D. None of the above
 
-=> ĐÁP ÁN ĐÚNG: C. #define
-💡 GIẢI THÍCH: Phương án "#define" là câu trả lời chính xác cho câu hỏi này trong chuyên đề 'Module 3: Access Control, Kế thừa & Interface'. Kiến thức này phản ánh đúng đặc tả kỹ thuật của ngôn ngữ lập trình Java và cơ chế thực thi của máy ảo JVM.
-🎯 MẸO THI: MẸO PHÒNG THI (Module 3: Access Control, Kế thừa & Interface): Chú ý từ khóa trọng tâm '#define'. Đề thi Java luôn ưu tiên các chuẩn cú pháp bất biến và thuật ngữ chính xác trong Java API.
+=> ĐÁP ÁN ĐÚNG: A. hello
+💡 GIẢI THÍCH: Lớp `One` cài đặt giao diện `A` và định nghĩa phương thức `method1()` in ra chữ "hello". Lớp `Two` kế thừa `One`. Khi khai báo biến tham chiếu `A a;` và gán `a = t;` (với `t` là thể hiện của `Two`), gọi `a.method1()` sẽ kích hoạt cơ chế đa hình runtime và gọi phương thức `method1()` của lớp `One`, in ra màn hình chuỗi "hello".
+🎯 MẸO THI: MẸO PHÒNG THI: Đa hình giao diện (Interface Polymorphism): `One` implements `A` và in ra "hello", đối tượng `Two` kế thừa `One` -> Khi gọi qua tham chiếu `A` sẽ in ra 'hello'!
 --------------------------------------------------------------------------------
 
 CÂU 50 (Module 3 - Câu 10): If there are data fields’ defined in an interface, then they are implicitly defined to be __________.

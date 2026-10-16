@@ -1,5 +1,5 @@
 ================================================================================
-   NGÂN HÀNG CÂU HỎI TRẮC NGHIỆM CDAC - DBMS (ĐẦY ĐỦ 260 CÂU CÓ ĐÁP ÁN)
+   NGÂN HÀNG CÂU HỎI TRẮC NGHIỆM CDAC - DBMS (ĐẦY ĐỦ 260 CÂU CÓ ĐÁP ÁN CHUẨN XÁC)
    Trích xuất chuẩn từ tài liệu: CDAC - DBMS Question Bank - HVCS.pdf
    Bao gồm 13 Modules chuẩn (mỗi Module 20 câu) + Đầy đủ A, B, C, D + Đáp án đúng + Giải thích & Mẹo thi
 ================================================================================
@@ -38,9 +38,9 @@ CÂU 3 (Module 1 - Câu 3): Which files can be multiplexed?
   C. Parameter Files
   D. Data Buffer Cache
 
-=> ĐÁP ÁN ĐÚNG: A. Data Files
-💡 GIẢI THÍCH: Phương án "Data Files" là câu trả lời chính xác cho câu hỏi trong Module 1: Introduction to DBMS. Đáp án phản ánh đúng cú pháp chuẩn SQL và nguyên lý hoạt động của hệ quản trị cơ sở dữ liệu quan hệ Oracle RDBMS.
-🎯 MẸO THI: MẸO PHÒNG THI (Module 1: Introduction to DBMS): Chú ý từ khóa then chốt 'Data Files'. Các câu hỏi trắc nghiệm DBMS thường kiểm tra cú pháp chuẩn SQL, thứ tự thực thi của các mệnh đề và các ràng buộc dữ liệu.
+=> ĐÁP ÁN ĐÚNG: B. Control Files
+💡 GIẢI THÍCH: Trong kiến trúc hệ quản trị cơ sở dữ liệu Oracle RDBMS, chỉ có **Control Files** và **Online Redo Log Files** là có thể được multiplexed (nhân bản đồng thời ra nhiều ổ đĩa vật lý khác nhau để dự phòng khi một ổ đĩa gặp sự cố). Data files không thể multiplexed bằng cơ chế của Oracle.
+🎯 MẸO THI: MẸO PHÒNG THI: Thấy câu hỏi 'Which files can be multiplexed?' trong Oracle -> Chọn ngay 'Control Files' (hoặc 'Redo Log Files')!
 --------------------------------------------------------------------------------
 
 CÂU 4 (Module 1 - Câu 4): Which Statement about the Data files is not true?
@@ -498,9 +498,9 @@ CÂU 41 (Module 3 - Câu 1): What does the TRUNCATE statement do?
   C. Shortens the table to 10 rows
   D. Removes all columns from a table
 
-=> ĐÁP ÁN ĐÚNG: A. Removes the table
-💡 GIẢI THÍCH: Lệnh `TRUNCATE TABLE` là lệnh DDL dùng để xóa toàn bộ các dòng trong bảng một cách nhanh chóng bằng cách giải phóng (deallocate) các khối lưu trữ (storage space) mà bảng đang chiếm giữ. Đặc điểm: tự động COMMIT, cấm WHERE, không ghi log từng dòng và không thể ROLLBACK.
-🎯 MẸO THI: MẸO PHÒNG THI: TRUNCATE = DDL, xóa hết dữ liệu siêu tốc, giải phóng dung lượng ('releases storage space'), không thể ROLLBACK!
+=> ĐÁP ÁN ĐÚNG: B. Removes all rows from a table
+💡 GIẢI THÍCH: Lệnh `TRUNCATE TABLE` là một câu lệnh DDL dùng để xóa toàn bộ các dòng dữ liệu (all rows) trong một bảng một cách nhanh chóng và giải phóng dung lượng lưu trữ của bảng. Cấu trúc của bảng (schema) vẫn được giữ nguyên vẹn. Lệnh xóa mất luôn cả bảng khỏi cơ sở dữ liệu là `DROP TABLE`.
+🎯 MẸO THI: MẸO PHÒNG THI: Phân biệt rõ: TRUNCATE = Xóa hết tất cả các dòng ('Removes all rows from a table'); DROP = Xóa mất luôn cả bảng ('Removes the table')!
 --------------------------------------------------------------------------------
 
 CÂU 42 (Module 3 - Câu 2): Which statement about data types is true?
@@ -624,9 +624,9 @@ Which statement is not true about the SQL statement?
   C. You can NOT roll back the deletion of rows after the statement executes.
   D. You must be the owner of the table or have DELETE ANY TABLE system privileges to truncate the DEPT table
 
-=> ĐÁP ÁN ĐÚNG: A. It releases the storage space used by the table.
-💡 GIẢI THÍCH: Lệnh `TRUNCATE TABLE` là lệnh DDL dùng để xóa toàn bộ các dòng trong bảng một cách nhanh chóng bằng cách giải phóng (deallocate) các khối lưu trữ (storage space) mà bảng đang chiếm giữ. Đặc điểm: tự động COMMIT, cấm WHERE, không ghi log từng dòng và không thể ROLLBACK.
-🎯 MẸO THI: MẸO PHÒNG THI: TRUNCATE = DDL, xóa hết dữ liệu siêu tốc, giải phóng dung lượng ('releases storage space'), không thể ROLLBACK!
+=> ĐÁP ÁN ĐÚNG: B. It does not release the storage space used by the table.
+💡 GIẢI THÍCH: Đặc điểm của lệnh `TRUNCATE TABLE` là tự động giải phóng (deallocate) các khối dữ liệu và không gian lưu trữ mà bảng đang chiếm giữ trên đĩa. Do đó, khẳng định 'It does not release the storage space used by the table' (Nó không giải phóng không gian lưu trữ) là một phát biểu KHÔNG ĐÚNG (NOT TRUE).
+🎯 MẸO THI: MẸO PHÒNG THI: Đề hỏi phát biểu NOT TRUE về TRUNCATE -> Tìm ngay câu phủ định sai sự thật: 'It does not release the storage space...' (bởi vì TRUNCATE thực tế CÓ giải phóng dung lượng)!
 --------------------------------------------------------------------------------
 
 CÂU 52 (Module 3 - Câu 12): Which is not a correct guideline for naming database tables?

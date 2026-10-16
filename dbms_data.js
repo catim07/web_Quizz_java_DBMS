@@ -56,9 +56,9 @@ window.DBMS_QUIZZES = [
           "Parameter Files",
           "Data Buffer Cache"
         ],
-        "correctAnswer": 0,
-        "explanation": "Phương án \"Data Files\" là câu trả lời chính xác cho câu hỏi trong Module 1: Introduction to DBMS. Đáp án phản ánh đúng cú pháp chuẩn SQL và nguyên lý hoạt động của hệ quản trị cơ sở dữ liệu quan hệ Oracle RDBMS.",
-        "tip": "MẸO PHÒNG THI (Module 1: Introduction to DBMS): Chú ý từ khóa then chốt 'Data Files'. Các câu hỏi trắc nghiệm DBMS thường kiểm tra cú pháp chuẩn SQL, thứ tự thực thi của các mệnh đề và các ràng buộc dữ liệu."
+        "correctAnswer": 1,
+        "explanation": "Trong kiến trúc hệ quản trị cơ sở dữ liệu Oracle RDBMS, chỉ có **Control Files** và **Online Redo Log Files** là có thể được multiplexed (nhân bản đồng thời ra nhiều ổ đĩa vật lý khác nhau để dự phòng khi một ổ đĩa gặp sự cố). Data files không thể multiplexed bằng cơ chế của Oracle.",
+        "tip": "MẸO PHÒNG THI: Thấy câu hỏi 'Which files can be multiplexed?' trong Oracle -> Chọn ngay 'Control Files' (hoặc 'Redo Log Files')!"
       },
       {
         "id": "dbms_q_4",
@@ -701,9 +701,9 @@ window.DBMS_QUIZZES = [
           "Shortens the table to 10 rows",
           "Removes all columns from a table"
         ],
-        "correctAnswer": 0,
-        "explanation": "Lệnh `TRUNCATE TABLE` là lệnh DDL dùng để xóa toàn bộ các dòng trong bảng một cách nhanh chóng bằng cách giải phóng (deallocate) các khối lưu trữ (storage space) mà bảng đang chiếm giữ. Đặc điểm: tự động COMMIT, cấm WHERE, không ghi log từng dòng và không thể ROLLBACK.",
-        "tip": "MẸO PHÒNG THI: TRUNCATE = DDL, xóa hết dữ liệu siêu tốc, giải phóng dung lượng ('releases storage space'), không thể ROLLBACK!"
+        "correctAnswer": 1,
+        "explanation": "Lệnh `TRUNCATE TABLE` là một câu lệnh DDL dùng để xóa toàn bộ các dòng dữ liệu (all rows) trong một bảng một cách nhanh chóng và giải phóng dung lượng lưu trữ của bảng. Cấu trúc của bảng (schema) vẫn được giữ nguyên vẹn. Lệnh xóa mất luôn cả bảng khỏi cơ sở dữ liệu là `DROP TABLE`.",
+        "tip": "MẸO PHÒNG THI: Phân biệt rõ: TRUNCATE = Xóa hết tất cả các dòng ('Removes all rows from a table'); DROP = Xóa mất luôn cả bảng ('Removes the table')!"
       },
       {
         "id": "dbms_q_42",
@@ -871,9 +871,9 @@ window.DBMS_QUIZZES = [
           "You can NOT roll back the deletion of rows after the statement executes.",
           "You must be the owner of the table or have DELETE ANY TABLE system privileges to truncate the DEPT table"
         ],
-        "correctAnswer": 0,
-        "explanation": "Lệnh `TRUNCATE TABLE` là lệnh DDL dùng để xóa toàn bộ các dòng trong bảng một cách nhanh chóng bằng cách giải phóng (deallocate) các khối lưu trữ (storage space) mà bảng đang chiếm giữ. Đặc điểm: tự động COMMIT, cấm WHERE, không ghi log từng dòng và không thể ROLLBACK.",
-        "tip": "MẸO PHÒNG THI: TRUNCATE = DDL, xóa hết dữ liệu siêu tốc, giải phóng dung lượng ('releases storage space'), không thể ROLLBACK!"
+        "correctAnswer": 1,
+        "explanation": "Đặc điểm của lệnh `TRUNCATE TABLE` là tự động giải phóng (deallocate) các khối dữ liệu và không gian lưu trữ mà bảng đang chiếm giữ trên đĩa. Do đó, khẳng định 'It does not release the storage space used by the table' (Nó không giải phóng không gian lưu trữ) là một phát biểu KHÔNG ĐÚNG (NOT TRUE).",
+        "tip": "MẸO PHÒNG THI: Đề hỏi phát biểu NOT TRUE về TRUNCATE -> Tìm ngay câu phủ định sai sự thật: 'It does not release the storage space...' (bởi vì TRUNCATE thực tế CÓ giải phóng dung lượng)!"
       },
       {
         "id": "dbms_q_52",
@@ -4485,9 +4485,9 @@ window.DBMS_QUIZZES = [
           "Parameter Files",
           "Data Buffer Cache"
         ],
-        "correctAnswer": 0,
-        "explanation": "Phương án \"Data Files\" là câu trả lời chính xác cho câu hỏi trong Module 1: Introduction to DBMS. Đáp án phản ánh đúng cú pháp chuẩn SQL và nguyên lý hoạt động của hệ quản trị cơ sở dữ liệu quan hệ Oracle RDBMS.",
-        "tip": "MẸO PHÒNG THI (Module 1: Introduction to DBMS): Chú ý từ khóa then chốt 'Data Files'. Các câu hỏi trắc nghiệm DBMS thường kiểm tra cú pháp chuẩn SQL, thứ tự thực thi của các mệnh đề và các ràng buộc dữ liệu."
+        "correctAnswer": 1,
+        "explanation": "Trong kiến trúc hệ quản trị cơ sở dữ liệu Oracle RDBMS, chỉ có **Control Files** và **Online Redo Log Files** là có thể được multiplexed (nhân bản đồng thời ra nhiều ổ đĩa vật lý khác nhau để dự phòng khi một ổ đĩa gặp sự cố). Data files không thể multiplexed bằng cơ chế của Oracle.",
+        "tip": "MẸO PHÒNG THI: Thấy câu hỏi 'Which files can be multiplexed?' trong Oracle -> Chọn ngay 'Control Files' (hoặc 'Redo Log Files')!"
       },
       {
         "id": "dbms_q_4",
@@ -5152,9 +5152,9 @@ window.DBMS_QUIZZES = [
           "Shortens the table to 10 rows",
           "Removes all columns from a table"
         ],
-        "correctAnswer": 0,
-        "explanation": "Lệnh `TRUNCATE TABLE` là lệnh DDL dùng để xóa toàn bộ các dòng trong bảng một cách nhanh chóng bằng cách giải phóng (deallocate) các khối lưu trữ (storage space) mà bảng đang chiếm giữ. Đặc điểm: tự động COMMIT, cấm WHERE, không ghi log từng dòng và không thể ROLLBACK.",
-        "tip": "MẸO PHÒNG THI: TRUNCATE = DDL, xóa hết dữ liệu siêu tốc, giải phóng dung lượng ('releases storage space'), không thể ROLLBACK!"
+        "correctAnswer": 1,
+        "explanation": "Lệnh `TRUNCATE TABLE` là một câu lệnh DDL dùng để xóa toàn bộ các dòng dữ liệu (all rows) trong một bảng một cách nhanh chóng và giải phóng dung lượng lưu trữ của bảng. Cấu trúc của bảng (schema) vẫn được giữ nguyên vẹn. Lệnh xóa mất luôn cả bảng khỏi cơ sở dữ liệu là `DROP TABLE`.",
+        "tip": "MẸO PHÒNG THI: Phân biệt rõ: TRUNCATE = Xóa hết tất cả các dòng ('Removes all rows from a table'); DROP = Xóa mất luôn cả bảng ('Removes the table')!"
       },
       {
         "id": "dbms_q_42",
@@ -5322,9 +5322,9 @@ window.DBMS_QUIZZES = [
           "You can NOT roll back the deletion of rows after the statement executes.",
           "You must be the owner of the table or have DELETE ANY TABLE system privileges to truncate the DEPT table"
         ],
-        "correctAnswer": 0,
-        "explanation": "Lệnh `TRUNCATE TABLE` là lệnh DDL dùng để xóa toàn bộ các dòng trong bảng một cách nhanh chóng bằng cách giải phóng (deallocate) các khối lưu trữ (storage space) mà bảng đang chiếm giữ. Đặc điểm: tự động COMMIT, cấm WHERE, không ghi log từng dòng và không thể ROLLBACK.",
-        "tip": "MẸO PHÒNG THI: TRUNCATE = DDL, xóa hết dữ liệu siêu tốc, giải phóng dung lượng ('releases storage space'), không thể ROLLBACK!"
+        "correctAnswer": 1,
+        "explanation": "Đặc điểm của lệnh `TRUNCATE TABLE` là tự động giải phóng (deallocate) các khối dữ liệu và không gian lưu trữ mà bảng đang chiếm giữ trên đĩa. Do đó, khẳng định 'It does not release the storage space used by the table' (Nó không giải phóng không gian lưu trữ) là một phát biểu KHÔNG ĐÚNG (NOT TRUE).",
+        "tip": "MẸO PHÒNG THI: Đề hỏi phát biểu NOT TRUE về TRUNCATE -> Tìm ngay câu phủ định sai sự thật: 'It does not release the storage space...' (bởi vì TRUNCATE thực tế CÓ giải phóng dung lượng)!"
       },
       {
         "id": "dbms_q_52",
